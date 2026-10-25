@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,9 @@
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -353,7 +356,8 @@
         </div>
     </footer>
 
-    <!-- GSAP + SCROLLTRIGGER & LÓGICA DE CALCULADORA IMC -->
+    <!-- LENIS SMOOTH SCROLL + GSAP + SCROLLTRIGGER & LÓGICA DE CALCULADORA IMC -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script>
@@ -457,9 +461,22 @@
 
             gsap.registerPlugin(ScrollTrigger);
 
+            const lenis = new Lenis({
+                duration: 1.25,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smoothWheel: true,
+                wheelMultiplier: 0.95,
+                touchMultiplier: 1.5
+            });
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+
             gsap.utils.toArray('.parallax-bg').forEach((bg) => {
-                gsap.fromTo(bg, { yPercent: -12 }, {
-                    yPercent: 16,
+                gsap.fromTo(bg, { yPercent: -14 }, {
+                    yPercent: 18,
                     ease: 'none',
                     scrollTrigger: {
                         trigger: bg.parentElement,
