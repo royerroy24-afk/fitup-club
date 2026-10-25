@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitUp Club Cajamarca | Inicio</title>
 
-    <!-- Google Fonts: Montserrat (400 Normal & 900 Black) -->
+    <!-- Google Fonts: Montserrat (300 Light, 400 Normal, 700 Bold & 900 Black) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -91,25 +91,25 @@
 
             <!-- Botón CTA Desktop + Hamburguesa Móvil -->
             <div class="flex items-center gap-3 shrink-0">
-                <a href="#prueba-gratis" class="hidden sm:inline-flex bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)] items-center justify-center whitespace-nowrap">
+                <a href="#prueba-gratis" class="hidden sm:inline-flex bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1 items-center justify-center whitespace-nowrap">
                     Sesión Gratis
                 </a>
-                <button type="button" onclick="toggleMobileMenu()" aria-label="Abrir Menú" class="md:hidden w-11 h-11 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white flex items-center justify-center transition-all">
+                <button type="button" onclick="toggleMobileMenu()" aria-label="Abrir Menú" class="md:hidden w-11 h-11 rounded-md border border-gray-800/50 text-gray-300 bg-white/5 hover:border-orange-500 hover:text-orange-500 flex items-center justify-center transition-all">
                     <i id="hamburger-icon" class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
         <!-- Menú Móvil Desplegable -->
-        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border border-white/10 mx-4 mb-4 p-4 rounded-xl space-y-1">
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border border-gray-800/50 mx-4 mb-4 p-4 rounded-xl space-y-1">
             <a href="index.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-orange-500">Inicio</a>
             <a href="servicios.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Servicios y Horarios</a>
             <a href="entrenadores.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Entrenadores</a>
             <a href="tu-espacio.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Tu Espacio FitUp</a>
             <a href="tips.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Tips FitUp Club</a>
             <div class="pt-3">
-                <a href="#prueba-gratis" onclick="toggleMobileMenu()" class="block w-full text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
-                    Solicita tu sesión de prueba gratuita
+                <a href="#prueba-gratis" onclick="toggleMobileMenu()" class="block w-full text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
+                    Solicita tu sesión de prueba
                 </a>
             </div>
         </div>
@@ -140,17 +140,17 @@
                             <span class="line-mask"><span class="line-reveal hero-line text-orange-500">EXCUSAS.</span></span>
                         </h1>
 
-                        <p class="mt-5 md:mt-6 text-gray-300 text-sm sm:text-base md:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed hero-sub">
+                        <p class="mt-5 md:mt-6 text-gray-300 text-sm sm:text-base md:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed hero-sub">
                             Transforma tu físico en el centro de entrenamiento más tecnológico de Cajamarca. Más de 1,500 m² con 11 zonas especializadas, sauna, médico deportivo y evaluación digital en tiempo real.
                         </p>
 
-                        <!-- Botones CTA Tecnológicos y Elegantes -->
+                        <!-- Botones CTA Ghost Tech (Elegancia Tecnológica) -->
                         <div class="mt-8 md:mt-9 flex flex-col md:flex-row items-center justify-center lg:justify-start gap-3.5 md:gap-4 hero-cta">
-                            <a href="#prueba-gratis" class="w-full md:w-auto bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)] inline-flex items-center justify-center gap-3 text-center">
-                                <span>Solicita tu sesión de prueba gratuita</span>
+                            <a href="#prueba-gratis" class="w-full md:w-auto bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1 inline-flex items-center justify-center gap-3 text-center">
+                                <span>Solicita tu sesión de prueba</span>
                                 <i class="fa-solid fa-arrow-right shrink-0"></i>
                             </a>
-                            <button type="button" onclick="openFitUpModal('zona-funcional-grupales')" class="w-full md:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all inline-flex items-center justify-center text-center">
+                            <button type="button" onclick="openFitUpModal('zona-funcional-grupales')" class="w-full md:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase hover:border-white hover:text-white transition-all duration-300 hover:-translate-y-1 inline-flex items-center justify-center text-center">
                                 <span>VER EL HORARIO DE CLASES GRUPALES</span>
                             </button>
                         </div>
@@ -158,7 +158,7 @@
 
                     <!-- Columna Derecha: Tarjeta Glassmorphism -->
                     <div class="lg:col-span-5">
-                        <div class="bg-white/5 backdrop-blur-md rounded-2xl p-4">
+                        <div class="bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-2xl p-4">
                             <div class="img-reveal-wrap rounded-xl h-72 sm:h-96 md:h-[420px]">
                                 <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85" 
                                      alt="Atleta FitUp Club" 
@@ -166,10 +166,10 @@
                             </div>
                             <div class="px-2 pt-4 pb-2 flex flex-col md:flex-row md:items-center justify-between gap-4">
                                 <div class="text-center md:text-left">
-                                    <span class="text-[11px] font-black uppercase tracking-widest text-orange-500 block">Diagnóstico Interactivo</span>
-                                    <p class="text-sm font-black uppercase text-white mt-0.5">Calcula tu Punto de Partida</p>
+                                    <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block">Diagnóstico Interactivo</span>
+                                    <p class="text-sm font-black uppercase text-white mt-1">Calcula tu Punto de Partida</p>
                                 </div>
-                                <a href="tu-espacio.html" class="w-full md:w-auto bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)] inline-flex items-center justify-center whitespace-nowrap shrink-0">
+                                <a href="tu-espacio.html" class="w-full md:w-auto bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1 inline-flex items-center justify-center whitespace-nowrap shrink-0">
                                     Calcular IMC
                                 </a>
                             </div>
@@ -222,12 +222,13 @@
 
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
                     <div>
+                        <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block mb-2">Infraestructura High-Tech</span>
                         <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
                             <span class="line-mask"><span class="line-reveal">ZONAS DISEÑADAS PARA</span></span>
                             <span class="line-mask"><span class="line-reveal text-orange-500">TU EVOLUCIÓN</span></span>
                         </h2>
                     </div>
-                    <button type="button" onclick="openFitUpModal('zona-funcional-grupales')" class="w-full md:w-auto inline-flex items-center justify-center gap-3 border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                    <button type="button" onclick="openFitUpModal('zona-funcional-grupales')" class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                         <span>VER EL HORARIO DE CLASES GRUPALES</span>
                         <i class="fa-solid fa-calendar-days"></i>
                     </button>
@@ -237,7 +238,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
                     <!-- Tarjeta 1 -->
-                    <article onclick="openFitUpModal('zona-musculacion')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                    <article onclick="openFitUpModal('zona-musculacion')" class="cursor-pointer group bg-white/5 border border-gray-800/50 hover:border-orange-500/40 transition-all duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
                         <div>
                             <div class="img-reveal-wrap rounded-xl h-56 sm:h-60">
                                 <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" 
@@ -245,22 +246,22 @@
                                      class="img-reveal w-full h-full object-cover">
                             </div>
                             <div class="px-1 pt-5 pb-4">
-                                <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Fuerza & Potencia</span>
-                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Sala de Musculación</h3>
-                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase">Fuerza & Potencia</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-2 group-hover:text-orange-500 transition-colors">Sala de Musculación</h3>
+                                <p class="text-gray-300 text-sm mt-3 font-light leading-relaxed">
                                     Máquinas biomecánicas guiadas, jaulas olímpicas y pesas libres de alto rendimiento.
                                 </p>
                             </div>
                         </div>
                         <div class="pt-2">
-                            <button type="button" class="block w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)] text-center">
+                            <button type="button" class="block w-full bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1 text-center">
                                 Explorar Zona
                             </button>
                         </div>
                     </article>
 
                     <!-- Tarjeta 2 -->
-                    <article onclick="openFitUpModal('zona-spinning-cardio')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                    <article onclick="openFitUpModal('zona-spinning-cardio')" class="cursor-pointer group bg-white/5 border border-gray-800/50 hover:border-orange-500/40 transition-all duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
                         <div>
                             <div class="img-reveal-wrap rounded-xl h-56 sm:h-60">
                                 <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=800&q=80" 
@@ -268,22 +269,22 @@
                                      class="img-reveal w-full h-full object-cover">
                             </div>
                             <div class="px-1 pt-5 pb-4">
-                                <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Resistencia</span>
-                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Spinning & Zona Cardio</h3>
-                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase">Resistencia</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-2 group-hover:text-orange-500 transition-colors">Spinning & Zona Cardio</h3>
+                                <p class="text-gray-300 text-sm mt-3 font-light leading-relaxed">
                                     Ciclismo indoor inmersivo, trotadoras profesionales, elípticas y escaladoras digitales.
                                 </p>
                             </div>
                         </div>
                         <div class="pt-2">
-                            <button type="button" class="block w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)] text-center">
+                            <button type="button" class="block w-full bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1 text-center">
                                 Explorar Zona
                             </button>
                         </div>
                     </article>
 
                     <!-- Tarjeta 3 -->
-                    <article onclick="openFitUpModal('zona-funcional-grupales')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                    <article onclick="openFitUpModal('zona-funcional-grupales')" class="cursor-pointer group bg-white/5 border border-gray-800/50 hover:border-orange-500/40 transition-all duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
                         <div>
                             <div class="img-reveal-wrap rounded-xl h-56 sm:h-60">
                                 <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" 
@@ -291,15 +292,15 @@
                                      class="img-reveal w-full h-full object-cover">
                             </div>
                             <div class="px-1 pt-5 pb-4">
-                                <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Energía Colectiva</span>
-                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Funcional & Clases Grupales</h3>
-                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase">Energía Colectiva</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-2 group-hover:text-orange-500 transition-colors">Funcional & Clases Grupales</h3>
+                                <p class="text-gray-300 text-sm mt-3 font-light leading-relaxed">
                                     Zumba, Tabata, Full Body, circuito HIIT con TRX, pesas rusas y cuerdas de batalla.
                                 </p>
                             </div>
                         </div>
                         <div class="pt-2">
-                            <button type="button" class="block w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)] text-center">
+                            <button type="button" class="block w-full bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1 text-center">
                                 Ver Horario de Clases Grupales
                             </button>
                         </div>
@@ -314,7 +315,7 @@
         ====================================================== -->
         <section class="py-12 md:py-16 bg-black">
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-                <div class="relative rounded-2xl overflow-hidden py-14 sm:py-16 px-5 sm:px-12 flex items-center justify-center">
+                <div class="relative rounded-2xl border border-gray-800/50 overflow-hidden py-14 sm:py-16 px-5 sm:px-12 flex items-center justify-center">
                     <div class="absolute inset-0 overflow-hidden pointer-events-none">
                         <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=85" 
                              alt="Tu Espacio FitUp" 
@@ -323,19 +324,20 @@
                     </div>
 
                     <div class="relative z-10 max-w-3xl mx-auto text-center w-full">
+                        <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block mb-2">Biometría & Ciencia</span>
                         <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
                             <span class="line-mask"><span class="line-reveal">CALCULA TU ESTADO FÍSICO</span></span>
                             <span class="line-mask"><span class="line-reveal text-orange-500">EN TU ESPACIO FITUP</span></span>
                         </h2>
-                        <p class="text-gray-300 text-sm sm:text-base mt-3 font-normal">
+                        <p class="text-gray-300 text-sm sm:text-base mt-4 font-light leading-relaxed">
                             Conoce tu Índice de Masa Corporal (IMC), explora nuestros Tips FitUp y obtén la recomendación exacta de las zonas que debes usar.
                         </p>
                         <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <a href="tu-espacio.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                            <a href="tu-espacio.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                                 <span>Abrir Calculadora Interactiva</span>
                                 <i class="fa-solid fa-calculator"></i>
                             </a>
-                            <a href="tips.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                            <a href="tips.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase hover:border-white hover:text-white transition-all duration-300 hover:-translate-y-1">
                                 <span>Explorar Tips FitUp Club</span>
                                 <i class="fa-solid fa-bolt"></i>
                             </a>
@@ -350,21 +352,22 @@
         ====================================================== -->
         <section id="prueba-gratis" class="py-16 md:py-20 bg-black">
             <div class="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
-                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-12 text-center">
+                <div class="bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-2xl p-6 sm:p-12 text-center">
+                    <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block mb-2">Pase de Cortesía • Open Plaza Cajamarca</span>
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
                         <span class="line-mask"><span class="line-reveal">SOLICITA TU SESIÓN DE</span></span>
                         <span class="line-mask"><span class="line-reveal text-orange-500">PRUEBA GRATUITA</span></span>
                     </h2>
-                    <p class="text-gray-300 text-sm sm:text-base mt-3 max-w-xl mx-auto font-normal">
+                    <p class="text-gray-300 text-sm sm:text-base mt-4 max-w-xl mx-auto font-light leading-relaxed">
                         Déjanos tu nombre y WhatsApp para activar tu pase de cortesía de 1 día en FitUp Club Cajamarca.
                     </p>
 
                     <form onsubmit="event.preventDefault(); alert('¡Tu sesión de prueba gratuita en FitUp Club (Open Plaza Cajamarca) ha sido reservada!'); this.reset();" class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
                         <input type="text" required placeholder="Tu Nombre Completo" 
-                               class="w-full bg-black border border-white/20 rounded-md px-5 py-2.5 text-white placeholder-gray-400 text-sm font-normal focus:outline-none focus:border-orange-500">
+                               class="w-full bg-black/80 border border-gray-800/50 rounded-md px-5 py-2.5 text-white placeholder-gray-400 text-sm font-light focus:outline-none focus:border-orange-500">
                         <input type="tel" required placeholder="Tu WhatsApp / Celular" 
-                               class="w-full bg-black border border-white/20 rounded-md px-5 py-2.5 text-white placeholder-gray-400 text-sm font-normal focus:outline-none focus:border-orange-500">
-                        <button type="submit" class="w-full bg-orange-500 text-white rounded-md px-6 py-2.5 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                               class="w-full bg-black/80 border border-gray-800/50 rounded-md px-5 py-2.5 text-white placeholder-gray-400 text-sm font-light focus:outline-none focus:border-orange-500">
+                        <button type="submit" class="w-full bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                             Solicitar Pase Gratis
                         </button>
                     </form>
@@ -459,7 +462,7 @@
                                 title="Mapa FitUp Club Open Plaza Cajamarca">
                             </iframe>
                         </div>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Open+Plaza+Cajamarca" target="_blank" rel="noopener" class="block w-full text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Open+Plaza+Cajamarca" target="_blank" rel="noopener" class="block w-full text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                             <i class="fa-solid fa-diamond-turn-right mr-1.5"></i> Cómo llegar en Google Maps
                         </a>
                     </div>
@@ -481,7 +484,7 @@
          SISTEMA DE MODALES INTERACTIVOS (NEGRO PURO + ANIMACIÓN FADE/SCALE + HORARIO INTERACTIVO)
     ====================================================== -->
     <div id="fitup-modal-backdrop" onclick="if(event.target === this) closeFitUpModal()" class="hidden fixed inset-0 z-[100] bg-black/85 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-        <div id="fitup-modal-box" class="relative w-full max-w-3xl bg-black/95 border border-white/15 rounded-2xl p-6 sm:p-8 text-white shadow-2xl my-auto max-h-[90vh] overflow-y-auto transform transition-all duration-500 scale-95 opacity-0">
+        <div id="fitup-modal-box" class="relative w-full max-w-3xl bg-black/95 border border-gray-800/50 rounded-2xl p-6 sm:p-8 text-white shadow-2xl my-auto max-h-[90vh] overflow-y-auto transform transition-all duration-500 scale-95 opacity-0">
             <!-- Botón X Ghost -->
             <button type="button" onclick="closeFitUpModal()" aria-label="Cerrar Modal" class="absolute top-4 right-4 w-10 h-10 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white flex items-center justify-center transition-all z-10">
                 <i class="fa-solid fa-xmark text-lg"></i>
@@ -493,16 +496,16 @@
                     <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=85" alt="Sala de Musculación" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
                 </div>
-                <span class="text-xs font-black uppercase tracking-widest text-orange-500 block">Fuerza, Biomecánica & Salud Emocional</span>
+                <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block">Fuerza, Biomecánica & Salud Emocional</span>
                 <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">Sala de Musculación</h3>
-                <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Equipada con máquinas biomecánicas de última generación, racks olímpicos y pesas libres calibradas. Cada serie pesada no solo construye masa muscular y densidad ósea: <strong>descarga el estrés acumulado del día</strong>, libera endorfinas y forja una autoconfianza inquebrantable.
+                <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
+                    Equipada con máquinas biomecánicas de última generación, racks olímpicos y pesas libres calibradas. Cada serie pesada no solo construye masa muscular y densidad ósea: <strong class="font-bold text-white">descarga el estrés acumulado del día</strong>, libera endorfinas y forja una autoconfianza inquebrantable.
                 </p>
                 <div class="pt-2 flex flex-col sm:flex-row gap-3">
-                    <a href="#prueba-gratis" onclick="closeFitUpModal()" class="w-full sm:w-auto flex-1 text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                    <a href="#prueba-gratis" onclick="closeFitUpModal()" class="w-full sm:w-auto flex-1 text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                         Probar Esta Zona Gratis
                     </a>
-                    <button type="button" onclick="closeFitUpModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                    <button type="button" onclick="closeFitUpModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase hover:border-white hover:text-white transition-all">
                         Cerrar
                     </button>
                 </div>
@@ -514,16 +517,16 @@
                     <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=1000&q=85" alt="Spinning y Cardio" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
                 </div>
-                <span class="text-xs font-black uppercase tracking-widest text-orange-500 block">Capacidad Cardiorrespiratoria & Liberación de Estrés</span>
+                <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block">Capacidad Cardiorrespiratoria & Liberación de Estrés</span>
                 <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">Spinning & Zona Cardio</h3>
-                <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Trotadoras profesionales con absorción de impacto, escaladoras digitales y una sala de Spinning inmersiva. El ritmo cardiovascular sostenido oxigena tu cerebro, <strong>reduce drásticamente el cortisol (hormona del estrés)</strong> y acelera la oxidación de grasas mientras desconectas de la rutina.
+                <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
+                    Trotadoras profesionales con absorción de impacto, escaladoras digitales y una sala de Spinning inmersiva. El ritmo cardiovascular sostenido oxigena tu cerebro, <strong class="font-bold text-white">reduce drásticamente el cortisol (hormona del estrés)</strong> y acelera la oxidación de grasas mientras desconectas de la rutina.
                 </p>
                 <div class="pt-2 flex flex-col sm:flex-row gap-3">
-                    <a href="#prueba-gratis" onclick="closeFitUpModal()" class="w-full sm:w-auto flex-1 text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                    <a href="#prueba-gratis" onclick="closeFitUpModal()" class="w-full sm:w-auto flex-1 text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                         Reservar Mi Sesión Gratis
                     </a>
-                    <button type="button" onclick="closeFitUpModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                    <button type="button" onclick="closeFitUpModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase hover:border-white hover:text-white transition-all">
                         Cerrar
                     </button>
                 </div>
@@ -532,106 +535,106 @@
             <!-- 3. MODAL ZONA: FUNCIONAL & CLASES GRUPALES (HORARIO INTERACTIVO EN TABLA/GRID NEGRO PURO) -->
             <div id="modal-zona-funcional-grupales" class="fitup-modal-item hidden space-y-5">
                 <div class="pr-10">
-                    <span class="text-xs font-black uppercase tracking-widest text-orange-500 block">Energía Colectiva & Transformación Total • Sin Imagen Estática</span>
+                    <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block">Energía Colectiva & Transformación Total</span>
                     <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white mt-1">Horario Oficial de Clases Grupales</h3>
-                    <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                    <p class="text-gray-300 text-xs sm:text-sm mt-2 font-light leading-relaxed">
                         Entrenar en comunidad eleva tu dopamina, libera el estrés emocional del día y transforma tu resistencia física. Elige tu disciplina y entrenador favorito en nuestra sede de Open Plaza Cajamarca:
                     </p>
                 </div>
 
-                <!-- Grid / Tabla Responsiva Minimalista de Horarios (Fondo Negro Puro) -->
+                <!-- Grid / Tabla Responsiva Minimalista de Horarios (Paneles de Control Premium) -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
                     <!-- LUNES -->
-                    <div class="bg-black border border-white/15 rounded-xl p-4">
-                        <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
-                            <span class="text-sm font-black uppercase tracking-wider text-orange-500">LUNES</span>
+                    <div class="bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-xl p-4">
+                        <div class="flex items-center justify-between border-b border-gray-800/50 pb-2 mb-3">
+                            <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase">LUNES</span>
                             <span class="text-[10px] font-bold uppercase text-gray-400">5 Sesiones</span>
                         </div>
                         <ul class="space-y-2 text-xs">
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:30 AM</span><span class="text-white font-bold">X-Local — Victoria</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">08:30 AM</span><span class="text-white font-bold">Full Body — Melisa</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">05:30 PM</span><span class="text-white font-bold">HIIT — Jhony</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">06:30 PM</span><span class="text-white font-bold">Latination — Elvis</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:10 PM</span><span class="text-white font-bold">Zumba — Arnold</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:30 AM</span><span class="text-gray-300 font-normal">X-Local — Victoria</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">08:30 AM</span><span class="text-gray-300 font-normal">Full Body — Melisa</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">05:30 PM</span><span class="text-gray-300 font-normal">HIIT — Jhony</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">06:30 PM</span><span class="text-gray-300 font-normal">Latination — Elvis</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:10 PM</span><span class="text-gray-300 font-normal">Zumba — Arnold</span></li>
                         </ul>
                     </div>
 
                     <!-- MARTES -->
-                    <div class="bg-black border border-white/15 rounded-xl p-4">
-                        <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
-                            <span class="text-sm font-black uppercase tracking-wider text-orange-500">MARTES</span>
+                    <div class="bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-xl p-4">
+                        <div class="flex items-center justify-between border-b border-gray-800/50 pb-2 mb-3">
+                            <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase">MARTES</span>
                             <span class="text-[10px] font-bold uppercase text-gray-400">4 Sesiones</span>
                         </div>
                         <ul class="space-y-2 text-xs">
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:30 AM</span><span class="text-white font-bold">Full Body — Veronica</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">08:30 AM</span><span class="text-white font-bold">Total Fit — Dulwer</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">06:00 PM</span><span class="text-white font-bold">HIIT — Angel</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:10 PM</span><span class="text-white font-bold">Zumba — Romel</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:30 AM</span><span class="text-gray-300 font-normal">Full Body — Veronica</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">08:30 AM</span><span class="text-gray-300 font-normal">Total Fit — Dulwer</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">06:00 PM</span><span class="text-gray-300 font-normal">HIIT — Angel</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:10 PM</span><span class="text-gray-300 font-normal">Zumba — Romel</span></li>
                         </ul>
                     </div>
 
                     <!-- MIÉRCOLES -->
-                    <div class="bg-black border border-white/15 rounded-xl p-4">
-                        <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
-                            <span class="text-sm font-black uppercase tracking-wider text-orange-500">MIÉRCOLES</span>
+                    <div class="bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-xl p-4">
+                        <div class="flex items-center justify-between border-b border-gray-800/50 pb-2 mb-3">
+                            <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase">MIÉRCOLES</span>
                             <span class="text-[10px] font-bold uppercase text-gray-400">4 Sesiones</span>
                         </div>
                         <ul class="space-y-2 text-xs">
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:30 AM</span><span class="text-white font-bold">Baile — Roger</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">08:30 AM</span><span class="text-white font-bold">Zumba — Romel</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">06:10 PM</span><span class="text-white font-bold">Baile — Leo Bravo</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:10 PM</span><span class="text-white font-bold">Zumba — Romel</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:30 AM</span><span class="text-gray-300 font-normal">Baile — Roger</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">08:30 AM</span><span class="text-gray-300 font-normal">Zumba — Romel</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">06:10 PM</span><span class="text-gray-300 font-normal">Baile — Leo Bravo</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:10 PM</span><span class="text-gray-300 font-normal">Zumba — Romel</span></li>
                         </ul>
                     </div>
 
                     <!-- JUEVES -->
-                    <div class="bg-black border border-white/15 rounded-xl p-4">
-                        <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
-                            <span class="text-sm font-black uppercase tracking-wider text-orange-500">JUEVES</span>
+                    <div class="bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-xl p-4">
+                        <div class="flex items-center justify-between border-b border-gray-800/50 pb-2 mb-3">
+                            <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase">JUEVES</span>
                             <span class="text-[10px] font-bold uppercase text-gray-400">4 Sesiones</span>
                         </div>
                         <ul class="space-y-2 text-xs">
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:30 AM</span><span class="text-white font-bold">Total Fit — Dulwer</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">08:30 AM</span><span class="text-white font-bold">Full Body — Melisa</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">06:00 PM</span><span class="text-white font-bold">Baile — Roger</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:10 PM</span><span class="text-white font-bold">Latination — Elvis</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:30 AM</span><span class="text-gray-300 font-normal">Total Fit — Dulwer</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">08:30 AM</span><span class="text-gray-300 font-normal">Full Body — Melisa</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">06:00 PM</span><span class="text-gray-300 font-normal">Baile — Roger</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:10 PM</span><span class="text-gray-300 font-normal">Latination — Elvis</span></li>
                         </ul>
                     </div>
 
                     <!-- VIERNES -->
-                    <div class="bg-black border border-white/15 rounded-xl p-4">
-                        <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
-                            <span class="text-sm font-black uppercase tracking-wider text-orange-500">VIERNES</span>
+                    <div class="bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-xl p-4">
+                        <div class="flex items-center justify-between border-b border-gray-800/50 pb-2 mb-3">
+                            <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase">VIERNES</span>
                             <span class="text-[10px] font-bold uppercase text-gray-400">2 Sesiones</span>
                         </div>
                         <ul class="space-y-2 text-xs">
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:30 AM</span><span class="text-white font-bold">Baile — Leo Bravo</span></li>
-                            <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:10 PM</span><span class="text-white font-bold">Baile — Yuliana</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:30 AM</span><span class="text-gray-300 font-normal">Baile — Leo Bravo</span></li>
+                            <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">07:10 PM</span><span class="text-gray-300 font-normal">Baile — Yuliana</span></li>
                         </ul>
                     </div>
 
                     <!-- SÁBADO -->
-                    <div class="bg-black border border-white/15 rounded-xl p-4 flex flex-col justify-between">
+                    <div class="bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-xl p-4 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
-                                <span class="text-sm font-black uppercase tracking-wider text-orange-500">SÁBADO</span>
+                            <div class="flex items-center justify-between border-b border-gray-800/50 pb-2 mb-3">
+                                <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase">SÁBADO</span>
                                 <span class="text-[10px] font-bold uppercase text-gray-400">Sesión Especial</span>
                             </div>
                             <ul class="space-y-2 text-xs">
-                                <li class="flex justify-between items-center bg-white/5 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">08:30 AM</span><span class="text-white font-bold">Zumba — Romel</span></li>
+                                <li class="flex justify-between items-center bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-md"><span class="font-black text-orange-500">08:30 AM</span><span class="text-gray-300 font-normal">Zumba — Romel</span></li>
                             </ul>
                         </div>
-                        <p class="text-[11px] text-gray-400 mt-3">
+                        <p class="text-[11px] text-gray-300 font-light leading-relaxed mt-3">
                             * Zona Funcional (TRX, Kettlebells, HIIT y Cuerdas) activa de Lunes a Domingo en horario general.
                         </p>
                     </div>
                 </div>
 
                 <div class="pt-2 flex flex-col sm:flex-row gap-3">
-                    <a href="#prueba-gratis" onclick="closeFitUpModal()" class="w-full sm:w-auto flex-1 text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                    <a href="#prueba-gratis" onclick="closeFitUpModal()" class="w-full sm:w-auto flex-1 text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                         Reservar Mi Clase Gratis
                     </a>
-                    <button type="button" onclick="closeFitUpModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                    <button type="button" onclick="closeFitUpModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase hover:border-white hover:text-white transition-all">
                         Cerrar
                     </button>
                 </div>

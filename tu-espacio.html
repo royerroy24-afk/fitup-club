@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitUp Club Cajamarca | Tu Espacio FitUp</title>
 
-    <!-- Google Fonts: Montserrat (400 Normal & 900 Black) -->
+    <!-- Google Fonts: Montserrat (300 Light, 400 Normal & 900 Black) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -104,7 +104,7 @@
             </nav>
 
             <div class="flex items-center gap-3 shrink-0">
-                <a href="index.html#prueba-gratis" class="hidden sm:inline-flex bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)] items-center justify-center whitespace-nowrap">
+                <a href="index.html#prueba-gratis" class="hidden sm:inline-flex bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1 items-center justify-center whitespace-nowrap">
                     Sesión Gratis
                 </a>
                 <button type="button" onclick="toggleMobileMenu()" aria-label="Abrir Menú" class="md:hidden w-11 h-11 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white flex items-center justify-center transition-all">
@@ -113,14 +113,14 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border border-white/10 mx-4 mb-4 p-4 rounded-xl space-y-1">
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border border-gray-800/50 mx-4 mb-4 p-4 rounded-xl space-y-1">
             <a href="index.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Inicio</a>
             <a href="servicios.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Servicios y Horarios</a>
             <a href="entrenadores.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Entrenadores</a>
             <a href="tu-espacio.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-orange-500">Tu Espacio FitUp</a>
             <a href="tips.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Tips FitUp Club</a>
             <div class="pt-3">
-                <a href="index.html#prueba-gratis" class="block w-full text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                <a href="index.html#prueba-gratis" class="block w-full text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                     Solicita tu sesión de prueba gratuita
                 </a>
             </div>
@@ -140,26 +140,27 @@
 
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
                 <div class="max-w-2xl">
+                    <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block mb-2">DIAGNÓSTICO INTERACTIVO</span>
                     <h1 class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
                         <span class="line-mask"><span class="line-reveal">CALCULA TU</span></span>
                         <span class="line-mask"><span class="line-reveal text-orange-500">PUNTO DE PARTIDA</span></span>
                     </h1>
-                    <p class="mt-4 text-gray-300 text-sm sm:text-base font-normal leading-relaxed">
+                    <p class="mt-4 text-gray-300 text-sm sm:text-base font-light leading-relaxed">
                         Ingresa tu edad, peso y altura para calcular tu Índice de Masa Corporal (IMC) y descubrir qué zonas de FitUp Club Cajamarca son ideales para ti.
                     </p>
                 </div>
 
                 <!-- Botones de Simulación Rápida (Estilo Ghost Elegante) -->
-                <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 shrink-0">
-                    <span class="text-[11px] font-black uppercase tracking-wider text-orange-500 block mb-3">Probar perfil de ejemplo:</span>
+                <div class="bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-xl p-5 shrink-0">
+                    <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500 block mb-3">Probar perfil de ejemplo:</span>
                     <div class="grid grid-cols-3 sm:flex sm:flex-wrap gap-2.5">
-                        <button type="button" onclick="cargarEjemplo(22, 51, 172)" class="border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                        <button type="button" onclick="cargarEjemplo(22, 51, 172)" class="border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-5 text-xs tracking-[0.2em] uppercase font-bold hover:border-white hover:text-white transition-all">
                             IMC Bajo
                         </button>
-                        <button type="button" onclick="cargarEjemplo(28, 72, 172)" class="border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                        <button type="button" onclick="cargarEjemplo(28, 72, 172)" class="border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-5 text-xs tracking-[0.2em] uppercase font-bold hover:border-white hover:text-white transition-all">
                             IMC Normal
                         </button>
-                        <button type="button" onclick="cargarEjemplo(35, 92, 170)" class="border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                        <button type="button" onclick="cargarEjemplo(35, 92, 170)" class="border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-5 text-xs tracking-[0.2em] uppercase font-bold hover:border-white hover:text-white transition-all">
                             IMC Alto
                         </button>
                     </div>
@@ -180,10 +181,10 @@
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
 
                 <!-- PANTALLA TEMPORAL DE ANÁLISIS BIOMÉTRICO (2.5 SEGUNDOS CON LOGO ANIMADO PULSE Y FONDO NEGRO PURO) -->
-                <div id="bmi-loading-screen" class="hidden bg-black/95 border border-white/15 backdrop-blur-xl rounded-2xl py-20 px-6 text-center flex flex-col items-center justify-center space-y-6 my-4">
+                <div id="bmi-loading-screen" class="hidden bg-black/95 border border-gray-800/50 backdrop-blur-xl rounded-2xl py-20 px-6 text-center flex flex-col items-center justify-center space-y-6 my-4">
                     <div class="relative flex items-center justify-center">
                         <div class="w-28 h-28 rounded-2xl bg-orange-500/15 animate-ping absolute"></div>
-                        <div class="relative bg-black border border-white/20 rounded-2xl p-6 shadow-2xl">
+                        <div class="relative bg-black border border-gray-800/50 rounded-2xl p-6 shadow-2xl">
                             <img src="imagenes/logo-fitup.png" alt="FitUp Club" class="w-36 sm:w-44 h-auto object-contain animate-pulse">
                         </div>
                     </div>
@@ -191,7 +192,7 @@
                         <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white animate-pulse">
                             Analizando tu biometría...
                         </h3>
-                        <p class="text-xs sm:text-sm text-orange-500 font-bold uppercase tracking-widest">
+                        <p class="text-xs tracking-[0.2em] text-orange-500 font-bold uppercase leading-relaxed">
                             Conectando tu perfil con las zonas y entrenadores de FitUp Club
                         </p>
                     </div>
@@ -204,14 +205,14 @@
                 <div id="bmi-workspace-grid" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
                     <!-- COLUMNA IZQUIERDA: CONTROLES BIOMÉTRICOS -->
-                    <div id="bmi-form-panel" class="lg:col-span-5 bg-white/5 backdrop-blur-md rounded-2xl p-5 sm:p-8 flex flex-col justify-between fade-card">
+                    <div id="bmi-form-panel" class="lg:col-span-5 bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-2xl p-5 sm:p-8 flex flex-col justify-between fade-card">
                         <div>
                             <div class="flex items-center justify-between mb-6 pb-2">
                                 <div>
-                                    <span class="text-xs font-black uppercase text-orange-500 block">Paso 01</span>
-                                    <h2 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white mt-1">Tus Parámetros</h2>
+                                    <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500 block">Paso 01 • Biometría</span>
+                                    <h2 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white mt-1.5">Tus Parámetros</h2>
                                 </div>
-                                <div class="w-11 h-11 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg">
+                                <div class="w-11 h-11 rounded-xl bg-orange-500/10 border border-orange-500 text-orange-500 flex items-center justify-center text-lg">
                                     <i class="fa-solid fa-sliders"></i>
                                 </div>
                             </div>
@@ -219,12 +220,12 @@
                             <form id="bmi-form" onsubmit="calcularEstadoFisico(event)" class="space-y-5">
 
                                 <!-- Edad -->
-                                <div class="bg-black/40 p-5 rounded-xl">
+                                <div class="bg-black/60 border border-gray-800/50 p-5 rounded-xl">
                                     <div class="flex items-center justify-between mb-3">
-                                        <label for="edad" class="text-xs font-black uppercase text-gray-200">
+                                        <label for="edad" class="text-xs tracking-[0.15em] font-bold uppercase text-gray-200">
                                             Edad (Años)
                                         </label>
-                                        <div class="flex items-center gap-1 bg-white/5 rounded-lg px-3 py-1">
+                                        <div class="flex items-center gap-1 bg-white/5 border border-gray-800/50 rounded-lg px-3 py-1">
                                             <input type="number" id="edad" min="12" max="95" value="28" required
                                                    oninput="document.getElementById('edad-range').value = this.value"
                                                    class="w-12 bg-transparent text-right font-black text-lg text-orange-500 focus:outline-none">
@@ -237,12 +238,12 @@
                                 </div>
 
                                 <!-- Peso (kg) -->
-                                <div class="bg-black/40 p-5 rounded-xl">
+                                <div class="bg-black/60 border border-gray-800/50 p-5 rounded-xl">
                                     <div class="flex items-center justify-between mb-3">
-                                        <label for="peso" class="text-xs font-black uppercase text-gray-200">
+                                        <label for="peso" class="text-xs tracking-[0.15em] font-bold uppercase text-gray-200">
                                             Peso Corporal (kg)
                                         </label>
-                                        <div class="flex items-center gap-1 bg-white/5 rounded-lg px-3 py-1">
+                                        <div class="flex items-center gap-1 bg-white/5 border border-gray-800/50 rounded-lg px-3 py-1">
                                             <input type="number" id="peso" step="0.5" min="35" max="180" value="72" required
                                                    oninput="document.getElementById('peso-range').value = this.value"
                                                    class="w-14 bg-transparent text-right font-black text-lg text-orange-500 focus:outline-none">
@@ -255,12 +256,12 @@
                                 </div>
 
                                 <!-- Altura (cm) -->
-                                <div class="bg-black/40 p-5 rounded-xl">
+                                <div class="bg-black/60 border border-gray-800/50 p-5 rounded-xl">
                                     <div class="flex items-center justify-between mb-3">
-                                        <label for="altura" class="text-xs font-black uppercase text-gray-200">
+                                        <label for="altura" class="text-xs tracking-[0.15em] font-bold uppercase text-gray-200">
                                             Estatura (cm)
                                         </label>
-                                        <div class="flex items-center gap-1 bg-white/5 rounded-lg px-3 py-1">
+                                        <div class="flex items-center gap-1 bg-white/5 border border-gray-800/50 rounded-lg px-3 py-1">
                                             <input type="number" id="altura" min="130" max="220" value="172" required
                                                    oninput="document.getElementById('altura-range').value = this.value"
                                                    class="w-14 bg-transparent text-right font-black text-lg text-orange-500 focus:outline-none">
@@ -272,9 +273,9 @@
                                            class="w-full">
                                 </div>
 
-                                <!-- Botón Naranja Tecnológico -->
+                                <!-- Botón Ghost Tech -->
                                 <button type="submit" 
-                                        class="w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)] flex items-center justify-center gap-2">
+                                        class="w-full bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1 flex items-center justify-center gap-2">
                                     <i class="fa-solid fa-calculator"></i>
                                     <span>Calcular mi Estado Físico</span>
                                 </button>
@@ -283,39 +284,39 @@
                     </div>
 
                     <!-- COLUMNA DERECHA: DIAGNÓSTICO Y ZONAS RECOMENDADAS -->
-                    <div class="lg:col-span-7 bg-white/5 backdrop-blur-md rounded-2xl p-5 sm:p-8 flex flex-col justify-between fade-card">
+                    <div class="lg:col-span-7 bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-2xl p-5 sm:p-8 flex flex-col justify-between fade-card">
 
                         <div class="space-y-6">
                             <!-- Cabecera de Resultado -->
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2">
                                 <div>
-                                    <span id="res-rango-badge" class="text-orange-500 text-xs font-black uppercase tracking-widest block mb-1">
+                                    <span id="res-rango-badge" class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500 block mb-1.5">
                                         IMC Normal (18.5 - 24.9)
                                     </span>
-                                    <h3 id="res-titulo" class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">
+                                    <h2 id="res-titulo" class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">
                                         ESTADO FÍSICO EQUILIBRADO
-                                    </h3>
-                                    <p id="res-subtitulo" class="text-xs sm:text-sm text-gray-300 font-normal mt-1">
+                                    </h2>
+                                    <p id="res-subtitulo" class="text-xs sm:text-sm text-gray-300 font-light leading-relaxed mt-1">
                                         Perfil evaluado: 28 años • 72 kg • 172 cm
                                     </p>
                                 </div>
 
                                 <!-- Recuadro del Valor IMC -->
-                                <div class="bg-black/60 rounded-xl px-6 py-4 text-center shrink-0">
-                                    <span class="text-[11px] font-black uppercase text-gray-400 block">Tu IMC</span>
+                                <div class="bg-black/60 border border-gray-800/50 rounded-xl px-6 py-4 text-center shrink-0">
+                                    <span class="text-[11px] tracking-[0.15em] font-bold uppercase text-gray-400 block">Tu IMC</span>
                                     <span id="res-imc-valor" class="text-4xl sm:text-5xl font-black tracking-tighter text-orange-500">24.3</span>
                                 </div>
                             </div>
 
                             <!-- Escala Visual Tecnológica (rounded-xl) -->
-                            <div class="bg-black/60 p-5 rounded-xl">
-                                <div class="flex justify-between text-[11px] font-black uppercase mb-3">
+                            <div class="bg-black/60 border border-gray-800/50 p-5 rounded-xl">
+                                <div class="flex justify-between text-[11px] tracking-[0.15em] font-bold uppercase mb-3">
                                     <span class="text-gray-300">Bajo (&lt;18.5)</span>
                                     <span class="text-orange-500">Normal (18.5 - 24.9)</span>
                                     <span class="text-gray-300">Alto (25+)</span>
                                 </div>
 
-                                <div class="w-full h-3 bg-black rounded-lg overflow-hidden flex">
+                                <div class="w-full h-3 bg-black rounded-lg overflow-hidden flex border border-gray-800/50">
                                     <div class="w-1/3 bg-white/25 h-full"></div>
                                     <div class="w-1/3 bg-orange-500 h-full"></div>
                                     <div class="w-1/3 bg-white/40 h-full"></div>
@@ -327,23 +328,23 @@
                                     </div>
                                 </div>
 
-                                <div class="mt-3 pt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
-                                    <span class="text-gray-400 font-normal">Peso saludable estimado para tu estatura:</span>
+                                <div class="mt-3 pt-3 border-t border-gray-800/50 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                                    <span class="text-gray-300 font-light">Peso saludable estimado para tu estatura:</span>
                                     <span id="res-peso-ideal" class="text-white font-black uppercase">54.7 kg - 73.7 kg</span>
                                 </div>
                             </div>
 
                             <!-- Mensaje Personalizado -->
-                            <div class="bg-black/60 p-5 rounded-xl">
-                                <span class="text-xs font-black uppercase text-orange-500 block mb-2">
+                            <div class="bg-black/60 border border-gray-800/50 p-5 rounded-xl">
+                                <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500 block mb-2">
                                     <i class="fa-solid fa-dumbbell mr-1.5"></i> Recomendación Personalizada FitUp Club:
                                 </span>
-                                <p id="res-mensaje" class="text-gray-200 text-sm sm:text-base font-normal leading-relaxed"></p>
+                                <p id="res-mensaje" class="text-gray-300 text-sm sm:text-base font-light leading-relaxed"></p>
                             </div>
 
                             <!-- Tarjetas de Zonas Recomendadas (1 col en móvil, 3 en PC) -->
                             <div>
-                                <span class="text-xs font-black uppercase text-gray-400 block mb-3">
+                                <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500 block mb-3">
                                     Zonas de FitUp Club que debes priorizar:
                                 </span>
                                 <div id="res-zonas-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -354,10 +355,10 @@
 
                         <!-- Botones Inferiores Tecnológicos y Elegantes -->
                         <div class="mt-8 pt-4 flex flex-col md:flex-row items-center gap-4">
-                            <a href="index.html#prueba-gratis" class="w-full md:w-auto flex-1 text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                            <a href="index.html#prueba-gratis" class="w-full md:w-auto flex-1 text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                                 Solicitar mi Sesión de Prueba Gratuita
                             </a>
-                            <a href="servicios.html" class="w-full md:w-auto text-center border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                            <a href="servicios.html" class="w-full md:w-auto text-center border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-6 text-xs tracking-[0.2em] uppercase font-bold hover:border-white hover:text-white transition-all">
                                 VER EL HORARIO DE CLASES GRUPALES
                             </a>
                         </div>
@@ -374,7 +375,7 @@
     <!-- FOOTER CORPORATIVO COMPLETO CON GOOGLE MAPS Y UBICACIÓN EN TODAS LAS PÁGINAS -->
     <footer class="bg-black text-white py-12 md:py-16 overflow-x-hidden">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-10">
+            <div class="bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-2xl p-6 sm:p-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
 
                     <!-- Columna 1: Marca, Propuesta de Valor y Redes (4 cols) -->
@@ -383,18 +384,18 @@
                             <a href="index.html" class="inline-block">
                                 <img src="imagenes/logo-fitup.png" alt="Logo FitUp Club" class="w-36 sm:w-40 h-auto object-contain" onerror="this.style.display='none'">
                             </a>
-                            <p class="text-gray-300 text-sm font-normal leading-relaxed">
+                            <p class="text-gray-300 text-sm font-light leading-relaxed">
                                 El centro de entrenamiento más moderno y completo de Cajamarca. Más de 1,500 m² con 11 zonas especializadas, sauna seco, cafetería fitness y médico deportivo.
                             </p>
                         </div>
                         <div class="flex flex-wrap items-center gap-2.5">
-                            <a href="https://instagram.com" target="_blank" rel="noopener" class="px-4 h-10 rounded-lg bg-black/40 hover:bg-orange-500 text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-colors">
+                            <a href="https://instagram.com" target="_blank" rel="noopener" class="px-4 h-10 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all">
                                 <i class="fa-brands fa-instagram text-sm"></i> Instagram
                             </a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener" class="px-4 h-10 rounded-lg bg-black/40 hover:bg-orange-500 text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-colors">
+                            <a href="https://facebook.com" target="_blank" rel="noopener" class="px-4 h-10 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all">
                                 <i class="fa-brands fa-facebook-f text-sm"></i> Facebook
                             </a>
-                            <a href="https://tiktok.com" target="_blank" rel="noopener" class="px-4 h-10 rounded-lg bg-black/40 hover:bg-orange-500 text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-colors">
+                            <a href="https://tiktok.com" target="_blank" rel="noopener" class="px-4 h-10 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all">
                                 <i class="fa-brands fa-tiktok text-sm"></i> TikTok
                             </a>
                         </div>
@@ -403,19 +404,19 @@
                     <!-- Columna 2: Horarios, Servicios Clave y Navegación (4 cols) -->
                     <div class="lg:col-span-4 space-y-5">
                         <div>
-                            <span class="text-xs font-black uppercase tracking-widest text-orange-500 block mb-3">
+                            <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500 block mb-3">
                                 <i class="fa-regular fa-clock mr-1.5"></i> Horarios de Atención
                             </span>
                             <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
-                                <li class="flex justify-between bg-black/40 px-3.5 py-2 rounded-lg">
+                                <li class="flex justify-between bg-black/60 border border-gray-800/50 px-3.5 py-2 rounded-lg">
                                     <span>Lunes a Viernes</span>
                                     <span class="font-bold text-white">6:00 AM - 10:00 PM</span>
                                 </li>
-                                <li class="flex justify-between bg-black/40 px-3.5 py-2 rounded-lg">
+                                <li class="flex justify-between bg-black/60 border border-gray-800/50 px-3.5 py-2 rounded-lg">
                                     <span>Sábados</span>
                                     <span class="font-bold text-white">6:00 AM - 6:00 PM</span>
                                 </li>
-                                <li class="flex justify-between bg-black/40 px-3.5 py-2 rounded-lg">
+                                <li class="flex justify-between bg-black/60 border border-gray-800/50 px-3.5 py-2 rounded-lg">
                                     <span>Domingos</span>
                                     <span class="font-bold text-white">8:00 AM - 12:00 PM</span>
                                 </li>
@@ -423,28 +424,28 @@
                         </div>
 
                         <div class="flex flex-wrap gap-2 pt-1">
-                            <a href="index.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/40 px-3 py-1.5 rounded-lg transition-colors">Inicio</a>
-                            <a href="servicios.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/40 px-3 py-1.5 rounded-lg transition-colors">Servicios</a>
-                            <a href="entrenadores.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/40 px-3 py-1.5 rounded-lg transition-colors">Entrenadores</a>
-                            <a href="tu-espacio.html" class="text-xs font-bold uppercase text-orange-500 bg-black/40 px-3 py-1.5 rounded-lg transition-colors">Calculadora IMC</a>
-                            <a href="tips.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/40 px-3 py-1.5 rounded-lg transition-colors">Tips FitUp</a>
+                            <a href="index.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-lg transition-colors">Inicio</a>
+                            <a href="servicios.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-lg transition-colors">Servicios</a>
+                            <a href="entrenadores.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-lg transition-colors">Entrenadores</a>
+                            <a href="tu-espacio.html" class="text-xs font-bold uppercase text-orange-500 bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-lg transition-colors">Calculadora IMC</a>
+                            <a href="tips.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-lg transition-colors">Tips FitUp</a>
                         </div>
                     </div>
 
                     <!-- Columna 3: Google Maps Interactivo y Ubicación Exacta (4 cols) -->
                     <div class="lg:col-span-4 space-y-3">
                         <div class="flex items-center justify-between">
-                            <span class="text-xs font-black uppercase tracking-widest text-orange-500">
+                            <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500">
                                 <i class="fa-solid fa-location-dot mr-1.5"></i> Nuestra Ubicación
                             </span>
                             <span class="text-[11px] font-bold uppercase bg-orange-500/20 text-orange-500 px-2.5 py-0.5 rounded-md">
                                 Parqueo 24h
                             </span>
                         </div>
-                        <p class="text-xs text-gray-300 font-normal">
+                        <p class="text-xs text-gray-300 font-light leading-relaxed">
                             C.C. Open Plaza Cajamarca (Segundo Nivel) — Av. Vía de Evitamiento Norte, Cajamarca.
                         </p>
-                        <div class="rounded-xl overflow-hidden h-44 bg-black/60 relative">
+                        <div class="rounded-xl overflow-hidden h-44 bg-black/60 border border-gray-800/50 relative">
                             <iframe 
                                 src="https://maps.google.com/maps?q=Open%20Plaza%20Cajamarca&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                                 width="100%" 
@@ -456,7 +457,7 @@
                                 title="Mapa FitUp Club Open Plaza Cajamarca">
                             </iframe>
                         </div>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Open+Plaza+Cajamarca" target="_blank" rel="noopener" class="block w-full text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Open+Plaza+Cajamarca" target="_blank" rel="noopener" class="block w-full text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                             <i class="fa-solid fa-diamond-turn-right mr-1.5"></i> Cómo llegar en Google Maps
                         </a>
                     </div>
@@ -464,8 +465,8 @@
                 </div>
 
                 <!-- Línea Inferior de Derechos y Beneficios -->
-                <div class="mt-8 pt-6 bg-black/40 rounded-xl px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left">
-                    <p>© 2026 FitUp Club Cajamarca • Todos los derechos reservados.</p>
+                <div class="mt-8 pt-6 bg-black/60 border border-gray-800/50 rounded-xl px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left">
+                    <p class="text-gray-300 font-light">© 2026 FitUp Club Cajamarca • Todos los derechos reservados.</p>
                     <p class="text-gray-300 font-bold uppercase tracking-wider">
                         <i class="fa-solid fa-shield-heart text-orange-500 mr-1.5"></i> Musculación • Spinning • Funcional • Sauna • Médico Deportivo
                     </p>
@@ -583,12 +584,12 @@
 
             const grid = document.getElementById('res-zonas-grid');
             grid.innerHTML = zonas.map(z => `
-                <div class="bg-black/40 backdrop-blur-md rounded-xl p-4">
-                    <div class="w-9 h-9 rounded-lg bg-orange-500 text-white flex items-center justify-center text-sm mb-3">
+                <div class="bg-black/60 border border-gray-800/50 backdrop-blur-md rounded-xl p-4">
+                    <div class="w-9 h-9 rounded-lg bg-orange-500/10 border border-orange-500 text-orange-500 flex items-center justify-center text-sm mb-3">
                         <i class="fa-solid ${z.icono}"></i>
                     </div>
                     <h5 class="text-sm font-black tracking-tighter uppercase text-white">${z.nombre}</h5>
-                    <p class="text-xs text-gray-300 mt-1 font-normal">${z.detalle}</p>
+                    <p class="text-xs text-gray-300 mt-1.5 font-light leading-relaxed">${z.detalle}</p>
                 </div>
             `).join('');
         }

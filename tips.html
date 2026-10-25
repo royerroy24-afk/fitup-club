@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitUp Club Cajamarca | Tips FitUp Club</title>
 
-    <!-- Google Fonts: Montserrat (400 Normal & 900 Black) -->
+    <!-- Google Fonts: Montserrat (300 Light, 400 Normal & 900 Black) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -88,7 +88,7 @@
             </nav>
 
             <div class="flex items-center gap-3 shrink-0">
-                <a href="index.html#prueba-gratis" class="hidden sm:inline-flex bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)] items-center justify-center whitespace-nowrap">
+                <a href="index.html#prueba-gratis" class="hidden sm:inline-flex bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1 items-center justify-center whitespace-nowrap">
                     Sesión Gratis
                 </a>
                 <button type="button" onclick="toggleMobileMenu()" aria-label="Abrir Menú" class="md:hidden w-11 h-11 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white flex items-center justify-center transition-all">
@@ -97,14 +97,14 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border border-white/10 mx-4 mb-4 p-4 rounded-xl space-y-1">
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border border-gray-800/50 mx-4 mb-4 p-4 rounded-xl space-y-1">
             <a href="index.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Inicio</a>
             <a href="servicios.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Servicios y Horarios</a>
             <a href="entrenadores.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Entrenadores</a>
             <a href="tu-espacio.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Tu Espacio FitUp</a>
             <a href="tips.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-orange-500">Tips FitUp</a>
             <div class="pt-3">
-                <a href="index.html#prueba-gratis" class="block w-full text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                <a href="index.html#prueba-gratis" class="block w-full text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                     Solicita tu sesión de prueba
                 </a>
             </div>
@@ -126,11 +126,12 @@
 
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
                 <div class="max-w-3xl">
+                    <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block mb-2">CIENCIA & BIENESTAR INTEGRAL</span>
                     <h1 class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
                         <span class="line-mask"><span class="line-reveal">TIPS</span></span>
                         <span class="line-mask"><span class="line-reveal text-orange-500">FITUP CLUB</span></span>
                     </h1>
-                    <p class="mt-4 text-gray-300 text-sm sm:text-base md:text-lg font-normal leading-relaxed">
+                    <p class="mt-4 text-gray-300 text-sm sm:text-base md:text-lg font-light leading-relaxed">
                         Ciencia aplicada a tu salud física y emocional. Explora nuestros 3 pilares fundamentales recomendados por entrenadores y médicos deportivos, e interactúa con nuestra calculadora de hidratación clínica.
                     </p>
                 </div>
@@ -146,7 +147,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
                     <!-- Tip 1: Entrenamiento Inteligente -->
-                    <article onclick="openTipModal('entrenamiento')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-all duration-300 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
+                    <article onclick="openTipModal('entrenamiento')" class="cursor-pointer group bg-white/5 hover:bg-white/10 border border-gray-800/50 transition-all duration-300 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
                         <div>
                             <div class="img-reveal-wrap rounded-xl h-56 sm:h-60 relative">
                                 <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" 
@@ -154,26 +155,26 @@
                                      class="img-reveal w-full h-full object-cover">
                             </div>
                             <div class="pt-5 pb-4">
-                                <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Biomecánica & Salud Mental</span>
-                                <h2 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Entrenamiento Inteligente</h2>
-                                <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
+                                <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block">Biomecánica & Salud Mental</span>
+                                <h2 class="text-2xl font-black tracking-tighter uppercase text-white mt-1.5 group-hover:text-orange-500 transition-colors">Entrenamiento Inteligente</h2>
+                                <p class="text-gray-300 text-sm mt-3 font-light leading-relaxed">
                                     Prioriza la ejecución biomecánica correcta, el control del tempo y la gestión del descanso activo y pasivo sobre el peso excesivo para estimular mayor hipertrofia y proteger tus articulaciones.
                                 </p>
                             </div>
                         </div>
                         <div class="space-y-3 pt-2">
-                            <div class="bg-black/60 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
-                                <span>Sala de Musculación & Funcional</span>
+                            <div class="bg-black/60 border border-gray-800/50 rounded-lg px-4 py-3 flex items-center justify-between text-xs tracking-[0.2em] font-bold uppercase text-orange-500">
+                                <span>Sala de Musculación</span>
                                 <i class="fa-solid fa-dumbbell"></i>
                             </div>
-                            <button type="button" class="w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                            <button type="button" class="w-full bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                                 Abrir Guía Profunda
                             </button>
                         </div>
                     </article>
 
                     <!-- Tip 2: Suplementación Estratégica -->
-                    <article onclick="openTipModal('suplementacion')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-all duration-300 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
+                    <article onclick="openTipModal('suplementacion')" class="cursor-pointer group bg-white/5 hover:bg-white/10 border border-gray-800/50 transition-all duration-300 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
                         <div>
                             <div class="img-reveal-wrap rounded-xl h-56 sm:h-60 relative">
                                 <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" 
@@ -181,26 +182,26 @@
                                      class="img-reveal w-full h-full object-cover">
                             </div>
                             <div class="pt-5 pb-4">
-                                <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Regeneración & Cognición</span>
-                                <h2 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Suplementación Estratégica</h2>
-                                <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
+                                <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block">Regeneración & Cognición</span>
+                                <h2 class="text-2xl font-black tracking-tighter uppercase text-white mt-1.5 group-hover:text-orange-500 transition-colors">Suplementación Estratégica</h2>
+                                <p class="text-gray-300 text-sm mt-3 font-light leading-relaxed">
                                     Descubre cómo la Proteína Whey acelera la regeneración fibrilar post-entreno y por qué la Creatina Monohidratada es vital para tu potencia explosiva y función cognitiva diaria.
                                 </p>
                             </div>
                         </div>
                         <div class="space-y-3 pt-2">
-                            <div class="bg-black/60 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
-                                <span>Cafetería Fitness & Nutrición</span>
+                            <div class="bg-black/60 border border-gray-800/50 rounded-lg px-4 py-3 flex items-center justify-between text-xs tracking-[0.2em] font-bold uppercase text-orange-500">
+                                <span>Cafetería Fitness</span>
                                 <i class="fa-solid fa-mug-hot"></i>
                             </div>
-                            <button type="button" class="w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                            <button type="button" class="w-full bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                                 Abrir Guía Profunda
                             </button>
                         </div>
                     </article>
 
                     <!-- Tip 3: Hidratación y Recuperación -->
-                    <article onclick="openTipModal('hidratacion')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-all duration-300 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
+                    <article onclick="openTipModal('hidratacion')" class="cursor-pointer group bg-white/5 hover:bg-white/10 border border-gray-800/50 transition-all duration-300 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
                         <div>
                             <div class="img-reveal-wrap rounded-xl h-56 sm:h-60 relative">
                                 <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" 
@@ -208,19 +209,19 @@
                                      class="img-reveal w-full h-full object-cover">
                             </div>
                             <div class="pt-5 pb-4">
-                                <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Calculadora Clínica Integrada</span>
-                                <h2 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Hidratación y Recuperación</h2>
-                                <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
+                                <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block">Calculadora Clínica</span>
+                                <h2 class="text-2xl font-black tracking-tighter uppercase text-white mt-1.5 group-hover:text-orange-500 transition-colors">Hidratación y Recuperación</h2>
+                                <p class="text-gray-300 text-sm mt-3 font-light leading-relaxed">
                                     En la altitud de Cajamarca, reponer agua y electrolitos evita la fatiga prematura. Usa nuestra calculadora médica integrada para conocer tus litros exactos de agua según tu peso, talla y edad.
                                 </p>
                             </div>
                         </div>
                         <div class="space-y-3 pt-2">
-                            <div class="bg-black/60 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
-                                <span>Calculadora de Agua & Sauna</span>
+                            <div class="bg-black/60 border border-gray-800/50 rounded-lg px-4 py-3 flex items-center justify-between text-xs tracking-[0.2em] font-bold uppercase text-orange-500">
+                                <span>Calculadora & Sauna</span>
                                 <i class="fa-solid fa-droplet"></i>
                             </div>
-                            <button type="button" class="w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                            <button type="button" class="w-full bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                                 Calcular Mis Litros de Agua
                             </button>
                         </div>
@@ -229,20 +230,21 @@
                 </div>
 
                 <!-- CTA Inferior hacia Calculadora IMC y Horarios -->
-                <div class="mt-16 bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div class="mt-16 bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                     <div>
-                        <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">
+                        <span class="text-xs tracking-[0.2em] font-bold text-orange-500 uppercase block mb-1">DIAGNÓSTICO INTERACTIVO</span>
+                        <h2 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">
                             ¿LISTO PARA APLICAR ESTOS PILARES EN FITUP CLUB?
-                        </h3>
-                        <p class="text-gray-300 text-sm mt-2">
+                        </h2>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mt-2">
                             Conoce tu diagnóstico biométrico en Tu Espacio FitUp o explora nuestras 11 zonas de entrenamiento.
                         </p>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
-                        <a href="tu-espacio.html" class="w-full sm:w-auto text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                        <a href="tu-espacio.html" class="w-full sm:w-auto text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                             Calcular IMC
                         </a>
-                        <a href="servicios.html" class="w-full sm:w-auto text-center border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                        <a href="servicios.html" class="w-full sm:w-auto text-center border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-6 text-xs tracking-[0.2em] uppercase font-bold hover:border-white hover:text-white transition-all">
                             Ver Servicios y Horarios
                         </a>
                     </div>
@@ -256,7 +258,7 @@
     <!-- FOOTER CORPORATIVO COMPLETO CON GOOGLE MAPS Y UBICACIÓN -->
     <footer class="bg-black text-white py-12 md:py-16 overflow-x-hidden">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-10">
+            <div class="bg-white/5 border border-gray-800/50 backdrop-blur-md rounded-2xl p-6 sm:p-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
 
                     <div class="lg:col-span-4 flex flex-col justify-between space-y-5">
@@ -264,7 +266,7 @@
                             <a href="index.html" class="inline-block">
                                 <img src="imagenes/logo-fitup.png" alt="Logo FitUp Club" class="w-36 sm:w-40 h-auto object-contain" onerror="this.style.display='none'">
                             </a>
-                            <p class="text-gray-300 text-sm font-normal leading-relaxed">
+                            <p class="text-gray-300 text-sm font-light leading-relaxed">
                                 El centro de entrenamiento más moderno y completo de Cajamarca. Más de 1,500 m² con 11 zonas especializadas, sauna seco, cafetería fitness y médico deportivo.
                             </p>
                         </div>
@@ -283,19 +285,19 @@
 
                     <div class="lg:col-span-4 space-y-5">
                         <div>
-                            <span class="text-xs font-black uppercase tracking-widest text-orange-500 block mb-3">
+                            <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500 block mb-3">
                                 <i class="fa-regular fa-clock mr-1.5"></i> Horarios de Atención
                             </span>
                             <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
-                                <li class="flex justify-between bg-black/60 px-3.5 py-2 rounded-lg">
+                                <li class="flex justify-between bg-black/60 border border-gray-800/50 px-3.5 py-2 rounded-lg">
                                     <span>Lunes a Viernes</span>
                                     <span class="font-bold text-white">6:00 AM - 10:00 PM</span>
                                 </li>
-                                <li class="flex justify-between bg-black/60 px-3.5 py-2 rounded-lg">
+                                <li class="flex justify-between bg-black/60 border border-gray-800/50 px-3.5 py-2 rounded-lg">
                                     <span>Sábados</span>
                                     <span class="font-bold text-white">6:00 AM - 6:00 PM</span>
                                 </li>
-                                <li class="flex justify-between bg-black/60 px-3.5 py-2 rounded-lg">
+                                <li class="flex justify-between bg-black/60 border border-gray-800/50 px-3.5 py-2 rounded-lg">
                                     <span>Domingos</span>
                                     <span class="font-bold text-white">8:00 AM - 12:00 PM</span>
                                 </li>
@@ -303,27 +305,27 @@
                         </div>
 
                         <div class="flex flex-wrap gap-2 pt-1">
-                            <a href="index.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 px-3 py-1.5 rounded-lg transition-colors">Inicio</a>
-                            <a href="servicios.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 px-3 py-1.5 rounded-lg transition-colors">Servicios</a>
-                            <a href="entrenadores.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 px-3 py-1.5 rounded-lg transition-colors">Entrenadores</a>
-                            <a href="tu-espacio.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 px-3 py-1.5 rounded-lg transition-colors">Calculadora IMC</a>
-                            <a href="tips.html" class="text-xs font-bold uppercase text-orange-500 bg-black/60 px-3 py-1.5 rounded-lg transition-colors">Tips FitUp</a>
+                            <a href="index.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-lg transition-colors">Inicio</a>
+                            <a href="servicios.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-lg transition-colors">Servicios</a>
+                            <a href="entrenadores.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-lg transition-colors">Entrenadores</a>
+                            <a href="tu-espacio.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-lg transition-colors">Calculadora IMC</a>
+                            <a href="tips.html" class="text-xs font-bold uppercase text-orange-500 bg-black/60 border border-gray-800/50 px-3 py-1.5 rounded-lg transition-colors">Tips FitUp</a>
                         </div>
                     </div>
 
                     <div class="lg:col-span-4 space-y-3">
                         <div class="flex items-center justify-between">
-                            <span class="text-xs font-black uppercase tracking-widest text-orange-500">
+                            <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500">
                                 <i class="fa-solid fa-location-dot mr-1.5"></i> Nuestra Ubicación
                             </span>
                             <span class="text-[11px] font-bold uppercase bg-orange-500/20 text-orange-500 px-2.5 py-0.5 rounded-md">
                                 Parqueo 24h
                             </span>
                         </div>
-                        <p class="text-xs text-gray-300 font-normal">
+                        <p class="text-xs text-gray-300 font-light leading-relaxed">
                             C.C. Open Plaza Cajamarca (Segundo Nivel) — Av. Vía de Evitamiento Norte, Cajamarca.
                         </p>
-                        <div class="rounded-xl overflow-hidden h-44 bg-black/60 relative">
+                        <div class="rounded-xl overflow-hidden h-44 bg-black/60 border border-gray-800/50 relative">
                             <iframe 
                                 src="https://maps.google.com/maps?q=Open%20Plaza%20Cajamarca&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                                 width="100%" 
@@ -335,15 +337,15 @@
                                 title="Mapa FitUp Club Open Plaza Cajamarca">
                             </iframe>
                         </div>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Open+Plaza+Cajamarca" target="_blank" rel="noopener" class="block w-full text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Open+Plaza+Cajamarca" target="_blank" rel="noopener" class="block w-full text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                             <i class="fa-solid fa-diamond-turn-right mr-1.5"></i> Cómo llegar en Google Maps
                         </a>
                     </div>
 
                 </div>
 
-                <div class="mt-8 pt-6 bg-black/60 rounded-xl px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left">
-                    <p>© 2026 FitUp Club Cajamarca • Todos los derechos reservados.</p>
+                <div class="mt-8 pt-6 bg-black/60 border border-gray-800/50 rounded-xl px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left">
+                    <p class="text-gray-300 font-light">© 2026 FitUp Club Cajamarca • Todos los derechos reservados.</p>
                     <p class="text-gray-300 font-bold uppercase tracking-wider">
                         <i class="fa-solid fa-shield-heart text-orange-500 mr-1.5"></i> Musculación • Spinning • Funcional • Sauna • Médico Deportivo
                     </p>
@@ -356,7 +358,7 @@
          SISTEMA DE MODALES DE TIPS FITUP (NEGRO PURO + ANIMACIÓN FADE/SCALE)
     ====================================================== -->
     <div id="tips-modal-backdrop" onclick="if(event.target === this) closeTipModal()" class="hidden fixed inset-0 z-[100] bg-black/85 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-        <div id="tips-modal-box" class="relative w-full max-w-2xl bg-black/95 border border-white/15 rounded-2xl p-6 sm:p-8 text-white shadow-2xl my-auto max-h-[90vh] overflow-y-auto transform transition-all duration-500 scale-95 opacity-0">
+        <div id="tips-modal-box" class="relative w-full max-w-2xl bg-black/95 border border-gray-800/50 rounded-2xl p-6 sm:p-8 text-white shadow-2xl my-auto max-h-[90vh] overflow-y-auto transform transition-all duration-500 scale-95 opacity-0">
             <!-- Botón X Ghost -->
             <button type="button" onclick="closeTipModal()" aria-label="Cerrar Modal" class="absolute top-4 right-4 w-10 h-10 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white flex items-center justify-center transition-all z-10">
                 <i class="fa-solid fa-xmark text-lg"></i>
@@ -367,37 +369,37 @@
                 <div class="rounded-xl overflow-hidden h-52 sm:h-60 relative">
                     <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=85" alt="Entrenamiento Inteligente" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
-                    <span class="absolute bottom-3 left-4 text-xs font-black uppercase tracking-widest text-orange-500">Salud Física & Emocional • FitUp Club</span>
+                    <span class="absolute bottom-3 left-4 text-xs tracking-[0.2em] font-bold uppercase text-orange-500">Salud Física & Emocional • FitUp Club</span>
                 </div>
-                <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">Entrenamiento Inteligente</h3>
-                <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                <h2 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">Entrenamiento Inteligente</h2>
+                <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
                     Entrenar con inteligencia significa estimular el músculo con precisión quirúrgica en lugar de mover peso por ego. Cuando dominas la técnica, tu cuerpo progresa sin dolor y tu mente libera tensiones acumuladas.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
-                        <span class="text-xs font-black uppercase text-orange-500 block mb-1">1. Descanso Activo vs Pasivo</span>
-                        <p class="text-xs text-gray-300 leading-relaxed">
+                    <div class="bg-white/5 border border-gray-800/50 rounded-xl p-4">
+                        <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500 block mb-2">1. Descanso Activo vs Pasivo</span>
+                        <p class="text-xs text-gray-300 font-light leading-relaxed">
                             El <strong>descanso pasivo</strong> (dormir 7-8h y pausas entre series) repara fibras y regula el cortisol; el <strong>descanso activo</strong> (movilidad suave, caminata o sauna) oxigena el tejido y acelera la recuperación muscular.
                         </p>
                     </div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
-                        <span class="text-xs font-black uppercase text-orange-500 block mb-1">2. Control del Tempo</span>
-                        <p class="text-xs text-gray-300 leading-relaxed">
+                    <div class="bg-white/5 border border-gray-800/50 rounded-xl p-4">
+                        <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500 block mb-2">2. Control del Tempo</span>
+                        <p class="text-xs text-gray-300 font-light leading-relaxed">
                             Aplicar una fase excéntrica controlada (2 a 3 segundos al bajar la carga) multiplica el tiempo bajo tensión, recluta más unidades motoras y genera ganancias reales de fuerza e hipertrofia.
                         </p>
                     </div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
-                        <span class="text-xs font-black uppercase text-orange-500 block mb-1">3. Salud Articular y Mental</span>
-                        <p class="text-xs text-gray-300 leading-relaxed">
+                    <div class="bg-white/5 border border-gray-800/50 rounded-xl p-4">
+                        <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500 block mb-2">3. Salud Articular y Mental</span>
+                        <p class="text-xs text-gray-300 font-light leading-relaxed">
                             La ejecución biomecánica perfecta protege tendones, rodillas y columna, mientras el enfoque pleno en cada repetición actúa como meditación activa que despeja la ansiedad diaria.
                         </p>
                     </div>
                 </div>
                 <div class="pt-2 flex flex-col sm:flex-row gap-3">
-                    <a href="entrenadores.html" class="w-full sm:w-auto flex-1 text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                    <a href="entrenadores.html" class="w-full sm:w-auto flex-1 text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                         Entrenar con Nuestro Staff
                     </a>
-                    <button type="button" onclick="closeTipModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                    <button type="button" onclick="closeTipModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-6 text-xs tracking-[0.2em] uppercase font-bold hover:border-white hover:text-white transition-all">
                         Cerrar
                     </button>
                 </div>
@@ -408,37 +410,37 @@
                 <div class="rounded-xl overflow-hidden h-52 sm:h-60 relative">
                     <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=85" alt="Suplementación Estratégica" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
-                    <span class="absolute bottom-3 left-4 text-xs font-black uppercase tracking-widest text-orange-500">Nutrición & Bioenergía • FitUp Club</span>
+                    <span class="absolute bottom-3 left-4 text-xs tracking-[0.2em] font-bold uppercase text-orange-500">Nutrición & Bioenergía • FitUp Club</span>
                 </div>
-                <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">Suplementación Estratégica</h3>
-                <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                <h2 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">Suplementación Estratégica</h2>
+                <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
                     La suplementación con respaldo científico no reemplaza tu alimentación: cierra brechas nutricionales con precisión para que tu cuerpo recupere más rápido y tu mente rinda al máximo todo el día.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-5">
-                        <div class="flex items-center gap-2 text-orange-500 font-black uppercase text-xs mb-2">
+                    <div class="bg-white/5 border border-gray-800/50 rounded-xl p-5">
+                        <div class="flex items-center gap-2 text-orange-500 font-bold tracking-[0.2em] uppercase text-xs mb-2">
                             <i class="fa-solid fa-bolt"></i>
-                            <span>Proteína Whey (Suero de Leche)</span>
+                            <span>Proteína Whey</span>
                         </div>
-                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                        <p class="text-xs sm:text-sm text-gray-300 font-light leading-relaxed">
                             Su biodisponibilidad superior y alto aporte de <strong>Leucina</strong> activan de inmediato la síntesis proteica post-entreno. Acelera la regeneración de microfibras musculares, reduce el dolor tardío y preserva tu masa magra.
                         </p>
                     </div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-5">
-                        <div class="flex items-center gap-2 text-orange-500 font-black uppercase text-xs mb-2">
+                    <div class="bg-white/5 border border-gray-800/50 rounded-xl p-5">
+                        <div class="flex items-center gap-2 text-orange-500 font-bold tracking-[0.2em] uppercase text-xs mb-2">
                             <i class="fa-solid fa-brain"></i>
                             <span>Creatina Monohidratada</span>
                         </div>
-                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                        <p class="text-xs sm:text-sm text-gray-300 font-light leading-relaxed">
                             Satura tus reservas de fosfocreatina (ATP) para darte <strong>potencia explosiva</strong> en series pesadas y sprints. Además, a nivel cerebral optimiza la bioenergética neuronal, mejorando la memoria, el enfoque mental y reduciendo la fatiga cognitiva.
                         </p>
                     </div>
                 </div>
                 <div class="pt-2 flex flex-col sm:flex-row gap-3">
-                    <a href="servicios.html" class="w-full sm:w-auto flex-1 text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                    <a href="servicios.html" class="w-full sm:w-auto flex-1 text-center bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                         Conocer Cafetería Fitness
                     </a>
-                    <button type="button" onclick="closeTipModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                    <button type="button" onclick="closeTipModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-6 text-xs tracking-[0.2em] uppercase font-bold hover:border-white hover:text-white transition-all">
                         Cerrar
                     </button>
                 </div>
@@ -447,17 +449,17 @@
             <!-- 3. MODAL: HIDRATACIÓN Y RECUPERACIÓN (CON CALCULADORA INTEGRADA) -->
             <div id="modal-tip-hidratacion" class="tip-modal-item hidden space-y-5">
                 <div>
-                    <span class="text-xs font-black uppercase tracking-widest text-orange-500 block">Hidratación Inteligente • Altitud Cajamarca (2,750 m s.n.m.)</span>
-                    <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white mt-1">Hidratación y Calculadora Diaria</h3>
-                    <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                    <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500 block">Hidratación Inteligente • Altitud Cajamarca (2,750 m s.n.m.)</span>
+                    <h2 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white mt-1">Hidratación y Calculadora Diaria</h2>
+                    <p class="text-gray-300 text-xs sm:text-sm mt-2 font-light leading-relaxed">
                         Una deshidratación de apenas el 2% reduce tu fuerza muscular hasta un 15% y eleva la fatiga mental. Hidrátate <strong>antes</strong> (400 ml 1h previa), <strong>durante</strong> (pequeños sorbos cada 15 min) y <strong>después</strong> de entrenar para lubricar articulaciones y estabilizar tu temperatura corporal.
                     </p>
                 </div>
 
-                <!-- Mini-Calculadora Interactiva de Litros de Agua (Fondo Negro Puro) -->
-                <div class="bg-white/5 border border-white/15 rounded-xl p-5 space-y-4">
+                <!-- Mini-Calculadora Interactiva de Litros de Agua (Panel de Control High-Tech) -->
+                <div class="bg-white/5 border border-gray-800/50 rounded-xl p-5 space-y-4">
                     <div class="flex items-center justify-between">
-                        <span class="text-xs font-black uppercase tracking-wider text-orange-500">
+                        <span class="text-xs tracking-[0.2em] font-bold uppercase text-orange-500">
                             <i class="fa-solid fa-droplet mr-1.5"></i> Calculadora Médica de Hidratación
                         </span>
                         <span class="text-[11px] text-gray-400 font-bold uppercase">Fórmula Clínica + Ajuste Entreno</span>
@@ -465,49 +467,49 @@
 
                     <form onsubmit="calcularAguaModal(event)" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                         <div>
-                            <label for="agua-peso" class="block text-[11px] font-black uppercase text-gray-300 mb-1">Peso (kg)</label>
+                            <label for="agua-peso" class="block text-[11px] font-bold tracking-[0.15em] uppercase text-gray-300 mb-1">Peso (kg)</label>
                             <input type="number" id="agua-peso" min="30" max="200" step="0.5" value="70" required
-                                   class="w-full bg-black border border-white/20 rounded-xl px-3.5 py-2.5 text-white font-black text-sm focus:outline-none focus:border-orange-500">
+                                   class="w-full bg-black border border-gray-800/50 rounded-xl px-3.5 py-2.5 text-white font-black text-sm focus:outline-none focus:border-orange-500">
                         </div>
                         <div>
-                            <label for="agua-talla" class="block text-[11px] font-black uppercase text-gray-300 mb-1">Talla (cm)</label>
+                            <label for="agua-talla" class="block text-[11px] font-bold tracking-[0.15em] uppercase text-gray-300 mb-1">Talla (cm)</label>
                             <input type="number" id="agua-talla" min="120" max="230" value="170" required
-                                   class="w-full bg-black border border-white/20 rounded-xl px-3.5 py-2.5 text-white font-black text-sm focus:outline-none focus:border-orange-500">
+                                   class="w-full bg-black border border-gray-800/50 rounded-xl px-3.5 py-2.5 text-white font-black text-sm focus:outline-none focus:border-orange-500">
                         </div>
                         <div>
-                            <label for="agua-edad" class="block text-[11px] font-black uppercase text-gray-300 mb-1">Edad (años)</label>
+                            <label for="agua-edad" class="block text-[11px] font-bold tracking-[0.15em] uppercase text-gray-300 mb-1">Edad (años)</label>
                             <input type="number" id="agua-edad" min="10" max="99" value="28" required
-                                   class="w-full bg-black border border-white/20 rounded-xl px-3.5 py-2.5 text-white font-black text-sm focus:outline-none focus:border-orange-500">
+                                   class="w-full bg-black border border-gray-800/50 rounded-xl px-3.5 py-2.5 text-white font-black text-sm focus:outline-none focus:border-orange-500">
                         </div>
                         <div class="sm:col-span-3 pt-1">
-                            <button type="submit" class="w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                            <button type="submit" class="w-full bg-orange-500/10 border border-orange-500 text-orange-500 rounded-md py-2.5 px-6 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(255,102,0,0.4)] hover:-translate-y-1">
                                 Calcular Mis Litros de Agua Exactos
                             </button>
                         </div>
                     </form>
 
                     <!-- Resultado Dinámico de Hidratación -->
-                    <div id="agua-resultado-box" class="bg-black border border-white/10 rounded-xl p-4 space-y-3">
+                    <div id="agua-resultado-box" class="bg-black/60 backdrop-blur-md border border-gray-800/50 rounded-xl p-4 space-y-3">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-center">
-                            <div class="bg-white/5 rounded-xl p-3 border border-white/10">
-                                <span class="text-[10px] font-black uppercase text-gray-400 block">Día de Descanso (Sin Entrenar)</span>
+                            <div class="bg-white/5 rounded-xl p-3 border border-gray-800/50">
+                                <span class="text-[10px] tracking-[0.15em] font-bold uppercase text-gray-400 block">Día de Descanso (Sin Entrenar)</span>
                                 <span id="agua-litros-base" class="text-2xl sm:text-3xl font-black text-white tracking-tighter">2.45 L / día</span>
                                 <span id="agua-vasos-base" class="text-[11px] text-gray-400 block mt-0.5">≈ 10 vasos de 250 ml</span>
                             </div>
                             <div class="bg-orange-500/10 rounded-xl p-3 border border-orange-500/40">
-                                <span class="text-[10px] font-black uppercase text-orange-500 block">Día de Entreno en FitUp Club</span>
+                                <span class="text-[10px] tracking-[0.15em] font-bold uppercase text-orange-500 block">Día de Entreno en FitUp Club</span>
                                 <span id="agua-litros-entreno" class="text-2xl sm:text-3xl font-black text-orange-500 tracking-tighter">3.15 L / día</span>
                                 <span id="agua-vasos-entreno" class="text-[11px] text-gray-300 block mt-0.5">Incluye +0.7 L por sudoración y altitud</span>
                             </div>
                         </div>
-                        <p id="agua-nota-medica" class="text-xs text-gray-300 text-center leading-relaxed">
+                        <p id="agua-nota-medica" class="text-xs text-gray-300 font-light text-center leading-relaxed">
                             Cálculo basado en requerimiento hídrico metabólico por kg de peso, superficie corporal y ajuste para entrenamiento de fuerza/cardio.
                         </p>
                     </div>
                 </div>
 
                 <div class="flex justify-end">
-                    <button type="button" onclick="closeTipModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                    <button type="button" onclick="closeTipModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md py-2.5 px-6 text-xs tracking-[0.2em] uppercase font-bold hover:border-white hover:text-white transition-all">
                         Cerrar
                     </button>
                 </div>
