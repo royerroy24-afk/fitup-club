@@ -149,86 +149,98 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
                     <!-- Coach 1 -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                    <div onclick="openCoachModal('carlos')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
                         <div>
                             <div class="img-reveal-wrap rounded-xl h-72 sm:h-80">
                                 <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=800&q=80" alt="Carlos Mendoza" class="img-reveal w-full h-full object-cover object-top">
                             </div>
                             <div class="pt-5 pb-4 px-1">
-                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white">Carlos Mendoza</h3>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white group-hover:text-orange-500 transition-colors">Carlos Mendoza</h3>
                                 <p class="text-orange-500 text-xs font-black uppercase tracking-wider mt-1">Hipertrofia & Fuerza</p>
                                 <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
                                     Especialista en biomecánica aplicada, levantamiento de pesas y recomposición corporal avanzada.
                                 </p>
                             </div>
                         </div>
-                        <div class="pt-2">
-                            <span class="block w-full bg-black/40 text-gray-200 text-xs font-black uppercase py-3 rounded-lg text-center">
+                        <div class="pt-2 space-y-2">
+                            <span class="block w-full bg-black/40 text-gray-200 text-xs font-black uppercase py-2.5 rounded-lg text-center">
                                 Sala de Musculación
                             </span>
+                            <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                                Ver Perfil Completo
+                            </button>
                         </div>
                     </div>
 
                     <!-- Coach 2 -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                    <div onclick="openCoachModal('valentina')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
                         <div>
                             <div class="img-reveal-wrap rounded-xl h-72 sm:h-80">
                                 <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=800&q=80" alt="Valentina Ríos" class="img-reveal w-full h-full object-cover object-top">
                             </div>
                             <div class="pt-5 pb-4 px-1">
-                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white">Valentina Ríos</h3>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white group-hover:text-orange-500 transition-colors">Valentina Ríos</h3>
                                 <p class="text-orange-500 text-xs font-black uppercase tracking-wider mt-1">Tabata & Tren Inferior</p>
                                 <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
                                     Certificada en acondicionamiento metabólico interválico, resistencia cardiovascular y tonificación.
                                 </p>
                             </div>
                         </div>
-                        <div class="pt-2">
-                            <span class="block w-full bg-black/40 text-gray-200 text-xs font-black uppercase py-3 rounded-lg text-center">
+                        <div class="pt-2 space-y-2">
+                            <span class="block w-full bg-black/40 text-gray-200 text-xs font-black uppercase py-2.5 rounded-lg text-center">
                                 Funcional & Clases
                             </span>
+                            <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                                Ver Perfil Completo
+                            </button>
                         </div>
                     </div>
 
                     <!-- Coach 3 -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                    <div onclick="openCoachModal('andrea')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
                         <div>
                             <div class="img-reveal-wrap rounded-xl h-72 sm:h-80">
                                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Andrea Salazar" class="img-reveal w-full h-full object-cover object-top">
                             </div>
                             <div class="pt-5 pb-4 px-1">
-                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white">Andrea Salazar</h3>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white group-hover:text-orange-500 transition-colors">Andrea Salazar</h3>
                                 <p class="text-orange-500 text-xs font-black uppercase tracking-wider mt-1">Indoor Cycling & Zumba</p>
                                 <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
                                     Instructora líder en ciclismo indoor y baile fitness, enfocada en sesiones dinámicas de alta energía.
                                 </p>
                             </div>
                         </div>
-                        <div class="pt-2">
-                            <span class="block w-full bg-black/40 text-gray-200 text-xs font-black uppercase py-3 rounded-lg text-center">
+                        <div class="pt-2 space-y-2">
+                            <span class="block w-full bg-black/40 text-gray-200 text-xs font-black uppercase py-2.5 rounded-lg text-center">
                                 Zona Spinning
                             </span>
+                            <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                                Ver Perfil Completo
+                            </button>
                         </div>
                     </div>
 
                     <!-- Coach 4 -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                    <div onclick="openCoachModal('diego')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
                         <div>
                             <div class="img-reveal-wrap rounded-xl h-72 sm:h-80">
                                 <img src="https://images.unsplash.com/photo-1583454155184-870a1f63aebc?auto=format&fit=crop&w=800&q=80" alt="Dr. Diego Paredes" class="img-reveal w-full h-full object-cover object-top">
                             </div>
                             <div class="pt-5 pb-4 px-1">
-                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white">Dr. Diego Paredes</h3>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white group-hover:text-orange-500 transition-colors">Dr. Diego Paredes</h3>
                                 <p class="text-orange-500 text-xs font-black uppercase tracking-wider mt-1">Médico Deportivo</p>
                                 <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
                                     Encargado del diagnóstico físico inicial, control antropométrico y prevención de lesiones.
                                 </p>
                             </div>
                         </div>
-                        <div class="pt-2">
-                            <span class="block w-full bg-black/40 text-gray-200 text-xs font-black uppercase py-3 rounded-lg text-center">
+                        <div class="pt-2 space-y-2">
+                            <span class="block w-full bg-black/40 text-gray-200 text-xs font-black uppercase py-2.5 rounded-lg text-center">
                                 Consultorio Médico
                             </span>
+                            <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                                Ver Perfil Completo
+                            </button>
                         </div>
                     </div>
 
@@ -357,6 +369,45 @@
         </div>
     </footer>
 
+    <!-- =====================================================
+         MODAL INTERACTIVO DE ENTRENADORES (GLASSMORPHISM DEEP-DIVE)
+    ====================================================== -->
+    <div id="coach-modal-backdrop" onclick="if(event.target === this) closeCoachModal()" class="hidden fixed inset-0 z-[100] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="relative w-full max-w-2xl bg-gray-900 border border-gray-700 rounded-2xl p-6 sm:p-8 text-white shadow-2xl my-auto max-h-[90vh] overflow-y-auto space-y-5">
+            <button type="button" onclick="closeCoachModal()" aria-label="Cerrar Modal" class="absolute top-4 right-4 w-10 h-10 rounded-xl bg-black/60 hover:bg-orange-500 text-white flex items-center justify-center transition-colors z-10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+                <div class="sm:col-span-5 rounded-xl overflow-hidden h-64 sm:h-72">
+                    <img id="coach-modal-img" src="" alt="Entrenador FitUp" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="sm:col-span-7 space-y-3">
+                    <span id="coach-modal-role" class="text-xs font-black uppercase tracking-widest text-orange-500 block"></span>
+                    <h3 id="coach-modal-name" class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white"></h3>
+                    <blockquote id="coach-modal-quote" class="bg-black/50 border-l-4 border-orange-500 p-3.5 rounded-r-xl text-sm font-bold italic text-white leading-relaxed"></blockquote>
+                    <p id="coach-modal-bio" class="text-gray-300 text-xs sm:text-sm leading-relaxed"></p>
+                </div>
+            </div>
+
+            <div class="bg-black/50 border border-gray-800 rounded-xl p-4">
+                <span class="text-xs font-black uppercase text-orange-500 block mb-1">
+                    <i class="fa-solid fa-fire mr-1.5"></i> Por Qué Entrenar Conmigo en FitUp Club
+                </span>
+                <p id="coach-modal-method" class="text-xs sm:text-sm text-gray-300 leading-relaxed"></p>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                <a href="index.html#prueba-gratis" class="w-full sm:w-auto flex-1 bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-3 px-6 rounded-md text-center transition-colors">
+                    Agendar Sesión con Este Especialista
+                </a>
+                <button type="button" onclick="closeCoachModal()" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-bold uppercase text-sm tracking-widest py-3 px-6 rounded-md transition-colors">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- LENIS SMOOTH SCROLL + GSAP + SCROLLTRIGGER (OPTIMIZADO CON GSAP.MATCHMEDIA PARA MÓVIL) -->
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -369,6 +420,68 @@
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-xmark');
         }
+
+        const COACHES_DATA = {
+            carlos: {
+                name: 'Carlos Mendoza',
+                role: 'Head Coach • Hipertrofia & Biomecánica',
+                img: 'https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=800&q=85',
+                quote: '"No solo cuento repeticiones, transformo tu disciplina. Déjame llevar tu cuerpo al siguiente nivel."',
+                bio: 'Más de 8 años liderando procesos de recomposición corporal e hipertrofia científica en atletas y principiantes que buscan resultados reales sin lesionarse.',
+                method: 'Corrijo cada ángulo de tu postura, programo tu sobrecarga progresiva semana a semana y convierto tus dudas en fuerza mental y física dentro de la Sala de Musculación.'
+            },
+            valentina: {
+                name: 'Valentina Ríos',
+                role: 'Especialista en Funcional, HIIT & Tren Inferior',
+                img: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=800&q=85',
+                quote: '"Cuando tu mente dice que no puedes más, ahí empieza mi trabajo. Vamos a esculpir tu mejor versión."',
+                bio: 'Especialista certificada en entrenamiento metabólico interválico (Tabata/HIIT) y desarrollo estético de glúteos y piernas con técnica de alto impacto visual.',
+                method: 'Diseño circuitos dinámicos que aceleran tu metabolismo por 24 horas, liberan toda tu tensión emocional y tonifican cada fibra muscular con energía inagotable.'
+            },
+            andrea: {
+                name: 'Andrea Salazar',
+                role: 'Líder de Indoor Cycling & Clases Grupales',
+                img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=85',
+                quote: '"Entras a mi clase con estrés y sales con el corazón latiendo de orgullo. El ritmo es nuestra gasolina."',
+                bio: 'Instructora principal de Zona Spinning y ritmos fitness en Cajamarca. Experta en resistencia cardiovascular y motivación grupal de alto voltaje.',
+                method: 'Cada pedaleo y cada coreografía están calculados para quemar hasta 600 calorías mientras desconectas de tus problemas y recargas tu salud emocional al 100%.'
+            },
+            diego: {
+                name: 'Dr. Diego Paredes',
+                role: 'Médico Deportivo & Antropometría',
+                img: 'https://images.unsplash.com/photo-1583454155184-870a1f63aebc?auto=format&fit=crop&w=800&q=85',
+                quote: '"Un cuerpo sin diagnóstico entrena a ciegas. Yo convierto tu biometría en el mapa exacto hacia tu meta."',
+                bio: 'Médico especializado en fisiología del ejercicio, prevención de lesiones articulares y evaluación de composición corporal (porcentaje de grasa y masa muscular).',
+                method: 'Evalúo tus articulaciones, columna y capacidad cardiovascular desde el día 1 para que entrenes con total seguridad clínica y alcances resultados medibles mes a mes.'
+            }
+        };
+
+        function openCoachModal(key) {
+            const data = COACHES_DATA[key];
+            if (!data) return;
+            document.getElementById('coach-modal-img').src = data.img;
+            document.getElementById('coach-modal-img').alt = data.name;
+            document.getElementById('coach-modal-role').textContent = data.role;
+            document.getElementById('coach-modal-name').textContent = data.name;
+            document.getElementById('coach-modal-quote').textContent = data.quote;
+            document.getElementById('coach-modal-bio').textContent = data.bio;
+            document.getElementById('coach-modal-method').textContent = data.method;
+            const backdrop = document.getElementById('coach-modal-backdrop');
+            backdrop.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCoachModal() {
+            const backdrop = document.getElementById('coach-modal-backdrop');
+            if (backdrop) {
+                backdrop.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeCoachModal();
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             gsap.registerPlugin(ScrollTrigger);

@@ -179,10 +179,32 @@
 
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- PANTALLA TEMPORAL DE ANÁLISIS BIOMÉTRICO (2.5 SEGUNDOS CON LOGO ANIMADO PULSE) -->
+                <div id="bmi-loading-screen" class="hidden bg-black/90 border border-gray-800 backdrop-blur-md rounded-2xl py-20 px-6 text-center flex flex-col items-center justify-center space-y-6 my-4">
+                    <div class="relative flex items-center justify-center">
+                        <div class="w-28 h-28 rounded-2xl bg-orange-500/15 animate-ping absolute"></div>
+                        <div class="relative bg-gray-900 border border-gray-700 rounded-2xl p-6 shadow-2xl">
+                            <img src="imagenes/logo-fitup.png" alt="FitUp Club" class="w-36 sm:w-44 h-auto object-contain animate-pulse">
+                        </div>
+                    </div>
+                    <div class="space-y-2 max-w-md">
+                        <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white animate-pulse">
+                            Analizando tu biometría...
+                        </h3>
+                        <p class="text-xs sm:text-sm text-orange-500 font-bold uppercase tracking-widest">
+                            Conectando tu perfil con las zonas y entrenadores de FitUp Club
+                        </p>
+                    </div>
+                    <div class="w-56 h-1.5 bg-gray-800 rounded-lg overflow-hidden">
+                        <div class="h-full bg-orange-500 animate-pulse w-full"></div>
+                    </div>
+                </div>
+
+                <!-- CONTENEDOR PRINCIPAL DE FORMULARIO Y RESULTADOS -->
+                <div id="bmi-workspace-grid" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
                     <!-- COLUMNA IZQUIERDA: CONTROLES BIOMÉTRICOS -->
-                    <div class="lg:col-span-5 bg-white/5 backdrop-blur-md rounded-2xl p-5 sm:p-8 flex flex-col justify-between fade-card">
+                    <div id="bmi-form-panel" class="lg:col-span-5 bg-white/5 backdrop-blur-md rounded-2xl p-5 sm:p-8 flex flex-col justify-between fade-card">
                         <div>
                             <div class="flex items-center justify-between mb-6 pb-2">
                                 <div>
@@ -464,6 +486,8 @@
             icon.classList.toggle('fa-xmark');
         }
 
+        let bmiTimeoutId = null;
+
         function cargarEjemplo(edad, peso, altura) {
             document.getElementById('edad').value = edad;
             document.getElementById('edad-range').value = edad;
@@ -471,12 +495,29 @@
             document.getElementById('peso-range').value = peso;
             document.getElementById('altura').value = altura;
             document.getElementById('altura-range').value = altura;
-            ejecutarCalculoIMC();
+            iniciarAnalisisBiometrico();
         }
 
         function calcularEstadoFisico(event) {
             if (event) event.preventDefault();
-            ejecutarCalculoIMC();
+            iniciarAnalisisBiometrico();
+        }
+
+        function iniciarAnalisisBiometrico() {
+            const workspaceGrid = document.getElementById('bmi-workspace-grid');
+            const loadingScreen = document.getElementById('bmi-loading-screen');
+
+            if (bmiTimeoutId) clearTimeout(bmiTimeoutId);
+
+            // Oculta el formulario/panel actual y muestra la pantalla temporal con el logo animado durante 2.5 segundos
+            workspaceGrid.classList.add('hidden');
+            loadingScreen.classList.remove('hidden');
+
+            bmiTimeoutId = setTimeout(() => {
+                ejecutarCalculoIMC();
+                loadingScreen.classList.add('hidden');
+                workspaceGrid.classList.remove('hidden');
+            }, 2500);
         }
 
         function ejecutarCalculoIMC() {
@@ -503,31 +544,31 @@
                 titulo = 'ENFOQUE EN HIPERTROFIA Y FUERZA';
                 badgeTexto = 'IMC Bajo (< 18.5) • Prioridad Masa Muscular';
                 markerPos = '18%';
-                mensaje = `Con ${edad} años y un IMC de ${imcRedondeado}, te recomendamos nuestra Sala de Musculación para construir masa muscular magra con cargas progresivas, acompañada de batidos proteicos en nuestra Cafetería Fitness y control mensual con el Médico Deportivo.`;
+                mensaje = `Con ${edad} años y un IMC de ${imcRedondeado}: Tu enfoque debe estar con nuestros Entrenadores en la Sala de Musculación para construir masa muscular magra con sobrecarga progresiva, apoyándote en batidos proteicos de nuestra Cafetería Fitness y control mensual con el Médico Deportivo.`;
                 zonas = [
-                    { icono: 'fa-dumbbell', nombre: 'Sala de Musculación', detalle: 'Fuerza e hipertrofia guiada (4 días/sem)' },
-                    { icono: 'fa-mug-hot', nombre: 'Cafetería Fitness', detalle: 'Batidos proteicos y superávit energético' },
-                    { icono: 'fa-user-doctor', nombre: 'Médico Deportivo', detalle: 'Seguimiento antropométrico mensual' }
+                    { icono: 'fa-dumbbell', nombre: 'Sala de Musculación', detalle: 'Entrenadores de fuerza e hipertrofia guiada' },
+                    { icono: 'fa-mug-hot', nombre: 'Cafetería Fitness', detalle: 'Proteína Whey y superávit energético limpio' },
+                    { icono: 'fa-user-doctor', nombre: 'Médico Deportivo', detalle: 'Seguimiento antropométrico de masa muscular' }
                 ];
             } else if (imc >= 18.5 && imc < 25) {
                 titulo = 'ESTADO FÍSICO EQUILIBRADO • ALTO RENDIMIENTO';
                 badgeTexto = 'IMC Normal (18.5 - 24.9) • Potencia y Definición';
                 markerPos = '50%';
-                mensaje = `¡Excelente punto de partida! Con ${edad} años y un IMC saludable de ${imcRedondeado}, te recomendamos combinar nuestra Sala de Musculación con sesiones explosivas en la Zona Funcional, Clases Grupales y recuperación en nuestro Sauna.`;
+                mensaje = `¡Excelente punto de partida! Con ${edad} años y un IMC saludable de ${imcRedondeado}: Tu enfoque debe combinar nuestros Entrenadores en la Sala de Musculación con sesiones explosivas en la Zona Funcional, Clases Grupales y recuperación muscular en nuestro Sauna.`;
                 zonas = [
                     { icono: 'fa-dumbbell', nombre: 'Sala de Musculación', detalle: 'Tonificación, fuerza y definición muscular' },
                     { icono: 'fa-bolt', nombre: 'Zona Funcional & Clases', detalle: 'Potencia atlética, Tabata y agilidad' },
-                    { icono: 'fa-hot-tub-person', nombre: 'Sauna & Recuperación', detalle: 'Relajación muscular post-entrenamiento' }
+                    { icono: 'fa-hot-tub-person', nombre: 'Sauna & Recuperación', detalle: 'Relajación muscular y salud emocional' }
                 ];
             } else {
                 titulo = 'PLAN QUEMA CALÓRICA Y ACONDICIONAMIENTO';
                 badgeTexto = 'IMC Alto (25.0+) • Prioridad Cardio + Metabólico';
                 markerPos = '82%';
-                mensaje = `Para tus ${edad} años y un IMC de ${imcRedondeado}, te sugerimos iniciar con nuestra Zona de Cardio, Zona Spinning y evaluación con el Médico Deportivo, complementando con ejercicios de fuerza en la Sala de Musculación para acelerar tu metabolismo.`;
+                mensaje = `Para tus ${edad} años y un IMC de ${imcRedondeado}: Te sugerimos iniciar con nuestras Clases Grupales y Zona Cardio (junto a Zona Spinning) para acelerar la oxidación de grasa sin impacto articular, complementando con la guía de nuestros Entrenadores en la Sala de Musculación y evaluación con el Médico Deportivo.`;
                 zonas = [
-                    { icono: 'fa-heart-pulse', nombre: 'Zona Cardio & Spinning', detalle: 'Quema de grasa continua sin impacto' },
-                    { icono: 'fa-user-doctor', nombre: 'Médico Deportivo', detalle: 'Evaluación inicial y control articular' },
-                    { icono: 'fa-users', nombre: 'Clases Grupales + Pesas', detalle: 'Gasto calórico elevado con guía en vivo' }
+                    { icono: 'fa-heart-pulse', nombre: 'Clases Grupales & Zona Cardio', detalle: 'Quema calórica continua y liberación de estrés' },
+                    { icono: 'fa-dumbbell', nombre: 'Sala de Musculación', detalle: 'Fuerza metabólica guiada por Entrenadores' },
+                    { icono: 'fa-user-doctor', nombre: 'Médico Deportivo', detalle: 'Evaluación inicial y protección articular' }
                 ];
             }
 

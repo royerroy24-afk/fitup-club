@@ -141,129 +141,174 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
                     <!-- 1. Sala de Musculación -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 fade-card">
-                        <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
-                            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Sala de Musculación" class="img-reveal w-full h-full object-cover">
+                    <div onclick="openZonaModal('musculacion')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
+                                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Sala de Musculación" class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4 px-1">
+                                <span class="text-xs font-black uppercase text-orange-500">Fuerza e Hipertrofia</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Sala de Musculación</h3>
+                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                    Máquinas biomecánicas guiadas, bancos olímpicos, jaulas de potencia y mancuernas de alto tonelaje.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pt-5 px-1">
-                            <span class="text-xs font-black uppercase text-orange-500">Fuerza e Hipertrofia</span>
-                            <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Sala de Musculación</h3>
-                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
-                                Máquinas biomecánicas guiadas, bancos olímpicos, jaulas de potencia y mancuernas de alto tonelaje.
-                            </p>
-                        </div>
+                        <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                            Explorar Zona
+                        </button>
                     </div>
 
                     <!-- 2. Clases Grupales -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 fade-card">
-                        <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
-                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Clases Grupales" class="img-reveal w-full h-full object-cover">
+                    <div onclick="openZonaModal('grupales')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
+                                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Clases Grupales" class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4 px-1">
+                                <span class="text-xs font-black uppercase text-orange-500">Energía Colectiva</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Clases Grupales</h3>
+                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                    Sesiones diarias de Zumba, Full Body, Tabata, Baile Fitness y entrenamiento localizado en vivo.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pt-5 px-1">
-                            <span class="text-xs font-black uppercase text-orange-500">Energía Colectiva</span>
-                            <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Clases Grupales</h3>
-                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
-                                Sesiones diarias de Zumba, Full Body, Tabata, Baile Fitness y entrenamiento localizado en vivo.
-                            </p>
-                        </div>
+                        <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                            Explorar Zona
+                        </button>
                     </div>
 
                     <!-- 3. Zona Spinning -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 fade-card">
-                        <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
-                            <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=800&q=80" alt="Zona Spinning" class="img-reveal w-full h-full object-cover">
+                    <div onclick="openZonaModal('spinning')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
+                                <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=800&q=80" alt="Zona Spinning" class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4 px-1">
+                                <span class="text-xs font-black uppercase text-orange-500">Ciclismo Indoor</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Zona Spinning</h3>
+                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                    Salón exclusivo de ciclismo indoor con música envolvente para máxima resistencia cardiovascular.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pt-5 px-1">
-                            <span class="text-xs font-black uppercase text-orange-500">Ciclismo Indoor</span>
-                            <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Zona Spinning</h3>
-                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
-                                Salón exclusivo de ciclismo indoor con música envolvente para máxima resistencia cardiovascular.
-                            </p>
-                        </div>
+                        <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                            Explorar Zona
+                        </button>
                     </div>
 
                     <!-- 4. Zona Cardio -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 fade-card">
-                        <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
-                            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Zona Cardio" class="img-reveal w-full h-full object-cover">
+                    <div onclick="openZonaModal('cardio')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
+                                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Zona Cardio" class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4 px-1">
+                                <span class="text-xs font-black uppercase text-orange-500">Capacidad Aeróbica</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Zona Cardio</h3>
+                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                    Trotadoras profesionales, elípticas, escaladoras y remos con monitoreo digital de ritmo cardíaco.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pt-5 px-1">
-                            <span class="text-xs font-black uppercase text-orange-500">Capacidad Aeróbica</span>
-                            <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Zona Cardio</h3>
-                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
-                                Trotadoras profesionales, elípticas, escaladoras y remos con monitoreo digital de ritmo cardíaco.
-                            </p>
-                        </div>
+                        <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                            Explorar Zona
+                        </button>
                     </div>
 
                     <!-- 5. Zona Funcional -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 fade-card">
-                        <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
-                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Zona Funcional" class="img-reveal w-full h-full object-cover">
+                    <div onclick="openZonaModal('funcional')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
+                                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Zona Funcional" class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4 px-1">
+                                <span class="text-xs font-black uppercase text-orange-500">Agilidad & HIIT</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Zona Funcional</h3>
+                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                    Circuito funcional con TRX, kettlebells, cuerdas de batalla, balones medicinales y cajones pliométricos.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pt-5 px-1">
-                            <span class="text-xs font-black uppercase text-orange-500">Agilidad & HIIT</span>
-                            <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Zona Funcional</h3>
-                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
-                                Circuito funcional con TRX, kettlebells, cuerdas de batalla, balones medicinales y cajones pliométricos.
-                            </p>
-                        </div>
+                        <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                            Explorar Zona
+                        </button>
                     </div>
 
                     <!-- 6. Sauna y Duchas Calientes -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 fade-card">
-                        <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
-                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Sauna y Duchas" class="img-reveal w-full h-full object-cover">
+                    <div onclick="openZonaModal('sauna')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
+                                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Sauna y Duchas" class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4 px-1">
+                                <span class="text-xs font-black uppercase text-orange-500">Recuperación</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Sauna & Duchas Calientes</h3>
+                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                    Relajación muscular en sauna seco, vestidores impecables, casilleros y duchas con agua caliente.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pt-5 px-1">
-                            <span class="text-xs font-black uppercase text-orange-500">Recuperación</span>
-                            <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Sauna & Duchas Calientes</h3>
-                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
-                                Relajación muscular en sauna seco, vestidores impecables, casilleros y duchas con agua caliente.
-                            </p>
-                        </div>
+                        <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                            Explorar Zona
+                        </button>
                     </div>
 
                     <!-- 7. Cafetería Fitness -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 fade-card">
-                        <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
-                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Cafetería Fitness" class="img-reveal w-full h-full object-cover">
+                    <div onclick="openZonaModal('cafeteria')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
+                                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Cafetería Fitness" class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4 px-1">
+                                <span class="text-xs font-black uppercase text-orange-500">Nutrición Deportiva</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Cafetería Fitness</h3>
+                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                    Batidos proteicos, aminoácidos, café de especialidad y comidas saludables para tu post-entreno.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pt-5 px-1">
-                            <span class="text-xs font-black uppercase text-orange-500">Nutrición Deportiva</span>
-                            <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Cafetería Fitness</h3>
-                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
-                                Batidos proteicos, aminoácidos, café de especialidad y comidas saludables para tu post-entreno.
-                            </p>
-                        </div>
+                        <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                            Explorar Zona
+                        </button>
                     </div>
 
                     <!-- 8. Médico Deportivo -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 fade-card">
-                        <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
-                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Médico Deportivo" class="img-reveal w-full h-full object-cover">
+                    <div onclick="openZonaModal('medico')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
+                                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Médico Deportivo" class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4 px-1">
+                                <span class="text-xs font-black uppercase text-orange-500">Salud Integral</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Médico Deportivo</h3>
+                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                    Diagnóstico físico inicial, evaluación antropométrica y prevención de lesiones articulares.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pt-5 px-1">
-                            <span class="text-xs font-black uppercase text-orange-500">Salud Integral</span>
-                            <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Médico Deportivo</h3>
-                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
-                                Diagnóstico físico inicial, evaluación antropométrica y prevención de lesiones articulares.
-                            </p>
-                        </div>
+                        <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                            Explorar Zona
+                        </button>
                     </div>
 
                     <!-- 9. Convenios y Estacionamiento 24h -->
-                    <div class="bg-white/5 backdrop-blur-md rounded-xl p-5 fade-card">
-                        <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
-                            <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80" alt="Convenios y Parqueo 24h" class="img-reveal w-full h-full object-cover">
+                    <div onclick="openZonaModal('convenios')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-colors duration-300 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56">
+                                <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80" alt="Convenios y Parqueo 24h" class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4 px-1">
+                                <span class="text-xs font-black uppercase text-orange-500">Comodidad Total</span>
+                                <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Convenios & Parqueo 24h</h3>
+                                <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
+                                    Membresías corporativas para empresas y estacionamiento seguro las 24 horas en Open Plaza.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pt-5 px-1">
-                            <span class="text-xs font-black uppercase text-orange-500">Comodidad Total</span>
-                            <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Convenios & Parqueo 24h</h3>
-                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
-                                Membresías corporativas para empresas y estacionamiento seguro las 24 horas en Open Plaza.
-                            </p>
-                        </div>
+                        <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-2.5 rounded-md text-center transition-colors duration-300">
+                            Explorar Zona
+                        </button>
                     </div>
 
                 </div>
@@ -432,6 +477,44 @@
         </div>
     </footer>
 
+    <!-- =====================================================
+         MODAL INTERACTIVO DE ZONAS (GLASSMORPHISM DEEP-DIVE)
+    ====================================================== -->
+    <div id="zona-modal-backdrop" onclick="if(event.target === this) closeZonaModal()" class="hidden fixed inset-0 z-[100] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="relative w-full max-w-2xl bg-gray-900 border border-gray-700 rounded-2xl p-6 sm:p-8 text-white shadow-2xl my-auto max-h-[90vh] overflow-y-auto space-y-5">
+            <button type="button" onclick="closeZonaModal()" aria-label="Cerrar Modal" class="absolute top-4 right-4 w-10 h-10 rounded-xl bg-black/60 hover:bg-orange-500 text-white flex items-center justify-center transition-colors z-10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="rounded-xl overflow-hidden h-56 sm:h-64 relative">
+                <img id="zona-modal-img" src="" alt="Zona FitUp" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+            </div>
+
+            <div>
+                <span id="zona-modal-tag" class="text-xs font-black uppercase tracking-widest text-orange-500 block"></span>
+                <h3 id="zona-modal-title" class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white mt-1"></h3>
+                <p id="zona-modal-desc" class="text-gray-300 text-sm sm:text-base mt-3 leading-relaxed"></p>
+            </div>
+
+            <div class="bg-black/50 border border-gray-800 rounded-xl p-4">
+                <span class="text-xs font-black uppercase text-orange-500 block mb-1">
+                    <i class="fa-solid fa-brain mr-1.5"></i> Impacto en tu Salud Emocional y Física
+                </span>
+                <p id="zona-modal-emocional" class="text-xs sm:text-sm text-gray-300 leading-relaxed"></p>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                <a href="index.html#prueba-gratis" class="w-full sm:w-auto flex-1 bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest py-3 px-6 rounded-md text-center transition-colors">
+                    Solicitar Sesión Gratis en Esta Zona
+                </a>
+                <button type="button" onclick="closeZonaModal()" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-bold uppercase text-sm tracking-widest py-3 px-6 rounded-md transition-colors">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- LENIS SMOOTH SCROLL + GSAP + SCROLLTRIGGER (OPTIMIZADO CON GSAP.MATCHMEDIA PARA MÓVIL) -->
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -444,6 +527,98 @@
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-xmark');
         }
+
+        const ZONAS_DATA = {
+            musculacion: {
+                tag: 'Fuerza e Hipertrofia • Equipamiento Biomecánico',
+                title: 'Sala de Musculación',
+                img: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=85',
+                desc: 'Equipada con máquinas biomecánicas guiadas de última generación, racks olímpicos, bancos regulables y mancuernas de alto tonelaje diseñadas para aislar cada grupo muscular con precisión.',
+                emocional: 'Superar cargas progresivas libera dopamina y endorfinas, canalizando el estrés laboral en fuerza pura y construyendo una seguridad personal que impacta todas las áreas de tu vida.'
+            },
+            grupales: {
+                tag: 'Energía Colectiva • Sesiones en Vivo',
+                title: 'Clases Grupales',
+                img: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1000&q=85',
+                desc: 'Salón amplio con acústica e iluminación envolvente para sesiones diarias de Zumba, Full Body, Tabata y Baile Fitness dirigidas por instructores apasionados.',
+                emocional: 'El movimiento sincronizado con música y comunidad reduce instantáneamente la ansiedad, combate el aislamiento y convierte el ejercicio en el momento más feliz de tu día.'
+            },
+            spinning: {
+                tag: 'Ciclismo Indoor • Alta Resistencia',
+                title: 'Zona Spinning',
+                img: 'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=1000&q=85',
+                desc: 'Bicicletas indoor de transmisión magnética suave y resistencia milimétrica para simular terrenos planos y montaña al ritmo de playlists de alta adrenalina.',
+                emocional: 'Una sesión de 45 minutos desconecta tu mente del ruido exterior, oxigena el sistema nervioso y quema hasta 600 kcal sin impacto en tus rodillas.'
+            },
+            cardio: {
+                tag: 'Capacidad Aeróbica • Monitoreo Digital',
+                title: 'Zona Cardio',
+                img: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1000&q=85',
+                desc: 'Trotadoras profesionales con absorción de impacto, elípticas ergonómicas, escaladoras sin fin y remos con pantallas digitales de pulso y gasto calórico.',
+                emocional: 'El cardio rítmico regula la presión arterial, disminuye drásticamente los niveles de cortisol (hormona del estrés) y mejora la calidad de tu sueño profundo.'
+            },
+            funcional: {
+                tag: 'Agilidad, Potencia & HIIT',
+                title: 'Zona Funcional',
+                img: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1000&q=85',
+                desc: 'Área dinámica con TRX, kettlebells, cuerdas de batalla (battle ropes), cajones pliométricos y balones medicinales para entrenamientos metabólicos completos.',
+                emocional: 'Despierta tus reflejos, mejora tu postura diaria y libera tensión acumulada con movimientos explosivos que te devuelven agilidad y vitalidad.'
+            },
+            sauna: {
+                tag: 'Recuperación & Bienestar Profundo',
+                title: 'Sauna & Duchas Calientes',
+                img: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85',
+                desc: 'Cabina de sauna seco a temperatura controlada, vestidores de lujo, casilleros seguros y duchas con agua caliente permanente.',
+                emocional: 'El calor dilata los vasos sanguíneos, elimina toxinas, alivia contracturas musculares y sumerge tu sistema nervioso en un estado de calma total antes de volver a casa.'
+            },
+            cafeteria: {
+                tag: 'Nutrición Deportiva & Social Hub',
+                title: 'Cafetería Fitness',
+                img: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=85',
+                desc: 'Barra especializada con batidos de Proteína Whey, creatina, pre-entrenos, café orgánico de Cajamarca y snacks saludables altos en proteína.',
+                emocional: 'Nutrir tu cuerpo inmediatamente después de entrenar evita bajones de energía, estabiliza tu estado de ánimo y acelera tu transformación física.'
+            },
+            medico: {
+                tag: 'Salud Integral & Prevención',
+                title: 'Médico Deportivo',
+                img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=85',
+                desc: 'Consultorio dentro del club para evaluación antropométrica, control de composición corporal, chequeo articular y prescripción segura del ejercicio.',
+                emocional: 'Entrenar sabiendo que tu corazón, articulaciones y columna están respaldados por un especialista te brinda tranquilidad absoluta para dar tu 100%.'
+            },
+            convenios: {
+                tag: 'Comodidad Total • Open Plaza Cajamarca',
+                title: 'Convenios & Parqueo 24h',
+                img: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1000&q=85',
+                desc: 'Alianzas corporativas para empresas de Cajamarca y acceso directo al estacionamiento vigilado las 24 horas del C.C. Open Plaza.',
+                emocional: 'Cero estrés buscando dónde estacionar: llegas, entrenas con total seguridad y disfrutas de tu tiempo sin preocupaciones.'
+            }
+        };
+
+        function openZonaModal(key) {
+            const data = ZONAS_DATA[key];
+            if (!data) return;
+            document.getElementById('zona-modal-img').src = data.img;
+            document.getElementById('zona-modal-img').alt = data.title;
+            document.getElementById('zona-modal-tag').textContent = data.tag;
+            document.getElementById('zona-modal-title').textContent = data.title;
+            document.getElementById('zona-modal-desc').textContent = data.desc;
+            document.getElementById('zona-modal-emocional').textContent = data.emocional;
+            const backdrop = document.getElementById('zona-modal-backdrop');
+            backdrop.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeZonaModal() {
+            const backdrop = document.getElementById('zona-modal-backdrop');
+            if (backdrop) {
+                backdrop.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeZonaModal();
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             gsap.registerPlugin(ScrollTrigger);
