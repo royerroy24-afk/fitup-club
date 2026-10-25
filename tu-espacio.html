@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitUp Club Cajamarca | Tu Espacio FitUp - Calculadora de Estado Físico</title>
+    <title>FitUp Club Cajamarca | Tu Espacio FitUp - Calculadora Interactiva</title>
 
     <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,9 +49,28 @@
         .page-fade-in {
             animation: pageFadeIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
+        /* Estilo Flat Design para controles deslizantes (Sliders) */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 6px;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            background: #F85C14;
+            cursor: pointer;
+            border: 2px solid #ffffff;
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased selection:bg-fitup-orange selection:text-white flex flex-col min-h-screen overflow-x-hidden">
+<body class="bg-slate-100 text-slate-900 antialiased selection:bg-fitup-orange selection:text-white flex flex-col min-h-screen overflow-x-hidden">
 
     <!-- BARRA INFORMATIVA PLANA -->
     <div class="bg-fitup-slateDark text-slate-300 text-xs font-bold py-2.5 px-4 text-center border-b border-slate-800 uppercase tracking-wider">
@@ -97,186 +116,210 @@
 
     <main class="flex-grow page-fade-in">
 
-        <!-- CABECERA DE PÁGINA PLANA -->
-        <section class="bg-slate-900 text-white py-16 border-b border-slate-800">
-            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center md:text-left">
-                <span class="inline-block bg-slate-800 text-fitup-orange text-xs font-extrabold uppercase tracking-widest px-3.5 py-1.5 rounded border border-slate-700 mb-3">
-                    Herramienta Interactiva FitUp
-                </span>
-                <h1 class="text-4xl sm:text-5xl font-black uppercase text-white">
-                    TU ESPACIO FITUP: <span class="text-fitup-orange">CALCULA TU PUNTO DE PARTIDA</span>
-                </h1>
-                <p class="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl font-medium">
-                    Ingresa tus datos biométricos básicos para calcular tu Índice de Masa Corporal (IMC) y descubrir qué zonas y servicios de FitUp Club Cajamarca son ideales para ti.
-                </p>
+        <!-- CABECERA PLANA -->
+        <section class="bg-slate-900 text-white py-14 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div>
+                    <span class="inline-block bg-slate-800 text-fitup-orange text-xs font-extrabold uppercase tracking-widest px-3.5 py-1.5 rounded border border-slate-700 mb-3">
+                        Interfaz Stitch UI • Flat Design
+                    </span>
+                    <h1 class="text-3xl sm:text-5xl font-black uppercase text-white">
+                        CALCULA TU <span class="text-fitup-orange">PUNTO DE PARTIDA</span>
+                    </h1>
+                    <p class="mt-2 text-slate-300 text-sm sm:text-base max-w-2xl font-medium">
+                        Configura tus parámetros corporales para obtener tu Índice de Masa Corporal (IMC) y tu ruta de zonas recomendada en FitUp Club Cajamarca.
+                    </p>
+                </div>
+
+                <!-- Perfiles de prueba rápida en 1 clic -->
+                <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shrink-0">
+                    <span class="text-[11px] font-extrabold uppercase text-slate-400 block mb-2">Simular perfil rápido:</span>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" onclick="cargarEjemplo(22, 51, 172)" class="bg-slate-900 hover:bg-fitup-orange text-white text-xs font-extrabold uppercase px-3 py-2 rounded transition-colors">
+                            IMC Bajo
+                        </button>
+                        <button type="button" onclick="cargarEjemplo(27, 71, 174)" class="bg-slate-900 hover:bg-fitup-orange text-white text-xs font-extrabold uppercase px-3 py-2 rounded transition-colors">
+                            IMC Normal
+                        </button>
+                        <button type="button" onclick="cargarEjemplo(35, 92, 170)" class="bg-slate-900 hover:bg-fitup-orange text-white text-xs font-extrabold uppercase px-3 py-2 rounded transition-colors">
+                            IMC Alto
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- PANEL INTERACTIVO: FORMULARIO + RESULTADO DINÁMICO EN JS -->
-        <section class="py-16 md:py-24">
+        <!-- DISEÑO VISUAL STITCH UI INTEGRADO CON JAVASCRIPT REAL (FLAT DESIGN) -->
+        <section class="py-12 md:py-16">
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12">
 
-                    <!-- COLUMNA IZQUIERDA: FORMULARIO DE CÁLCULO (5 COLUMNAS) -->
-                    <div class="lg:col-span-5 bg-white rounded-xl border border-slate-200 p-6 sm:p-8">
-                        <div class="flex items-center gap-3 pb-5 mb-6 border-b border-slate-200">
-                            <div class="w-11 h-11 rounded-lg bg-fitup-orange text-white flex items-center justify-center text-lg shrink-0">
-                                <i class="fa-solid fa-calculator"></i>
+                    <!-- PANEL IZQUIERDO: CONTROLES BIOMÉTRICOS (STITCH STYLE) -->
+                    <div class="lg:col-span-5 p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between pb-5 mb-6 border-b border-slate-200">
+                                <div>
+                                    <span class="text-xs font-extrabold uppercase text-fitup-orange block">Parámetros Físicos</span>
+                                    <h2 class="text-2xl font-black uppercase text-slate-900">Ingresa tus Datos</h2>
+                                </div>
+                                <span class="w-11 h-11 rounded-xl bg-slate-900 text-fitup-orange flex items-center justify-center text-lg">
+                                    <i class="fa-solid fa-sliders"></i>
+                                </span>
                             </div>
-                            <div>
-                                <span class="text-xs font-extrabold uppercase text-fitup-orange block">Paso 1</span>
-                                <h2 class="text-xl sm:text-2xl font-black uppercase text-slate-900">Tus Datos Actuales</h2>
-                            </div>
+
+                            <form id="bmi-form" onsubmit="calcularEstadoFisico(event)" class="space-y-6">
+
+                                <!-- Control 1: Edad -->
+                                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <label for="edad" class="text-xs font-extrabold uppercase text-slate-700">
+                                            <i class="fa-regular fa-calendar text-fitup-orange mr-1.5"></i> Edad (Años)
+                                        </label>
+                                        <div class="flex items-center gap-1 bg-white border border-slate-300 rounded-lg px-3 py-1">
+                                            <input type="number" id="edad" min="12" max="95" value="28" required
+                                                   oninput="document.getElementById('edad-range').value = this.value"
+                                                   class="w-14 text-right font-black text-lg text-slate-900 focus:outline-none">
+                                            <span class="text-xs font-bold text-slate-400">años</span>
+                                        </div>
+                                    </div>
+                                    <input type="range" id="edad-range" min="12" max="95" value="28" 
+                                           oninput="document.getElementById('edad').value = this.value"
+                                           class="w-full">
+                                </div>
+
+                                <!-- Control 2: Peso (kg) -->
+                                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <label for="peso" class="text-xs font-extrabold uppercase text-slate-700">
+                                            <i class="fa-solid fa-weight-scale text-fitup-orange mr-1.5"></i> Peso Corporal (kg)
+                                        </label>
+                                        <div class="flex items-center gap-1 bg-white border border-slate-300 rounded-lg px-3 py-1">
+                                            <input type="number" id="peso" step="0.5" min="35" max="180" value="72" required
+                                                   oninput="document.getElementById('peso-range').value = this.value"
+                                                   class="w-16 text-right font-black text-lg text-slate-900 focus:outline-none">
+                                            <span class="text-xs font-bold text-slate-400">kg</span>
+                                        </div>
+                                    </div>
+                                    <input type="range" id="peso-range" step="0.5" min="35" max="180" value="72" 
+                                           oninput="document.getElementById('peso').value = this.value"
+                                           class="w-full">
+                                </div>
+
+                                <!-- Control 3: Altura (cm) -->
+                                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <label for="altura" class="text-xs font-extrabold uppercase text-slate-700">
+                                            <i class="fa-solid fa-ruler-vertical text-fitup-orange mr-1.5"></i> Estatura (cm)
+                                        </label>
+                                        <div class="flex items-center gap-1 bg-white border border-slate-300 rounded-lg px-3 py-1">
+                                            <input type="number" id="altura" min="130" max="220" value="172" required
+                                                   oninput="document.getElementById('altura-range').value = this.value"
+                                                   class="w-16 text-right font-black text-lg text-slate-900 focus:outline-none">
+                                            <span class="text-xs font-bold text-slate-400">cm</span>
+                                        </div>
+                                    </div>
+                                    <input type="range" id="altura-range" min="130" max="220" value="172" 
+                                           oninput="document.getElementById('altura').value = this.value"
+                                           class="w-full">
+                                </div>
+
+                                <!-- Botón Naranja Plano -->
+                                <button type="submit" 
+                                        class="w-full bg-fitup-orange hover:bg-fitup-orangeHover text-white font-black uppercase tracking-wider text-sm py-4 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-calculator"></i>
+                                    <span>Calcular mi Estado Físico</span>
+                                </button>
+                            </form>
                         </div>
 
-                        <form id="bmi-form" onsubmit="calcularEstadoFisico(event)" class="space-y-5">
-                            <!-- Edad -->
-                            <div>
-                                <label for="edad" class="text-xs font-extrabold uppercase text-slate-700 block mb-2">
-                                    Edad (años)
-                                </label>
-                                <input type="number" id="edad" min="12" max="95" required placeholder="Ej. 28" 
-                                       class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3.5 text-slate-900 font-bold text-base focus:outline-none focus:border-fitup-orange">
-                            </div>
-
-                            <!-- Peso (kg) -->
-                            <div>
-                                <label for="peso" class="text-xs font-extrabold uppercase text-slate-700 block mb-2">
-                                    Peso Actual (kg)
-                                </label>
-                                <input type="number" id="peso" step="0.1" min="30" max="250" required placeholder="Ej. 74.5" 
-                                       class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3.5 text-slate-900 font-bold text-base focus:outline-none focus:border-fitup-orange">
-                            </div>
-
-                            <!-- Altura (cm) -->
-                            <div>
-                                <label for="altura" class="text-xs font-extrabold uppercase text-slate-700 block mb-2">
-                                    Altura (cm)
-                                </label>
-                                <input type="number" id="altura" min="120" max="230" required placeholder="Ej. 172" 
-                                       class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3.5 text-slate-900 font-bold text-base focus:outline-none focus:border-fitup-orange">
-                            </div>
-
-                            <!-- Botón Naranja Plano -->
-                            <button type="submit" 
-                                    class="w-full bg-fitup-orange hover:bg-fitup-orangeHover text-white font-black uppercase tracking-wider text-sm py-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-bolt"></i>
-                                <span>Calcular mi Estado Físico</span>
-                            </button>
-                        </form>
-
-                        <!-- Botones de ejemplo rápido para probar al instante -->
-                        <div class="mt-6 pt-5 border-t border-slate-200">
-                            <span class="text-[11px] font-bold uppercase text-slate-400 block mb-2">Prueba rápida con perfiles de ejemplo:</span>
-                            <div class="grid grid-cols-3 gap-2">
-                                <button type="button" onclick="cargarEjemplo(23, 52, 173)" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold py-2 px-2 rounded transition-colors">
-                                    IMC Bajo
-                                </button>
-                                <button type="button" onclick="cargarEjemplo(28, 70, 174)" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold py-2 px-2 rounded transition-colors">
-                                    IMC Normal
-                                </button>
-                                <button type="button" onclick="cargarEjemplo(34, 92, 170)" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold py-2 px-2 rounded transition-colors">
-                                    IMC Alto
-                                </button>
-                            </div>
-                        </div>
+                        <p class="text-[11px] text-slate-400 font-semibold mt-6 text-center">
+                            * Cálculos basados en la fórmula oficial de la OMS y adaptados a las zonas deportivas de FitUp Club.
+                        </p>
                     </div>
 
-                    <!-- COLUMNA DERECHA: PANEL DE DIAGNÓSTICO Y RECOMENDACIÓN FITUP (7 COLUMNAS) -->
-                    <div class="lg:col-span-7">
+                    <!-- PANEL DERECHO: DASHBOARD VISUAL DE RESULTADOS Y ZONAS RECOMENDADAS -->
+                    <div class="lg:col-span-7 bg-slate-900 text-white p-6 sm:p-10 flex flex-col justify-between">
 
-                        <!-- Estado Inicial (Antes de calcular) -->
-                        <div id="estado-inicial" class="bg-white rounded-xl border border-slate-200 p-8 sm:p-12 text-center">
-                            <div class="w-16 h-16 rounded-xl bg-slate-100 text-fitup-orange flex items-center justify-center text-3xl mx-auto mb-5">
-                                <i class="fa-solid fa-chart-pie"></i>
-                            </div>
-                            <h3 class="text-2xl font-black uppercase text-slate-900">
-                                Tu Diagnóstico Personalizado Aparecerá Aquí
-                            </h3>
-                            <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-md mx-auto font-medium">
-                                Completa tu edad, peso y altura a la izquierda y presiona <strong>"Calcular mi Estado Físico"</strong> para conocer las zonas de FitUp Club recomendadas para ti.
-                            </p>
-                            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
-                                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
-                                    <span class="text-xs font-black uppercase text-fitup-orange">1. Cálculo IMC</span>
-                                    <p class="text-xs text-slate-600 mt-1">Relación exacta entre tu peso y estatura actual.</p>
-                                </div>
-                                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
-                                    <span class="text-xs font-black uppercase text-fitup-orange">2. Zonas Sugeridas</span>
-                                    <p class="text-xs text-slate-600 mt-1">Qué áreas de FitUp Club priorizar desde tu primer día.</p>
-                                </div>
-                                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
-                                    <span class="text-xs font-black uppercase text-fitup-orange">3. Ruta Semanal</span>
-                                    <p class="text-xs text-slate-600 mt-1">Frecuencia e intensidad ideal según tu edad y estado.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Resultado Dinámico (Oculto hasta calcular) -->
-                        <div id="resultado-panel" class="hidden bg-slate-900 text-white rounded-xl border border-slate-800 p-6 sm:p-10 space-y-7">
-
-                            <!-- Cabecera de Resultado -->
+                        <div class="space-y-7">
+                            <!-- Cabecera de Diagnóstico -->
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
                                 <div>
-                                    <span class="text-xs font-extrabold uppercase text-fitup-orange block">Resultado de tu Evaluación</span>
-                                    <h3 id="res-titulo" class="text-2xl sm:text-3xl font-black uppercase text-white mt-1">Estado Físico Calculado</h3>
-                                    <p id="res-subtitulo" class="text-xs sm:text-sm text-slate-400 font-medium mt-0.5"></p>
+                                    <span id="res-rango-badge" class="inline-block bg-fitup-orange text-white text-xs font-black uppercase px-3 py-1 rounded mb-2">
+                                        IMC Normal (18.5 - 24.9)
+                                    </span>
+                                    <h3 id="res-titulo" class="text-2xl sm:text-3xl font-black uppercase text-white">
+                                        ESTADO FÍSICO EQUILIBRADO
+                                    </h3>
+                                    <p id="res-subtitulo" class="text-xs sm:text-sm text-slate-400 font-medium mt-1">
+                                        Perfil evaluado: 28 años • 72 kg • 172 cm
+                                    </p>
                                 </div>
+
+                                <!-- Indicador Gigante de IMC -->
                                 <div class="bg-slate-800 border border-slate-700 rounded-xl px-6 py-4 text-center shrink-0">
-                                    <span class="text-[11px] font-bold uppercase text-slate-400 block">Tu IMC Actual</span>
-                                    <span id="res-imc-valor" class="text-4xl font-black text-fitup-orange">22.5</span>
+                                    <span class="text-[11px] font-extrabold uppercase text-slate-400 block">Tu Índice IMC</span>
+                                    <span id="res-imc-valor" class="text-4xl sm:text-5xl font-black text-fitup-orange">24.3</span>
+                                    <span class="text-[11px] font-bold text-slate-400 block mt-0.5">kg/m²</span>
                                 </div>
                             </div>
 
-                            <!-- Barra Visual Plana de Rango IMC -->
+                            <!-- Escala Plana con Marcador Dinámico -->
                             <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                                <div class="flex justify-between text-xs font-bold uppercase mb-2">
-                                    <span class="text-sky-400">Bajo (&lt;18.5)</span>
-                                    <span class="text-emerald-400">Normal (18.5 - 24.9)</span>
-                                    <span class="text-amber-400">Alto (25+)</span>
+                                <div class="flex justify-between text-[11px] font-extrabold uppercase mb-2">
+                                    <span class="text-sky-400">Bajo Peso (&lt;18.5)</span>
+                                    <span class="text-emerald-400">Peso Normal (18.5 - 24.9)</span>
+                                    <span class="text-fitup-orange">Sobrepeso / Alto (25+)</span>
                                 </div>
-                                <div class="w-full h-3 bg-slate-700 rounded-full overflow-hidden flex">
+
+                                <!-- Barra de 3 niveles con pin indicador -->
+                                <div class="relative w-full h-4 bg-slate-700 rounded-lg overflow-hidden flex">
                                     <div class="w-1/3 bg-sky-500 h-full"></div>
                                     <div class="w-1/3 bg-emerald-500 h-full"></div>
                                     <div class="w-1/3 bg-fitup-orange h-full"></div>
                                 </div>
-                                <div class="mt-2 flex items-center justify-between text-xs">
-                                    <span id="res-rango-badge" class="inline-block font-black uppercase px-3 py-1 rounded bg-fitup-orange text-white">
-                                        Clasificación
-                                    </span>
-                                    <span id="res-peso-ideal" class="text-slate-300 font-semibold"></span>
+                                <!-- Pin posición -->
+                                <div class="relative w-full h-5 mt-1">
+                                    <div id="imc-marker" class="absolute top-0 -translate-x-1/2 transition-all duration-500 text-xs font-black text-white bg-fitup-orange px-2 py-0.5 rounded" style="left: 55%;">
+                                        ▲ Tu IMC
+                                    </div>
+                                </div>
+
+                                <div class="mt-2 pt-3 border-t border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                                    <span class="text-slate-400 font-bold uppercase">Rango de peso saludable estimado para tu altura:</span>
+                                    <span id="res-peso-ideal" class="text-white font-black uppercase">54.7 kg - 73.7 kg</span>
                                 </div>
                             </div>
 
-                            <!-- Mensaje Personalizado de Recomendación FitUp Club -->
-                            <div class="bg-slate-800 border-l-4 border-fitup-orange p-6 rounded-r-xl">
-                                <h4 class="text-sm font-black uppercase text-fitup-orange tracking-wider mb-2">
-                                    <i class="fa-solid fa-bullseye mr-1.5"></i> Recomendación Oficial FitUp Club:
-                                </h4>
-                                <p id="res-mensaje" class="text-slate-200 text-sm sm:text-base font-medium leading-relaxed"></p>
+                            <!-- Recomendación Personalizada de FitUp Club -->
+                            <div class="bg-slate-800 border-l-4 border-fitup-orange p-5 rounded-r-xl">
+                                <span class="text-xs font-extrabold uppercase text-fitup-orange block mb-1">
+                                    <i class="fa-solid fa-dumbbell mr-1.5"></i> Diagnóstico y Ruta Recomendada FitUp Club:
+                                </span>
+                                <p id="res-mensaje" class="text-slate-200 text-sm sm:text-base font-medium leading-relaxed">
+                                    ¡Excelente base física! Te recomendamos combinar nuestra Sala de Musculación con sesiones explosivas en la Zona Funcional, Clases Grupales y recuperación muscular en nuestro Sauna.
+                                </p>
                             </div>
 
-                            <!-- Tarjetas de Zonas Recomendadas -->
+                            <!-- 3 Tarjetas de Zonas Recomendadas -->
                             <div>
                                 <span class="text-xs font-extrabold uppercase text-slate-400 block mb-3">
-                                    Zonas de FitUp Club que debes priorizar:
+                                    Zonas de FitUp Club (Open Plaza Cajamarca) para tu objetivo:
                                 </span>
                                 <div id="res-zonas-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                    <!-- Se inyecta dinámicamente vía JS -->
+                                    <!-- Se actualiza en vivo con JS -->
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Acciones Finales -->
-                            <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center gap-4">
-                                <a href="index.html#prueba-gratis" class="w-full sm:w-auto flex-1 bg-fitup-orange hover:bg-fitup-orangeHover text-white font-black uppercase text-xs tracking-wider py-4 px-6 rounded-lg text-center transition-colors">
-                                    Solicitar mi Sesión de Prueba Gratuita
-                                </a>
-                                <a href="servicios.html" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-bold uppercase text-xs tracking-wider py-4 px-6 rounded-lg text-center transition-colors">
-                                    Ver Horarios de esas Zonas
-                                </a>
-                            </div>
-
+                        <!-- Botones de Acción inferiores -->
+                        <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center gap-4">
+                            <a href="index.html#prueba-gratis" class="w-full sm:w-auto flex-1 bg-fitup-orange hover:bg-fitup-orangeHover text-white font-black uppercase text-xs tracking-wider py-4 px-6 rounded-xl text-center transition-colors">
+                                Solicitar mi Sesión de Prueba Gratuita
+                            </a>
+                            <a href="servicios.html" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-bold uppercase text-xs tracking-wider py-4 px-6 rounded-xl text-center transition-colors">
+                                Ver Horarios de Zonas
+                            </a>
                         </div>
 
                     </div>
@@ -299,7 +342,7 @@
         </div>
     </footer>
 
-    <!-- LÓGICA JAVASCRIPT REAL DE LA CALCULADORA IMC Y RECOMENDADOR -->
+    <!-- JAVASCRIPT REAL DE LA CALCULADORA -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 600, once: true, offset: 50 });
@@ -314,14 +357,20 @@
 
         function cargarEjemplo(edad, peso, altura) {
             document.getElementById('edad').value = edad;
+            document.getElementById('edad-range').value = edad;
             document.getElementById('peso').value = peso;
+            document.getElementById('peso-range').value = peso;
             document.getElementById('altura').value = altura;
-            document.getElementById('bmi-form').dispatchEvent(new Event('submit'));
+            document.getElementById('altura-range').value = altura;
+            ejecutarCalculoIMC();
         }
 
         function calcularEstadoFisico(event) {
-            event.preventDefault();
+            if (event) event.preventDefault();
+            ejecutarCalculoIMC();
+        }
 
+        function ejecutarCalculoIMC() {
             const edad = parseInt(document.getElementById('edad').value, 10);
             const peso = parseFloat(document.getElementById('peso').value);
             const alturaCm = parseFloat(document.getElementById('altura').value);
@@ -332,60 +381,59 @@
             const imc = peso / (alturaM * alturaM);
             const imcRedondeado = imc.toFixed(1);
 
-            // Rango de peso saludable estimado (IMC 18.5 a 24.9)
             const pesoMin = (18.5 * alturaM * alturaM).toFixed(1);
             const pesoMax = (24.9 * alturaM * alturaM).toFixed(1);
 
             let titulo = '';
             let badgeTexto = '';
             let mensaje = '';
+            let markerPos = '50%';
             let zonas = [];
 
             if (imc < 18.5) {
-                titulo = 'ENFOQUE EN GANANCIA MUSCULAR Y FUERZA';
-                badgeTexto = 'IMC Bajo (< 18.5) • Prioridad Hipertrofia';
-                mensaje = `Con ${edad} años y un IMC de ${imcRedondeado}, te recomendamos nuestra Sala de Musculación para construir masa muscular magra mediante fuerza progresiva, acompañada de batidos hipercalóricos/proteicos en nuestra Cafetería Fitness y una evaluación antropométrica con nuestro Médico Deportivo.`;
+                titulo = 'ENFOQUE EN HIPERTROFIA Y FUERZA';
+                badgeTexto = 'IMC Bajo (< 18.5) • Prioridad Masa Muscular';
+                markerPos = '18%';
+                mensaje = `Con ${edad} años y un IMC de ${imcRedondeado}, te recomendamos nuestra Sala de Musculación para construir masa muscular magra con cargas progresivas, acompañada de batidos proteicos en nuestra Cafetería Fitness y control mensual con el Médico Deportivo.`;
                 zonas = [
-                    { icono: 'fa-dumbbell', nombre: 'Sala de Musculación', detalle: '4 sesiones/semana de fuerza e hipertrofia guiada' },
-                    { icono: 'fa-mug-hot', nombre: 'Cafetería Fitness', detalle: 'Suplementación proteica post-entrenamiento' },
-                    { icono: 'fa-user-doctor', nombre: 'Médico Deportivo', detalle: 'Control mensual de aumento de masa muscular' }
+                    { icono: 'fa-dumbbell', nombre: 'Sala de Musculación', detalle: 'Fuerza e hipertrofia guiada (4 días/sem)' },
+                    { icono: 'fa-mug-hot', nombre: 'Cafetería Fitness', detalle: 'Batidos proteicos y superávit energético' },
+                    { icono: 'fa-user-doctor', nombre: 'Médico Deportivo', detalle: 'Seguimiento antropométrico mensual' }
                 ];
             } else if (imc >= 18.5 && imc < 25) {
                 titulo = 'ESTADO FÍSICO EQUILIBRADO • ALTO RENDIMIENTO';
                 badgeTexto = 'IMC Normal (18.5 - 24.9) • Potencia y Definición';
-                mensaje = `¡Excelente punto de partida! Con ${edad} años y un IMC saludable de ${imcRedondeado}, estás listo para un entrenamiento híbrido. Te recomendamos combinar nuestra Sala de Musculación con sesiones explosivas en la Zona Funcional, Clases Grupales y recuperación muscular en nuestro Sauna.`;
+                markerPos = '50%';
+                mensaje = `¡Excelente punto de partida! Con ${edad} años y un IMC saludable de ${imcRedondeado}, te recomendamos combinar nuestra Sala de Musculación con sesiones explosivas en la Zona Funcional, Clases Grupales y recuperación en nuestro Sauna.`;
                 zonas = [
                     { icono: 'fa-dumbbell', nombre: 'Sala de Musculación', detalle: 'Tonificación, fuerza y definición muscular' },
                     { icono: 'fa-bolt', nombre: 'Zona Funcional & Clases', detalle: 'Potencia atlética, Tabata y agilidad' },
-                    { icono: 'fa-hot-tub-person', nombre: 'Sauna & Recuperación', detalle: 'Descarga muscular tras entrenamientos intensos' }
+                    { icono: 'fa-hot-tub-person', nombre: 'Sauna & Recuperación', detalle: 'Relajación muscular post-entrenamiento' }
                 ];
             } else {
-                titulo = 'PLAN DE QUEMA CALÓRICA Y ACONDICIONAMIENTO';
+                titulo = 'PLAN QUEMA CALÓRICA Y ACONDICIONAMIENTO';
                 badgeTexto = 'IMC Alto (25.0+) • Prioridad Cardio + Metabólico';
-                mensaje = `Para tus ${edad} años y un IMC de ${imcRedondeado}, te sugerimos iniciar con una evaluación segura en nuestro Médico Deportivo, combinando sesiones de quema de grasa en nuestra Zona Cardio, Zona Spinning y Clases Grupales, fortaleciendo tus articulaciones en la Sala de Musculación.`;
+                markerPos = '82%';
+                mensaje = `Para tus ${edad} años y un IMC de ${imcRedondeado}, te sugerimos iniciar con nuestra Zona de Cardio, Zona Spinning y evaluación con el Médico Deportivo, complementando con ejercicios de fuerza en la Sala de Musculación para acelerar tu metabolismo.`;
                 zonas = [
-                    { icono: 'fa-user-doctor', nombre: 'Médico Deportivo', detalle: 'Evaluación inicial y plan seguro sin impacto articular' },
-                    { icono: 'fa-heart-pulse', nombre: 'Zona Cardio & Spinning', detalle: 'Quema calórica constante y salud cardiovascular' },
-                    { icono: 'fa-users', nombre: 'Clases Grupales + Pesas', detalle: 'Aceleración metabólica con entrenadores en vivo' }
+                    { icono: 'fa-heart-pulse', nombre: 'Zona Cardio & Spinning', detalle: 'Quema de grasa continua sin impacto' },
+                    { icono: 'fa-user-doctor', nombre: 'Médico Deportivo', detalle: 'Evaluación inicial y control articular' },
+                    { icono: 'fa-users', nombre: 'Clases Grupales + Pesas', detalle: 'Gasto calórico elevado con guía en vivo' }
                 ];
             }
-
-            // Actualizar DOM
-            document.getElementById('estado-inicial').classList.add('hidden');
-            const panel = document.getElementById('resultado-panel');
-            panel.classList.remove('hidden');
 
             document.getElementById('res-titulo').textContent = titulo;
             document.getElementById('res-subtitulo').textContent = `Perfil evaluado: ${edad} años • ${peso} kg • ${alturaCm} cm`;
             document.getElementById('res-imc-valor').textContent = imcRedondeado;
             document.getElementById('res-rango-badge').textContent = badgeTexto;
-            document.getElementById('res-peso-ideal').textContent = `Rango saludable ref: ${pesoMin} kg - ${pesoMax} kg`;
+            document.getElementById('res-peso-ideal').textContent = `${pesoMin} kg - ${pesoMax} kg`;
             document.getElementById('res-mensaje').textContent = mensaje;
+            document.getElementById('imc-marker').style.left = markerPos;
 
             const grid = document.getElementById('res-zonas-grid');
             grid.innerHTML = zonas.map(z => `
-                <div class="bg-slate-800 border border-slate-700 rounded-lg p-4">
-                    <div class="w-9 h-9 rounded bg-fitup-orange text-white flex items-center justify-center text-sm mb-3">
+                <div class="bg-slate-800 border border-slate-700 rounded-xl p-4">
+                    <div class="w-9 h-9 rounded-lg bg-fitup-orange text-white flex items-center justify-center text-sm mb-3">
                         <i class="fa-solid ${z.icono}"></i>
                     </div>
                     <h5 class="text-sm font-black uppercase text-white">${z.nombre}</h5>
@@ -393,6 +441,9 @@
                 </div>
             `).join('');
         }
+
+        // Inicializar al cargar la página
+        document.addEventListener('DOMContentLoaded', ejecutarCalculoIMC);
     </script>
 </body>
 </html>
