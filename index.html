@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,10 +39,12 @@
     </script>
 
     <style>
-        body {
+        html, body {
             font-family: 'Montserrat', sans-serif;
             background-color: #000000;
             color: #ffffff;
+            overflow-x: hidden;
+            max-width: 100vw;
         }
         h1, h2, h3, h4 {
             font-weight: 900 !important;
@@ -70,16 +72,16 @@
 <body class="bg-black text-white antialiased selection:bg-orange-500 selection:text-white overflow-x-hidden">
 
     <!-- =====================================================
-         1. NAVBAR PLANA, SUAVE Y ELEGANTE CON FONDO NEGRO
+         1. NAVBAR MÓVIL-FIRST PLANA, SUAVE Y ELEGANTE CON FONDO NEGRO
     ====================================================== -->
     <header class="sticky top-0 w-full z-50 bg-black/95 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
             <a href="index.html" class="flex items-center shrink-0">
-                <img src="imagenes/logo-fitup.png" alt="FitUp Club" class="h-11 sm:h-12 w-auto object-contain" onerror="this.style.display='none'">
+                <img src="imagenes/logo-fitup.png" alt="FitUp Club" class="w-32 md:w-36 h-auto object-contain" onerror="this.style.display='none'">
             </a>
 
-            <!-- Enlaces Desktop Planos y Elegantes (Sin cajas naranjas, solo texto que cambia al estar activo/hover) -->
-            <nav class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest">
+            <!-- Enlaces Desktop Planos y Elegantes (hidden md:flex) -->
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-bold uppercase tracking-widest">
                 <a href="index.html" class="text-orange-500 transition-colors duration-200 py-2">Inicio</a>
                 <a href="servicios.html" class="text-gray-300 hover:text-orange-500 active:text-orange-500 transition-colors duration-200 py-2">Servicios y Horarios</a>
                 <a href="entrenadores.html" class="text-gray-300 hover:text-orange-500 active:text-orange-500 transition-colors duration-200 py-2">Entrenadores</a>
@@ -87,38 +89,38 @@
                 <a href="#tips" class="text-gray-300 hover:text-orange-500 active:text-orange-500 transition-colors duration-200 py-2">Tips FitUp</a>
             </nav>
 
-            <!-- Botón CTA Suave y Plano + Hamburguesa Móvil -->
+            <!-- Botón CTA Desktop + Hamburguesa Móvil -->
             <div class="flex items-center gap-3 shrink-0">
-                <a href="#prueba-gratis" class="bg-white/10 hover:bg-orange-500 active:bg-orange-500 text-white font-bold uppercase text-xs tracking-widest h-10 px-5 rounded-lg inline-flex items-center justify-center transition-colors duration-200 whitespace-nowrap">
+                <a href="#prueba-gratis" class="hidden sm:inline-flex bg-white/10 hover:bg-orange-500 active:bg-orange-500 text-white font-bold uppercase text-xs tracking-widest h-10 px-5 rounded-lg items-center justify-center transition-colors duration-200 whitespace-nowrap">
                     Sesión Gratis
                 </a>
-                <button type="button" onclick="toggleMobileMenu()" aria-label="Menú" class="lg:hidden w-10 h-10 rounded-lg bg-white/5 hover:text-orange-500 text-white flex items-center justify-center transition-colors">
-                    <i id="hamburger-icon" class="fa-solid fa-bars text-base"></i>
+                <button type="button" onclick="toggleMobileMenu()" aria-label="Abrir Menú" class="md:hidden w-11 h-11 rounded-xl bg-white/10 hover:bg-orange-500 text-white flex items-center justify-center transition-colors">
+                    <i id="hamburger-icon" class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Menú Móvil Plano y Elegante -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-black/95 backdrop-blur-md mx-4 mb-4 p-4 rounded-xl space-y-1">
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-md mx-4 mb-4 p-4 rounded-xl space-y-1">
             <a href="index.html" class="block py-3 px-4 rounded-lg text-xs font-bold uppercase tracking-widest text-orange-500">Inicio</a>
             <a href="servicios.html" class="block py-3 px-4 rounded-lg text-xs font-bold uppercase tracking-widest text-gray-300 hover:text-orange-500 transition-colors">Servicios y Horarios</a>
             <a href="entrenadores.html" class="block py-3 px-4 rounded-lg text-xs font-bold uppercase tracking-widest text-gray-300 hover:text-orange-500 transition-colors">Entrenadores</a>
             <a href="tu-espacio.html" class="block py-3 px-4 rounded-lg text-xs font-bold uppercase tracking-widest text-gray-300 hover:text-orange-500 transition-colors">Tu Espacio FitUp</a>
             <a href="#tips" onclick="toggleMobileMenu()" class="block py-3 px-4 rounded-lg text-xs font-bold uppercase tracking-widest text-gray-300 hover:text-orange-500 transition-colors">Tips FitUp Club</a>
-            <div class="pt-2">
-                <a href="#prueba-gratis" onclick="toggleMobileMenu()" class="block w-full bg-white/10 hover:bg-orange-500 text-white font-bold uppercase text-center text-xs tracking-widest py-3.5 rounded-lg transition-colors">
+            <div class="pt-3">
+                <a href="#prueba-gratis" onclick="toggleMobileMenu()" class="block w-full bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-center text-xs tracking-widest py-4 rounded-xl transition-colors">
                     Solicita tu sesión de prueba gratuita
                 </a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main class="overflow-x-hidden">
 
         <!-- =====================================================
-             2. HERO SECTION CON FONDO DE GIMNASIO + OVERLAY BG-BLACK/80 + PARALLAX
+             2. HERO SECTION RESPONSIVA (TEXT-4XL SM:TEXT-5XL MD:TEXT-7XL)
         ====================================================== -->
-        <section class="relative min-h-[86vh] flex items-center overflow-hidden bg-black py-16 md:py-24">
+        <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-black py-12 md:py-24">
             <!-- Imagen de fondo de gimnasio con Parallax + Overlay bg-black/80 -->
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
                 <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=85" 
@@ -128,46 +130,46 @@
             </div>
 
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10 w-full">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
-                    <!-- Columna Texto Hero (Sin etiqueta de ubicación, alineado y ordenado) -->
+                    <!-- Columna Texto Hero -->
                     <div class="lg:col-span-7 text-center lg:text-left">
-                        <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase leading-[1.02] text-white">
+                        <h1 class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[1.04] text-white">
                             <span class="line-mask"><span class="line-reveal hero-line">COMIENZA YA.</span></span>
                             <span class="line-mask"><span class="line-reveal hero-line text-orange-500">DEJA LAS</span></span>
                             <span class="line-mask"><span class="line-reveal hero-line text-orange-500">EXCUSAS.</span></span>
                         </h1>
 
-                        <p class="mt-6 text-gray-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed hero-sub">
+                        <p class="mt-5 md:mt-6 text-gray-300 text-sm sm:text-base md:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed hero-sub">
                             Transforma tu físico en el centro de entrenamiento más tecnológico de Cajamarca. Más de 1,500 m² con 11 zonas especializadas, sauna, médico deportivo y evaluación digital en tiempo real.
                         </p>
 
-                        <!-- Botones CTA Ordenados en una sola línea uniforme -->
-                        <div class="mt-9 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 hero-cta">
-                            <a href="#prueba-gratis" class="w-full sm:w-auto h-14 px-8 rounded-xl bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs sm:text-sm tracking-wider inline-flex items-center justify-center gap-3 whitespace-nowrap transition-colors duration-200">
+                        <!-- Botones CTA 100% Táctiles en móvil (w-full md:w-auto) -->
+                        <div class="mt-8 md:mt-9 flex flex-col md:flex-row items-center justify-center lg:justify-start gap-3.5 md:gap-4 hero-cta">
+                            <a href="#prueba-gratis" class="w-full md:w-auto min-h-[56px] px-7 py-4 rounded-xl bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs sm:text-sm tracking-wider inline-flex items-center justify-center gap-3 text-center transition-colors duration-200">
                                 <span>Solicita tu sesión de prueba gratuita</span>
-                                <i class="fa-solid fa-arrow-right"></i>
+                                <i class="fa-solid fa-arrow-right shrink-0"></i>
                             </a>
-                            <a href="servicios.html" class="w-full sm:w-auto h-14 px-8 rounded-xl bg-white/10 backdrop-blur-md hover:bg-orange-500 text-white font-black uppercase text-xs sm:text-sm tracking-wider inline-flex items-center justify-center whitespace-nowrap transition-colors duration-200">
+                            <a href="servicios.html" class="w-full md:w-auto min-h-[56px] px-7 py-4 rounded-xl bg-white/10 backdrop-blur-md hover:bg-orange-500 text-white font-black uppercase text-xs sm:text-sm tracking-wider inline-flex items-center justify-center text-center transition-colors duration-200">
                                 <span>Explorar las 11 Zonas</span>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Columna Derecha: Tarjeta Glassmorphism (bg-white/5 backdrop-blur-md rounded-2xl) -->
+                    <!-- Columna Derecha: Tarjeta Glassmorphism -->
                     <div class="lg:col-span-5">
                         <div class="bg-white/5 backdrop-blur-md rounded-2xl p-4">
-                            <div class="img-reveal-wrap rounded-xl h-[380px] sm:h-[420px]">
+                            <div class="img-reveal-wrap rounded-xl h-72 sm:h-96 md:h-[420px]">
                                 <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85" 
                                      alt="Atleta FitUp Club" 
                                      class="img-reveal w-full h-full object-cover">
                             </div>
-                            <div class="px-3 pt-4 pb-2 flex items-center justify-between gap-4">
-                                <div>
+                            <div class="px-2 pt-4 pb-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div class="text-center sm:text-left">
                                     <span class="text-[11px] font-black uppercase tracking-widest text-orange-500 block">Diagnóstico Interactivo</span>
                                     <p class="text-sm font-black uppercase text-white mt-0.5">Calcula tu Punto de Partida</p>
                                 </div>
-                                <a href="tu-espacio.html" class="bg-orange-500 hover:bg-white hover:text-black text-white text-xs font-black uppercase h-10 px-5 rounded-xl inline-flex items-center justify-center whitespace-nowrap transition-colors shrink-0">
+                                <a href="tu-espacio.html" class="w-full sm:w-auto bg-orange-500 hover:bg-white hover:text-black text-white text-xs font-black uppercase h-11 px-6 rounded-xl inline-flex items-center justify-center whitespace-nowrap transition-colors shrink-0">
                                     Calcular IMC
                                 </a>
                             </div>
@@ -179,11 +181,11 @@
         </section>
 
         <!-- =====================================================
-             3. BARRA DE ESTADÍSTICAS UNIFORME (1 SOLA FILA POR TÍTULO Y SUBTÍTULO)
+             3. BARRA DE ESTADÍSTICAS UNIFORME (1 COL EN MÓVIL, 4 EN PC)
         ====================================================== -->
-        <section class="py-10 bg-black">
+        <section class="py-8 md:py-10 bg-black">
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-                <div class="bg-white/5 backdrop-blur-md rounded-2xl py-10 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center items-center">
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl py-8 md:py-10 px-5 sm:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center items-center">
                     <div class="stat-item flex flex-col items-center justify-center py-2">
                         <p class="text-3xl xl:text-4xl font-black tracking-tighter uppercase text-orange-500 whitespace-nowrap leading-none">+1,500 M²</p>
                         <p class="text-[11px] font-bold uppercase tracking-widest text-gray-300 mt-3 whitespace-nowrap">Infraestructura Deportiva</p>
@@ -205,9 +207,9 @@
         </section>
 
         <!-- =====================================================
-             4. SECCIÓN DE SERVICIOS DESTACADOS (GLASSMORPHISM - SIN BORDES)
+             4. SECCIÓN DE SERVICIOS DESTACADOS (GRID-COLS-1 MD:GRID-COLS-3)
         ====================================================== -->
-        <section class="relative bg-black text-white py-24 md:py-28 overflow-hidden">
+        <section class="relative bg-black text-white py-20 md:py-28 overflow-hidden">
             <!-- Fondo inmersivo sutil con bg-black/85 -->
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
                 <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1920&q=80" 
@@ -218,34 +220,34 @@
 
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
 
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
                     <div>
                         <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-lg mb-4">
                             Instalaciones de Primer Nivel
                         </span>
-                        <h2 class="text-3xl sm:text-5xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
                             <span class="line-mask"><span class="line-reveal">ZONAS DISEÑADAS PARA</span></span>
                             <span class="line-mask"><span class="line-reveal text-orange-500">TU EVOLUCIÓN</span></span>
                         </h2>
                     </div>
-                    <a href="servicios.html" class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-white/5 backdrop-blur-md hover:bg-orange-500 text-white font-black uppercase text-xs tracking-wider px-7 py-4 rounded-full transition-colors duration-200">
+                    <a href="servicios.html" class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md hover:bg-orange-500 text-white font-black uppercase text-xs tracking-wider px-7 py-4 rounded-xl transition-colors duration-200">
                         <span>Ver las 11 Zonas y Horarios</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <!-- 3 Tarjetas Principales con Glassmorphism (bg-white/5 backdrop-blur-md rounded-xl) y Zoom 3D (1.2 -> 1) -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 3 Tarjetas Principales: 1 col en móvil, 3 en PC -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
                     <!-- Tarjeta 1 -->
                     <article class="bg-white/5 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
                         <div>
-                            <div class="img-reveal-wrap rounded-xl h-60">
+                            <div class="img-reveal-wrap rounded-xl h-56 sm:h-60">
                                 <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" 
                                      alt="Sala de Musculación" 
                                      class="img-reveal w-full h-full object-cover">
                             </div>
-                            <div class="px-2 pt-6 pb-4">
+                            <div class="px-1 pt-5 pb-4">
                                 <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Fuerza & Potencia</span>
                                 <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Sala de Musculación</h3>
                                 <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
@@ -253,8 +255,8 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="px-2 pb-2 pt-2">
-                            <a href="servicios.html" class="block w-full bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider py-4 rounded-full text-center transition-colors">
+                        <div class="pt-2">
+                            <a href="servicios.html" class="block w-full bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider py-4 rounded-xl text-center transition-colors">
                                 Explorar Zona
                             </a>
                         </div>
@@ -263,12 +265,12 @@
                     <!-- Tarjeta 2 -->
                     <article class="bg-white/5 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
                         <div>
-                            <div class="img-reveal-wrap rounded-xl h-60">
+                            <div class="img-reveal-wrap rounded-xl h-56 sm:h-60">
                                 <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=800&q=80" 
                                      alt="Spinning y Cardio" 
                                      class="img-reveal w-full h-full object-cover">
                             </div>
-                            <div class="px-2 pt-6 pb-4">
+                            <div class="px-1 pt-5 pb-4">
                                 <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Resistencia</span>
                                 <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Spinning & Zona Cardio</h3>
                                 <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
@@ -276,8 +278,8 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="px-2 pb-2 pt-2">
-                            <a href="servicios.html" class="block w-full bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider py-4 rounded-full text-center transition-colors">
+                        <div class="pt-2">
+                            <a href="servicios.html" class="block w-full bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider py-4 rounded-xl text-center transition-colors">
                                 Explorar Zona
                             </a>
                         </div>
@@ -286,12 +288,12 @@
                     <!-- Tarjeta 3 -->
                     <article class="bg-white/5 backdrop-blur-md rounded-xl p-5 flex flex-col justify-between fade-card">
                         <div>
-                            <div class="img-reveal-wrap rounded-xl h-60">
+                            <div class="img-reveal-wrap rounded-xl h-56 sm:h-60">
                                 <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" 
                                      alt="Clases Grupales" 
                                      class="img-reveal w-full h-full object-cover">
                             </div>
-                            <div class="px-2 pt-6 pb-4">
+                            <div class="px-1 pt-5 pb-4">
                                 <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Energía Colectiva</span>
                                 <h3 class="text-2xl font-black tracking-tighter uppercase text-white mt-1">Funcional & Clases Grupales</h3>
                                 <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
@@ -299,8 +301,8 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="px-2 pb-2 pt-2">
-                            <a href="servicios.html" class="block w-full bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider py-4 rounded-full text-center transition-colors">
+                        <div class="pt-2">
+                            <a href="servicios.html" class="block w-full bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider py-4 rounded-xl text-center transition-colors">
                                 Explorar Zona
                             </a>
                         </div>
@@ -311,30 +313,30 @@
         </section>
 
         <!-- =====================================================
-             5. SECCIÓN: TIPS FITUP CLUB (GLASSMORPHISM - SIN BORDES)
+             5. SECCIÓN: TIPS FITUP CLUB (GRID-COLS-1 MD:GRID-COLS-3)
         ====================================================== -->
-        <section id="tips" class="relative bg-black text-white py-24 md:py-28 overflow-hidden">
+        <section id="tips" class="relative bg-black text-white py-20 md:py-28 overflow-hidden">
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
 
-                <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
                     <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-lg mb-4">
                         Ciencia y Rendimiento Deportivo
                     </span>
-                    <h2 class="text-3xl sm:text-5xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
                         <span class="line-mask"><span class="line-reveal">TIPS <span class="text-orange-500">FITUP CLUB</span></span></span>
                     </h2>
-                    <p class="text-gray-300 text-base sm:text-lg mt-3 font-normal">
+                    <p class="text-gray-300 text-sm sm:text-base md:text-lg mt-3 font-normal">
                         Pilares fundamentales recomendados por nuestros entrenadores y médicos deportivos para maximizar cada sesión.
                     </p>
                 </div>
 
-                <!-- Grid de 3 Columnas con Tarjetas Glassmorphism (bg-white/5 backdrop-blur-md rounded-xl) sin bordes -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Grid de 3 Columnas: 1 col en móvil, 3 en PC -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
                     <!-- Tip 1: Entrenamiento Inteligente -->
-                    <article class="bg-white/5 backdrop-blur-md rounded-xl p-6 flex flex-col justify-between fade-card">
+                    <article class="bg-white/5 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
                         <div>
-                            <div class="img-reveal-wrap rounded-xl h-56 relative">
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56 relative">
                                 <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" 
                                      alt="Entrenamiento Inteligente" 
                                      class="img-reveal w-full h-full object-cover">
@@ -342,23 +344,23 @@
                                     Pilar 01
                                 </span>
                             </div>
-                            <div class="pt-6 pb-4">
+                            <div class="pt-5 pb-4">
                                 <h3 class="text-2xl font-black tracking-tighter uppercase text-white">Entrenamiento Inteligente</h3>
                                 <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
                                     Prioriza la ejecución biomecánica correcta y la sobrecarga progresiva planificada sobre el peso excesivo. Controlar el tempo de cada repetición estimula mayor hipertrofia y protege tus articulaciones.
                                 </p>
                             </div>
                         </div>
-                        <div class="pt-4 bg-black/40 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
+                        <div class="bg-black/40 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
                             <span>Sala de Musculación & Funcional</span>
                             <i class="fa-solid fa-dumbbell"></i>
                         </div>
                     </article>
 
                     <!-- Tip 2: Suplementación Estratégica -->
-                    <article class="bg-white/5 backdrop-blur-md rounded-xl p-6 flex flex-col justify-between fade-card">
+                    <article class="bg-white/5 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
                         <div>
-                            <div class="img-reveal-wrap rounded-xl h-56 relative">
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56 relative">
                                 <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" 
                                      alt="Suplementación Estratégica" 
                                      class="img-reveal w-full h-full object-cover">
@@ -366,23 +368,23 @@
                                     Pilar 02
                                 </span>
                             </div>
-                            <div class="pt-6 pb-4">
+                            <div class="pt-5 pb-4">
                                 <h3 class="text-2xl font-black tracking-tighter uppercase text-white">Suplementación Estratégica</h3>
                                 <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
                                     Alcanza tu requerimiento diario de macronutrientes apoyándote en proteína de suero post-entreno y creatina monohidratada para mejorar la síntesis proteica y tu potencia explosiva en cada serie.
                                 </p>
                             </div>
                         </div>
-                        <div class="pt-4 bg-black/40 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
+                        <div class="bg-black/40 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
                             <span>Cafetería Fitness & Nutrición</span>
                             <i class="fa-solid fa-mug-hot"></i>
                         </div>
                     </article>
 
                     <!-- Tip 3: Hidratación y Recuperación -->
-                    <article class="bg-white/5 backdrop-blur-md rounded-xl p-6 flex flex-col justify-between fade-card">
+                    <article class="bg-white/5 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
                         <div>
-                            <div class="img-reveal-wrap rounded-xl h-56 relative">
+                            <div class="img-reveal-wrap rounded-xl h-52 sm:h-56 relative">
                                 <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" 
                                      alt="Hidratación y Recuperación" 
                                      class="img-reveal w-full h-full object-cover">
@@ -390,14 +392,14 @@
                                     Pilar 03
                                 </span>
                             </div>
-                            <div class="pt-6 pb-4">
+                            <div class="pt-5 pb-4">
                                 <h3 class="text-2xl font-black tracking-tighter uppercase text-white">Hidratación y Recuperación</h3>
                                 <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
                                     En la altitud de Cajamarca, reponer agua y electrolitos durante la sesión evita la fatiga prematura. Complementa tu semana con 15 minutos de sauna seco y descanso profundo para regenerar tus músculos.
                                 </p>
                             </div>
                         </div>
-                        <div class="pt-4 bg-black/40 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
+                        <div class="bg-black/40 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
                             <span>Sauna & Médico Deportivo</span>
                             <i class="fa-solid fa-hot-tub-person"></i>
                         </div>
@@ -409,11 +411,11 @@
         </section>
 
         <!-- =====================================================
-             6. BANNER PARALLAX HACIA TU ESPACIO FITUP (ROUNDED-2XL)
+             6. BANNER PARALLAX HACIA TU ESPACIO FITUP (BOTÓN W-FULL EN MÓVIL)
         ====================================================== -->
-        <section class="py-16 bg-black">
+        <section class="py-12 md:py-16 bg-black">
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-                <div class="relative rounded-2xl overflow-hidden py-16 px-6 sm:px-12 flex items-center justify-center">
+                <div class="relative rounded-2xl overflow-hidden py-14 sm:py-16 px-5 sm:px-12 flex items-center justify-center">
                     <div class="absolute inset-0 overflow-hidden pointer-events-none">
                         <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=85" 
                              alt="Tu Espacio FitUp" 
@@ -421,11 +423,11 @@
                         <div class="absolute inset-0 bg-black/80"></div>
                     </div>
 
-                    <div class="relative z-10 max-w-3xl mx-auto text-center">
+                    <div class="relative z-10 max-w-3xl mx-auto text-center w-full">
                         <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-lg mb-4">
                             Evaluación Biométrica Online
                         </span>
-                        <h2 class="text-3xl sm:text-5xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
                             <span class="line-mask"><span class="line-reveal">CALCULA TU ESTADO FÍSICO</span></span>
                             <span class="line-mask"><span class="line-reveal text-orange-500">EN TU ESPACIO FITUP</span></span>
                         </h2>
@@ -433,7 +435,7 @@
                             Conoce tu Índice de Masa Corporal (IMC) y obtén la recomendación exacta de las zonas que debes usar en FitUp Club.
                         </p>
                         <div class="mt-8">
-                            <a href="tu-espacio.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs sm:text-sm tracking-wider px-9 py-4 rounded-full transition-colors duration-200">
+                            <a href="tu-espacio.html" class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs sm:text-sm tracking-wider px-9 py-4 rounded-xl transition-colors duration-200">
                                 <span>Abrir Calculadora Interactiva</span>
                                 <i class="fa-solid fa-calculator"></i>
                             </a>
@@ -444,15 +446,15 @@
         </section>
 
         <!-- =====================================================
-             7. FORMULARIO DE PRUEBA GRATUITA (GLASSMORPHISM ROUNDED-2XL)
+             7. FORMULARIO DE PRUEBA GRATUITA (BOTÓN W-FULL EN MÓVIL)
         ====================================================== -->
-        <section id="prueba-gratis" class="py-20 bg-black">
+        <section id="prueba-gratis" class="py-16 md:py-20 bg-black">
             <div class="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
-                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-8 sm:p-12 text-center">
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-12 text-center">
                     <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-lg mb-4">
                         C.C. Open Plaza Cajamarca • Segundo Nivel
                     </span>
-                    <h2 class="text-3xl sm:text-5xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
                         <span class="line-mask"><span class="line-reveal">SOLICITA TU SESIÓN DE</span></span>
                         <span class="line-mask"><span class="line-reveal text-orange-500">PRUEBA GRATUITA</span></span>
                     </h2>
@@ -460,12 +462,12 @@
                         Déjanos tu nombre y WhatsApp para activar tu pase de cortesía de 1 día en FitUp Club Cajamarca.
                     </p>
 
-                    <form onsubmit="event.preventDefault(); alert('¡Tu sesión de prueba gratuita en FitUp Club (Open Plaza Cajamarca) ha sido reservada!'); this.reset();" class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <form onsubmit="event.preventDefault(); alert('¡Tu sesión de prueba gratuita en FitUp Club (Open Plaza Cajamarca) ha sido reservada!'); this.reset();" class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
                         <input type="text" required placeholder="Tu Nombre Completo" 
-                               class="bg-black/60 rounded-xl px-5 py-4 text-white placeholder-gray-400 text-sm font-normal focus:outline-none focus:ring-2 focus:ring-orange-500">
+                               class="w-full bg-black/60 rounded-xl px-5 py-4 text-white placeholder-gray-400 text-sm font-normal focus:outline-none focus:ring-2 focus:ring-orange-500">
                         <input type="tel" required placeholder="Tu WhatsApp / Celular" 
-                               class="bg-black/60 rounded-xl px-5 py-4 text-white placeholder-gray-400 text-sm font-normal focus:outline-none focus:ring-2 focus:ring-orange-500">
-                        <button type="submit" class="bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase tracking-wider text-xs sm:text-sm py-4 px-6 rounded-full transition-colors duration-200">
+                               class="w-full bg-black/60 rounded-xl px-5 py-4 text-white placeholder-gray-400 text-sm font-normal focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase tracking-wider text-xs sm:text-sm py-4 px-6 rounded-xl transition-colors duration-200">
                             Solicitar Pase Gratis
                         </button>
                     </form>
@@ -476,16 +478,16 @@
     </main>
 
     <!-- FOOTER CORPORATIVO COMPLETO CON GOOGLE MAPS Y UBICACIÓN EN TODAS LAS PÁGINAS -->
-    <footer class="bg-black text-white py-16">
+    <footer class="bg-black text-white py-12 md:py-16 overflow-x-hidden">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div class="bg-white/5 backdrop-blur-md rounded-2xl p-8 sm:p-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 items-start">
+            <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
 
                     <!-- Columna 1: Marca, Propuesta de Valor y Redes (4 cols) -->
                     <div class="lg:col-span-4 flex flex-col justify-between space-y-5">
                         <div class="space-y-4">
                             <a href="index.html" class="inline-block">
-                                <img src="imagenes/logo-fitup.png" alt="Logo FitUp Club" class="h-14 sm:h-16 w-auto object-contain" onerror="this.style.display='none'">
+                                <img src="imagenes/logo-fitup.png" alt="Logo FitUp Club" class="w-36 sm:w-40 h-auto object-contain" onerror="this.style.display='none'">
                             </a>
                             <p class="text-gray-300 text-sm font-normal leading-relaxed">
                                 El centro de entrenamiento más moderno y completo de Cajamarca. Más de 1,500 m² con 11 zonas especializadas, sauna seco, cafetería fitness y médico deportivo.
@@ -559,7 +561,7 @@
                                 title="Mapa FitUp Club Open Plaza Cajamarca">
                             </iframe>
                         </div>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Open+Plaza+Cajamarca" target="_blank" rel="noopener" class="block w-full bg-white/10 hover:bg-orange-500 text-white text-center text-xs font-bold uppercase tracking-wider py-2.5 rounded-lg transition-colors">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Open+Plaza+Cajamarca" target="_blank" rel="noopener" class="block w-full bg-white/10 hover:bg-orange-500 text-white text-center text-xs font-bold uppercase tracking-wider py-3 rounded-lg transition-colors">
                             <i class="fa-solid fa-diamond-turn-right mr-1.5"></i> Cómo llegar en Google Maps
                         </a>
                     </div>
@@ -577,7 +579,7 @@
         </div>
     </footer>
 
-    <!-- LENIS SMOOTH SCROLL + GSAP + SCROLLTRIGGER -->
+    <!-- LENIS SMOOTH SCROLL + GSAP + SCROLLTRIGGER (OPTIMIZADO CON GSAP.MATCHMEDIA PARA MÓVIL) -->
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -593,13 +595,14 @@
         document.addEventListener('DOMContentLoaded', () => {
             gsap.registerPlugin(ScrollTrigger);
 
-            // Inicializar Lenis sincronizado con GSAP
+            // Inicializar Lenis respetando el scroll táctil nativo en celulares (syncTouch: false)
             const lenis = new Lenis({
-                duration: 1.25,
+                duration: 1.2,
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
                 smoothWheel: true,
+                syncTouch: false,
                 wheelMultiplier: 0.95,
-                touchMultiplier: 1.5
+                touchMultiplier: 1.0
             });
             lenis.on('scroll', ScrollTrigger.update);
             gsap.ticker.add((time) => {
@@ -614,7 +617,7 @@
                         const targetEl = document.querySelector(targetId);
                         if (targetEl) {
                             e.preventDefault();
-                            lenis.scrollTo(targetEl, { offset: -40, duration: 1.4 });
+                            lenis.scrollTo(targetEl, { offset: -40, duration: 1.2 });
                         }
                     }
                 });
@@ -623,70 +626,106 @@
             // 1. Entrada del Hero
             const heroTl = gsap.timeline({ defaults: { ease: 'expo.out' } });
             heroTl
-                .from('.hero-line', { yPercent: 115, duration: 1.15, stagger: 0.12 })
-                .from('.hero-sub', { y: 25, opacity: 0, duration: 0.9, ease: 'power3.out' }, '-=0.7')
-                .from('.hero-cta', { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6');
+                .from('.hero-line', { yPercent: 115, duration: 1.1, stagger: 0.12 })
+                .from('.hero-sub', { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+                .from('.hero-cta', { y: 18, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5');
 
-            // 2. Efecto Parallax en fondos
-            gsap.utils.toArray('.parallax-bg').forEach((bg) => {
-                gsap.fromTo(bg, 
-                    { yPercent: -14 },
-                    {
-                        yPercent: 18,
-                        ease: 'none',
-                        scrollTrigger: {
-                            trigger: bg.closest('section') || bg.parentElement,
-                            start: 'top bottom',
-                            end: 'bottom top',
-                            scrub: true
+            // 2. Optimización por dispositivo usando gsap.matchMedia()
+            const mm = gsap.matchMedia();
+
+            // DESKTOP (min-width: 768px): Parallax completo y Zoom 3D profundo
+            mm.add("(min-width: 768px)", () => {
+                gsap.utils.toArray('.parallax-bg').forEach((bg) => {
+                    gsap.fromTo(bg, 
+                        { yPercent: -14 },
+                        {
+                            yPercent: 18,
+                            ease: 'none',
+                            scrollTrigger: {
+                                trigger: bg.closest('section') || bg.parentElement,
+                                start: 'top bottom',
+                                end: 'bottom top',
+                                scrub: true
+                            }
                         }
-                    }
-                );
+                    );
+                });
+
+                gsap.utils.toArray('.img-reveal').forEach((img) => {
+                    gsap.fromTo(img,
+                        { scale: 1.2 },
+                        {
+                            scale: 1,
+                            ease: 'power2.out',
+                            scrollTrigger: {
+                                trigger: img.parentElement,
+                                start: 'top 92%',
+                                end: 'bottom 35%',
+                                scrub: 0.6
+                            }
+                        }
+                    );
+                });
             });
 
-            // 3. Efecto 3D en Imágenes de Tarjetas (scale 1.2 -> 1 dentro de overflow-hidden rounded-xl)
-            gsap.utils.toArray('.img-reveal').forEach((img) => {
-                gsap.fromTo(img,
-                    { scale: 1.2 },
-                    {
-                        scale: 1,
-                        ease: 'power2.out',
-                        scrollTrigger: {
-                            trigger: img.parentElement,
-                            start: 'top 92%',
-                            end: 'bottom 35%',
-                            scrub: 0.6
+            // MÓVIL (max-width: 767px): Parallax ultra-ligero sin lag y revelado fluido
+            mm.add("(max-width: 767px)", () => {
+                gsap.utils.toArray('.parallax-bg').forEach((bg) => {
+                    gsap.fromTo(bg, 
+                        { yPercent: -4 },
+                        {
+                            yPercent: 4,
+                            ease: 'none',
+                            scrollTrigger: {
+                                trigger: bg.closest('section') || bg.parentElement,
+                                start: 'top bottom',
+                                end: 'bottom top',
+                                scrub: true
+                            }
                         }
-                    }
-                );
+                    );
+                });
+
+                gsap.utils.toArray('.img-reveal').forEach((img) => {
+                    gsap.fromTo(img,
+                        { scale: 1.08 },
+                        {
+                            scale: 1,
+                            duration: 0.8,
+                            ease: 'power2.out',
+                            scrollTrigger: {
+                                trigger: img.parentElement,
+                                start: 'top 90%'
+                            }
+                        }
+                    );
+                });
             });
 
-            // 4. Revelación de Títulos por línea
+            // 3. Revelación de Títulos y Fade-Up elegante en todas las pantallas
             gsap.utils.toArray('.reveal-heading').forEach((heading) => {
                 const lines = heading.querySelectorAll('.line-reveal');
                 gsap.from(lines, {
                     yPercent: 115,
-                    duration: 1.1,
-                    stagger: 0.12,
+                    duration: 1.0,
+                    stagger: 0.1,
                     ease: 'expo.out',
                     scrollTrigger: {
                         trigger: heading,
-                        start: 'top 86%'
+                        start: 'top 88%'
                     }
                 });
             });
 
-            // 5. Aparición suave de tarjetas
-            gsap.utils.toArray('.fade-card').forEach((card, i) => {
+            gsap.utils.toArray('.fade-card').forEach((card) => {
                 gsap.from(card, {
-                    y: 35,
+                    y: 28,
                     opacity: 0,
-                    duration: 0.9,
-                    delay: (i % 3) * 0.08,
+                    duration: 0.75,
                     ease: 'power3.out',
                     scrollTrigger: {
                         trigger: card,
-                        start: 'top 90%'
+                        start: 'top 92%'
                     }
                 });
             });
