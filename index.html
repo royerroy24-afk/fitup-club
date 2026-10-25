@@ -480,30 +480,102 @@
 
     </main>
 
-    <!-- FOOTER UNIFICADO NEGRO PURO CON GLASSMORPHISM -->
-    <footer class="bg-black text-white py-12">
+    <!-- FOOTER CORPORATIVO COMPLETO CON GOOGLE MAPS Y UBICACIÓN EN TODAS LAS PÁGINAS -->
+    <footer class="bg-black text-white py-16">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div class="bg-white/5 backdrop-blur-md rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-                <a href="index.html" class="flex items-center">
-                    <img src="imagenes/logo-fitup.png" alt="Logo FitUp Club" class="w-44 h-auto object-contain" onerror="this.style.display='none'">
-                </a>
+            <div class="bg-white/5 backdrop-blur-md rounded-2xl p-8 sm:p-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 items-start">
 
-                <div class="flex flex-wrap items-center justify-center gap-3">
-                    <a href="https://instagram.com" target="_blank" rel="noopener" class="px-5 py-3 rounded-full bg-white/10 hover:bg-orange-500 text-white text-xs font-black uppercase tracking-wider transition-colors flex items-center gap-2">
-                        <i class="fa-brands fa-instagram text-base"></i> Instagram
-                    </a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener" class="px-5 py-3 rounded-full bg-white/10 hover:bg-orange-500 text-white text-xs font-black uppercase tracking-wider transition-colors flex items-center gap-2">
-                        <i class="fa-brands fa-facebook-f text-base"></i> Facebook
-                    </a>
-                    <a href="https://tiktok.com" target="_blank" rel="noopener" class="px-5 py-3 rounded-full bg-white/10 hover:bg-orange-500 text-white text-xs font-black uppercase tracking-wider transition-colors flex items-center gap-2">
-                        <i class="fa-brands fa-tiktok text-base"></i> TikTok
-                    </a>
+                    <!-- Columna 1: Marca, Propuesta de Valor y Redes (4 cols) -->
+                    <div class="lg:col-span-4 space-y-4">
+                        <a href="index.html" class="inline-block">
+                            <img src="imagenes/logo-fitup.png" alt="Logo FitUp Club" class="w-36 h-auto object-contain" onerror="this.style.display='none'">
+                        </a>
+                        <p class="text-gray-300 text-sm font-normal leading-relaxed">
+                            El centro de entrenamiento más moderno y completo de Cajamarca. Más de 1,500 m² con 11 zonas especializadas, sauna seco, cafetería fitness y médico deportivo.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-2.5 pt-2">
+                            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-white/10 hover:bg-orange-500 text-white flex items-center justify-center transition-colors" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram text-base"></i>
+                            </a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-white/10 hover:bg-orange-500 text-white flex items-center justify-center transition-colors" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f text-base"></i>
+                            </a>
+                            <a href="https://tiktok.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-white/10 hover:bg-orange-500 text-white flex items-center justify-center transition-colors" aria-label="TikTok">
+                                <i class="fa-brands fa-tiktok text-base"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2: Horarios, Servicios Clave y Navegación (4 cols) -->
+                    <div class="lg:col-span-4 space-y-5">
+                        <div>
+                            <span class="text-xs font-black uppercase tracking-widest text-orange-500 block mb-3">
+                                <i class="fa-regular fa-clock mr-1.5"></i> Horarios de Atención
+                            </span>
+                            <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                                <li class="flex justify-between bg-black/40 px-3.5 py-2 rounded-lg">
+                                    <span>Lunes a Viernes</span>
+                                    <span class="font-bold text-white">6:00 AM - 10:00 PM</span>
+                                </li>
+                                <li class="flex justify-between bg-black/40 px-3.5 py-2 rounded-lg">
+                                    <span>Sábados</span>
+                                    <span class="font-bold text-white">6:00 AM - 6:00 PM</span>
+                                </li>
+                                <li class="flex justify-between bg-black/40 px-3.5 py-2 rounded-lg">
+                                    <span>Domingos</span>
+                                    <span class="font-bold text-white">8:00 AM - 12:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <a href="index.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/40 px-3 py-1.5 rounded-lg transition-colors">Inicio</a>
+                            <a href="servicios.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/40 px-3 py-1.5 rounded-lg transition-colors">11 Zonas</a>
+                            <a href="entrenadores.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/40 px-3 py-1.5 rounded-lg transition-colors">Entrenadores</a>
+                            <a href="tu-espacio.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/40 px-3 py-1.5 rounded-lg transition-colors">Calculadora IMC</a>
+                        </div>
+                    </div>
+
+                    <!-- Columna 3: Google Maps Interactivo y Ubicación Exacta (4 cols) -->
+                    <div class="lg:col-span-4 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-black uppercase tracking-widest text-orange-500">
+                                <i class="fa-solid fa-location-dot mr-1.5"></i> Nuestra Ubicación
+                            </span>
+                            <span class="text-[11px] font-bold uppercase bg-orange-500/20 text-orange-500 px-2.5 py-0.5 rounded-md">
+                                Parqueo 24h
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-300 font-normal">
+                            C.C. Open Plaza Cajamarca (Segundo Nivel) — Av. Vía de Evitamiento Norte, Cajamarca.
+                        </p>
+                        <div class="rounded-xl overflow-hidden h-44 bg-black/60 relative">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=Open%20Plaza%20Cajamarca&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0; filter: grayscale(20%) contrast(1.05);" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Mapa FitUp Club Open Plaza Cajamarca">
+                            </iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Open+Plaza+Cajamarca" target="_blank" rel="noopener" class="block w-full bg-white/10 hover:bg-orange-500 text-white text-center text-xs font-bold uppercase tracking-wider py-2.5 rounded-lg transition-colors">
+                            <i class="fa-solid fa-diamond-turn-right mr-1.5"></i> Cómo llegar en Google Maps
+                        </a>
+                    </div>
+
                 </div>
-            </div>
 
-            <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left px-2">
-                <p>📍 C.C. Open Plaza Cajamarca (Segundo Nivel) | L-V: 6am-10pm • Sáb: 6am-6pm • Dom: 8am-12pm</p>
-                <p>© 2026 FitUp Club Cajamarca. Todos los derechos reservados.</p>
+                <!-- Línea Inferior de Derechos y Beneficios -->
+                <div class="mt-8 pt-6 bg-black/40 rounded-xl px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left">
+                    <p>© 2026 FitUp Club Cajamarca • Todos los derechos reservados.</p>
+                    <p class="text-gray-300 font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-shield-heart text-orange-500 mr-1.5"></i> Musculación • Spinning • Funcional • Sauna • Médico Deportivo
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
