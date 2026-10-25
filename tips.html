@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="es" class="overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitUp Club Cajamarca | Tips FitUp Club</title>
+
+    <!-- Google Fonts: Montserrat (400 Normal & 900 Black) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif']
+                    },
+                    colors: {
+                        orange: {
+                            400: '#FF7A1A',
+                            500: '#FF6600',
+                            600: '#E65C00'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html, body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+        h1, h2, h3, h4 {
+            font-weight: 900 !important;
+        }
+        p {
+            font-weight: 400;
+        }
+        .line-mask {
+            overflow: hidden;
+            display: block;
+        }
+        .line-reveal {
+            display: block;
+            will-change: transform;
+        }
+        .img-reveal-wrap {
+            overflow: hidden;
+            transform: translateZ(0);
+        }
+        .img-reveal, .parallax-bg {
+            will-change: transform;
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased selection:bg-orange-500 selection:text-white overflow-x-hidden">
+
+    <!-- =====================================================
+         1. NAVBAR MÓVIL-FIRST CON FONDO NEGRO PURO
+    ====================================================== -->
+    <header class="sticky top-0 w-full z-50 bg-black/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="index.html" class="flex items-center shrink-0">
+                <img src="imagenes/logo-fitup.png" alt="FitUp Club" class="w-32 md:w-36 max-h-10 object-contain" onerror="this.style.display='none'">
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 lg:gap-9 text-xs font-black uppercase tracking-wider">
+                <a href="index.html" class="text-white hover:text-orange-500 active:text-orange-500 transition-colors duration-200 py-2">Inicio</a>
+                <a href="servicios.html" class="text-white hover:text-orange-500 active:text-orange-500 transition-colors duration-200 py-2">Servicios y Horarios</a>
+                <a href="entrenadores.html" class="text-white hover:text-orange-500 active:text-orange-500 transition-colors duration-200 py-2">Entrenadores</a>
+                <a href="tu-espacio.html" class="text-white hover:text-orange-500 active:text-orange-500 transition-colors duration-200 py-2">Tu Espacio FitUp</a>
+                <a href="tips.html" class="text-orange-500 transition-colors duration-200 py-2">Tips FitUp</a>
+            </nav>
+
+            <div class="flex items-center gap-3 shrink-0">
+                <a href="index.html#prueba-gratis" class="hidden sm:inline-flex bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)] items-center justify-center whitespace-nowrap">
+                    Sesión Gratis
+                </a>
+                <button type="button" onclick="toggleMobileMenu()" aria-label="Abrir Menú" class="md:hidden w-11 h-11 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white flex items-center justify-center transition-all">
+                    <i id="hamburger-icon" class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border border-white/10 mx-4 mb-4 p-4 rounded-xl space-y-1">
+            <a href="index.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Inicio</a>
+            <a href="servicios.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Servicios y Horarios</a>
+            <a href="entrenadores.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Entrenadores</a>
+            <a href="tu-espacio.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors">Tu Espacio FitUp</a>
+            <a href="tips.html" class="block py-3 px-4 rounded-lg text-xs font-black uppercase tracking-wider text-orange-500">Tips FitUp</a>
+            <div class="pt-3">
+                <a href="index.html#prueba-gratis" class="block w-full text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                    Solicita tu sesión de prueba
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="overflow-x-hidden bg-black">
+
+        <!-- =====================================================
+             2. HERO SECTION DE TIPS FITUP CON PARALLAX Y FONDO NEGRO PURO
+        ====================================================== -->
+        <section class="relative py-16 sm:py-24 md:py-28 overflow-hidden bg-black">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1920&q=85" 
+                     alt="Tips FitUp Club Cajamarca" 
+                     class="parallax-bg w-full h-[135%] -top-[18%] relative object-cover object-center">
+                <div class="absolute inset-0 bg-black/85"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl">
+                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase text-white leading-tight reveal-heading">
+                        <span class="line-mask"><span class="line-reveal">TIPS</span></span>
+                        <span class="line-mask"><span class="line-reveal text-orange-500">FITUP CLUB</span></span>
+                    </h1>
+                    <p class="mt-4 text-gray-300 text-sm sm:text-base md:text-lg font-normal leading-relaxed">
+                        Ciencia aplicada a tu salud física y emocional. Explora nuestros 3 pilares fundamentales recomendados por entrenadores y médicos deportivos, e interactúa con nuestra calculadora de hidratación clínica.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             3. TARJETAS DE TIPS FITUP (CON MODALES INTERACTIVOS DEEP-DIVE)
+        ====================================================== -->
+        <section class="relative bg-black text-white py-16 md:py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+                    <!-- Tip 1: Entrenamiento Inteligente -->
+                    <article onclick="openTipModal('entrenamiento')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-all duration-300 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-56 sm:h-60 relative">
+                                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Entrenamiento Inteligente" 
+                                     class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4">
+                                <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Biomecánica & Salud Mental</span>
+                                <h2 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Entrenamiento Inteligente</h2>
+                                <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
+                                    Prioriza la ejecución biomecánica correcta, el control del tempo y la gestión del descanso activo y pasivo sobre el peso excesivo para estimular mayor hipertrofia y proteger tus articulaciones.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space-y-3 pt-2">
+                            <div class="bg-black/60 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
+                                <span>Sala de Musculación & Funcional</span>
+                                <i class="fa-solid fa-dumbbell"></i>
+                            </div>
+                            <button type="button" class="w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                                Abrir Guía Profunda
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Tip 2: Suplementación Estratégica -->
+                    <article onclick="openTipModal('suplementacion')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-all duration-300 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-56 sm:h-60 relative">
+                                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Suplementación Estratégica" 
+                                     class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4">
+                                <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Regeneración & Cognición</span>
+                                <h2 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Suplementación Estratégica</h2>
+                                <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
+                                    Descubre cómo la Proteína Whey acelera la regeneración fibrilar post-entreno y por qué la Creatina Monohidratada es vital para tu potencia explosiva y función cognitiva diaria.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space-y-3 pt-2">
+                            <div class="bg-black/60 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
+                                <span>Cafetería Fitness & Nutrición</span>
+                                <i class="fa-solid fa-mug-hot"></i>
+                            </div>
+                            <button type="button" class="w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                                Abrir Guía Profunda
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Tip 3: Hidratación y Recuperación -->
+                    <article onclick="openTipModal('hidratacion')" class="cursor-pointer group bg-white/5 hover:bg-white/10 transition-all duration-300 backdrop-blur-md rounded-xl p-5 sm:p-6 flex flex-col justify-between fade-card">
+                        <div>
+                            <div class="img-reveal-wrap rounded-xl h-56 sm:h-60 relative">
+                                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Hidratación y Recuperación" 
+                                     class="img-reveal w-full h-full object-cover">
+                            </div>
+                            <div class="pt-5 pb-4">
+                                <span class="text-xs font-black uppercase text-orange-500 tracking-wider">Calculadora Clínica Integrada</span>
+                                <h2 class="text-2xl font-black tracking-tighter uppercase text-white mt-1 group-hover:text-orange-500 transition-colors">Hidratación y Recuperación</h2>
+                                <p class="text-gray-300 text-sm mt-3 font-normal leading-relaxed">
+                                    En la altitud de Cajamarca, reponer agua y electrolitos evita la fatiga prematura. Usa nuestra calculadora médica integrada para conocer tus litros exactos de agua según tu peso, talla y edad.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space-y-3 pt-2">
+                            <div class="bg-black/60 rounded-lg px-4 py-3 flex items-center justify-between text-xs font-black uppercase text-orange-500">
+                                <span>Calculadora de Agua & Sauna</span>
+                                <i class="fa-solid fa-droplet"></i>
+                            </div>
+                            <button type="button" class="w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                                Calcular Mis Litros de Agua
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- CTA Inferior hacia Calculadora IMC y Horarios -->
+                <div class="mt-16 bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                    <div>
+                        <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">
+                            ¿LISTO PARA APLICAR ESTOS PILARES EN FITUP CLUB?
+                        </h3>
+                        <p class="text-gray-300 text-sm mt-2">
+                            Conoce tu diagnóstico biométrico en Tu Espacio FitUp o explora nuestras 11 zonas de entrenamiento.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
+                        <a href="tu-espacio.html" class="w-full sm:w-auto text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                            Calcular IMC
+                        </a>
+                        <a href="servicios.html" class="w-full sm:w-auto text-center border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                            Ver Servicios y Horarios
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER CORPORATIVO COMPLETO CON GOOGLE MAPS Y UBICACIÓN -->
+    <footer class="bg-black text-white py-12 md:py-16 overflow-x-hidden">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+                    <div class="lg:col-span-4 flex flex-col justify-between space-y-5">
+                        <div class="space-y-4">
+                            <a href="index.html" class="inline-block">
+                                <img src="imagenes/logo-fitup.png" alt="Logo FitUp Club" class="w-36 sm:w-40 h-auto object-contain" onerror="this.style.display='none'">
+                            </a>
+                            <p class="text-gray-300 text-sm font-normal leading-relaxed">
+                                El centro de entrenamiento más moderno y completo de Cajamarca. Más de 1,500 m² con 11 zonas especializadas, sauna seco, cafetería fitness y médico deportivo.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2.5">
+                            <a href="https://instagram.com" target="_blank" rel="noopener" class="px-4 h-10 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all">
+                                <i class="fa-brands fa-instagram text-sm"></i> Instagram
+                            </a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener" class="px-4 h-10 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all">
+                                <i class="fa-brands fa-facebook-f text-sm"></i> Facebook
+                            </a>
+                            <a href="https://tiktok.com" target="_blank" rel="noopener" class="px-4 h-10 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all">
+                                <i class="fa-brands fa-tiktok text-sm"></i> TikTok
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-4 space-y-5">
+                        <div>
+                            <span class="text-xs font-black uppercase tracking-widest text-orange-500 block mb-3">
+                                <i class="fa-regular fa-clock mr-1.5"></i> Horarios de Atención
+                            </span>
+                            <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                                <li class="flex justify-between bg-black/60 px-3.5 py-2 rounded-lg">
+                                    <span>Lunes a Viernes</span>
+                                    <span class="font-bold text-white">6:00 AM - 10:00 PM</span>
+                                </li>
+                                <li class="flex justify-between bg-black/60 px-3.5 py-2 rounded-lg">
+                                    <span>Sábados</span>
+                                    <span class="font-bold text-white">6:00 AM - 6:00 PM</span>
+                                </li>
+                                <li class="flex justify-between bg-black/60 px-3.5 py-2 rounded-lg">
+                                    <span>Domingos</span>
+                                    <span class="font-bold text-white">8:00 AM - 12:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <a href="index.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 px-3 py-1.5 rounded-lg transition-colors">Inicio</a>
+                            <a href="servicios.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 px-3 py-1.5 rounded-lg transition-colors">Servicios</a>
+                            <a href="entrenadores.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 px-3 py-1.5 rounded-lg transition-colors">Entrenadores</a>
+                            <a href="tu-espacio.html" class="text-xs font-bold uppercase text-gray-300 hover:text-orange-500 bg-black/60 px-3 py-1.5 rounded-lg transition-colors">Calculadora IMC</a>
+                            <a href="tips.html" class="text-xs font-bold uppercase text-orange-500 bg-black/60 px-3 py-1.5 rounded-lg transition-colors">Tips FitUp</a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-4 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-black uppercase tracking-widest text-orange-500">
+                                <i class="fa-solid fa-location-dot mr-1.5"></i> Nuestra Ubicación
+                            </span>
+                            <span class="text-[11px] font-bold uppercase bg-orange-500/20 text-orange-500 px-2.5 py-0.5 rounded-md">
+                                Parqueo 24h
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-300 font-normal">
+                            C.C. Open Plaza Cajamarca (Segundo Nivel) — Av. Vía de Evitamiento Norte, Cajamarca.
+                        </p>
+                        <div class="rounded-xl overflow-hidden h-44 bg-black/60 relative">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=Open%20Plaza%20Cajamarca&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0; filter: grayscale(20%) contrast(1.05);" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Mapa FitUp Club Open Plaza Cajamarca">
+                            </iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Open+Plaza+Cajamarca" target="_blank" rel="noopener" class="block w-full text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                            <i class="fa-solid fa-diamond-turn-right mr-1.5"></i> Cómo llegar en Google Maps
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 pt-6 bg-black/60 rounded-xl px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left">
+                    <p>© 2026 FitUp Club Cajamarca • Todos los derechos reservados.</p>
+                    <p class="text-gray-300 font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-shield-heart text-orange-500 mr-1.5"></i> Musculación • Spinning • Funcional • Sauna • Médico Deportivo
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================
+         SISTEMA DE MODALES DE TIPS FITUP (NEGRO PURO + ANIMACIÓN FADE/SCALE)
+    ====================================================== -->
+    <div id="tips-modal-backdrop" onclick="if(event.target === this) closeTipModal()" class="hidden fixed inset-0 z-[100] bg-black/85 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div id="tips-modal-box" class="relative w-full max-w-2xl bg-black/95 border border-white/15 rounded-2xl p-6 sm:p-8 text-white shadow-2xl my-auto max-h-[90vh] overflow-y-auto transform transition-all duration-500 scale-95 opacity-0">
+            <!-- Botón X Ghost -->
+            <button type="button" onclick="closeTipModal()" aria-label="Cerrar Modal" class="absolute top-4 right-4 w-10 h-10 rounded-md border border-gray-500 text-gray-300 bg-transparent hover:border-white hover:text-white flex items-center justify-center transition-all z-10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- 1. MODAL: ENTRENAMIENTO INTELIGENTE -->
+            <div id="modal-tip-entrenamiento" class="tip-modal-item hidden space-y-5">
+                <div class="rounded-xl overflow-hidden h-52 sm:h-60 relative">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=85" alt="Entrenamiento Inteligente" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+                    <span class="absolute bottom-3 left-4 text-xs font-black uppercase tracking-widest text-orange-500">Salud Física & Emocional • FitUp Club</span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">Entrenamiento Inteligente</h3>
+                <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                    Entrenar con inteligencia significa estimular el músculo con precisión quirúrgica en lugar de mover peso por ego. Cuando dominas la técnica, tu cuerpo progresa sin dolor y tu mente libera tensiones acumuladas.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <span class="text-xs font-black uppercase text-orange-500 block mb-1">1. Descanso Activo vs Pasivo</span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            El <strong>descanso pasivo</strong> (dormir 7-8h y pausas entre series) repara fibras y regula el cortisol; el <strong>descanso activo</strong> (movilidad suave, caminata o sauna) oxigena el tejido y acelera la recuperación muscular.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <span class="text-xs font-black uppercase text-orange-500 block mb-1">2. Control del Tempo</span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Aplicar una fase excéntrica controlada (2 a 3 segundos al bajar la carga) multiplica el tiempo bajo tensión, recluta más unidades motoras y genera ganancias reales de fuerza e hipertrofia.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <span class="text-xs font-black uppercase text-orange-500 block mb-1">3. Salud Articular y Mental</span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            La ejecución biomecánica perfecta protege tendones, rodillas y columna, mientras el enfoque pleno en cada repetición actúa como meditación activa que despeja la ansiedad diaria.
+                        </p>
+                    </div>
+                </div>
+                <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                    <a href="entrenadores.html" class="w-full sm:w-auto flex-1 text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                        Entrenar con Nuestro Staff
+                    </a>
+                    <button type="button" onclick="closeTipModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. MODAL: SUPLEMENTACIÓN ESTRATÉGICA -->
+            <div id="modal-tip-suplementacion" class="tip-modal-item hidden space-y-5">
+                <div class="rounded-xl overflow-hidden h-52 sm:h-60 relative">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=85" alt="Suplementación Estratégica" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+                    <span class="absolute bottom-3 left-4 text-xs font-black uppercase tracking-widest text-orange-500">Nutrición & Bioenergía • FitUp Club</span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">Suplementación Estratégica</h3>
+                <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                    La suplementación con respaldo científico no reemplaza tu alimentación: cierra brechas nutricionales con precisión para que tu cuerpo recupere más rápido y tu mente rinda al máximo todo el día.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+                        <div class="flex items-center gap-2 text-orange-500 font-black uppercase text-xs mb-2">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Proteína Whey (Suero de Leche)</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                            Su biodisponibilidad superior y alto aporte de <strong>Leucina</strong> activan de inmediato la síntesis proteica post-entreno. Acelera la regeneración de microfibras musculares, reduce el dolor tardío y preserva tu masa magra.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+                        <div class="flex items-center gap-2 text-orange-500 font-black uppercase text-xs mb-2">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>Creatina Monohidratada</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                            Satura tus reservas de fosfocreatina (ATP) para darte <strong>potencia explosiva</strong> en series pesadas y sprints. Además, a nivel cerebral optimiza la bioenergética neuronal, mejorando la memoria, el enfoque mental y reduciendo la fatiga cognitiva.
+                        </p>
+                    </div>
+                </div>
+                <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                    <a href="servicios.html" class="w-full sm:w-auto flex-1 text-center bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                        Conocer Cafetería Fitness
+                    </a>
+                    <button type="button" onclick="closeTipModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. MODAL: HIDRATACIÓN Y RECUPERACIÓN (CON CALCULADORA INTEGRADA) -->
+            <div id="modal-tip-hidratacion" class="tip-modal-item hidden space-y-5">
+                <div>
+                    <span class="text-xs font-black uppercase tracking-widest text-orange-500 block">Hidratación Inteligente • Altitud Cajamarca (2,750 m s.n.m.)</span>
+                    <h3 class="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white mt-1">Hidratación y Calculadora Diaria</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                        Una deshidratación de apenas el 2% reduce tu fuerza muscular hasta un 15% y eleva la fatiga mental. Hidrátate <strong>antes</strong> (400 ml 1h previa), <strong>durante</strong> (pequeños sorbos cada 15 min) y <strong>después</strong> de entrenar para lubricar articulaciones y estabilizar tu temperatura corporal.
+                    </p>
+                </div>
+
+                <!-- Mini-Calculadora Interactiva de Litros de Agua (Fondo Negro Puro) -->
+                <div class="bg-white/5 border border-white/15 rounded-xl p-5 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-black uppercase tracking-wider text-orange-500">
+                            <i class="fa-solid fa-droplet mr-1.5"></i> Calculadora Médica de Hidratación
+                        </span>
+                        <span class="text-[11px] text-gray-400 font-bold uppercase">Fórmula Clínica + Ajuste Entreno</span>
+                    </div>
+
+                    <form onsubmit="calcularAguaModal(event)" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div>
+                            <label for="agua-peso" class="block text-[11px] font-black uppercase text-gray-300 mb-1">Peso (kg)</label>
+                            <input type="number" id="agua-peso" min="30" max="200" step="0.5" value="70" required
+                                   class="w-full bg-black border border-white/20 rounded-xl px-3.5 py-2.5 text-white font-black text-sm focus:outline-none focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="agua-talla" class="block text-[11px] font-black uppercase text-gray-300 mb-1">Talla (cm)</label>
+                            <input type="number" id="agua-talla" min="120" max="230" value="170" required
+                                   class="w-full bg-black border border-white/20 rounded-xl px-3.5 py-2.5 text-white font-black text-sm focus:outline-none focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="agua-edad" class="block text-[11px] font-black uppercase text-gray-300 mb-1">Edad (años)</label>
+                            <input type="number" id="agua-edad" min="10" max="99" value="28" required
+                                   class="w-full bg-black border border-white/20 rounded-xl px-3.5 py-2.5 text-white font-black text-sm focus:outline-none focus:border-orange-500">
+                        </div>
+                        <div class="sm:col-span-3 pt-1">
+                            <button type="submit" class="w-full bg-orange-500 text-white rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold transition-all duration-300 hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,102,0,0.5)]">
+                                Calcular Mis Litros de Agua Exactos
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Resultado Dinámico de Hidratación -->
+                    <div id="agua-resultado-box" class="bg-black border border-white/10 rounded-xl p-4 space-y-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-center">
+                            <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                                <span class="text-[10px] font-black uppercase text-gray-400 block">Día de Descanso (Sin Entrenar)</span>
+                                <span id="agua-litros-base" class="text-2xl sm:text-3xl font-black text-white tracking-tighter">2.45 L / día</span>
+                                <span id="agua-vasos-base" class="text-[11px] text-gray-400 block mt-0.5">≈ 10 vasos de 250 ml</span>
+                            </div>
+                            <div class="bg-orange-500/10 rounded-xl p-3 border border-orange-500/40">
+                                <span class="text-[10px] font-black uppercase text-orange-500 block">Día de Entreno en FitUp Club</span>
+                                <span id="agua-litros-entreno" class="text-2xl sm:text-3xl font-black text-orange-500 tracking-tighter">3.15 L / día</span>
+                                <span id="agua-vasos-entreno" class="text-[11px] text-gray-300 block mt-0.5">Incluye +0.7 L por sudoración y altitud</span>
+                            </div>
+                        </div>
+                        <p id="agua-nota-medica" class="text-xs text-gray-300 text-center leading-relaxed">
+                            Cálculo basado en requerimiento hídrico metabólico por kg de peso, superficie corporal y ajuste para entrenamiento de fuerza/cardio.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex justify-end">
+                    <button type="button" onclick="closeTipModal()" class="w-full sm:w-auto border border-gray-500 text-gray-300 bg-transparent rounded-md px-6 py-2 text-sm tracking-widest uppercase font-bold hover:border-white hover:text-white transition-all">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- LENIS SMOOTH SCROLL + GSAP + SCROLLTRIGGER -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('hamburger-icon');
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        }
+
+        function openTipModal(key) {
+            const backdrop = document.getElementById('tips-modal-backdrop');
+            const box = document.getElementById('tips-modal-box');
+            document.querySelectorAll('.tip-modal-item').forEach((el) => el.classList.add('hidden'));
+            const target = document.getElementById('modal-tip-' + key);
+            if (target && backdrop && box) {
+                target.classList.remove('hidden');
+                backdrop.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                if (key === 'hidratacion') calcularAguaModal();
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        box.classList.remove('scale-95', 'opacity-0');
+                        box.classList.add('scale-100', 'opacity-100');
+                    });
+                });
+            }
+        }
+
+        function closeTipModal() {
+            const backdrop = document.getElementById('tips-modal-backdrop');
+            const box = document.getElementById('tips-modal-box');
+            if (backdrop && box) {
+                box.classList.remove('scale-100', 'opacity-100');
+                box.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    backdrop.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeTipModal();
+        });
+
+        function calcularAguaModal(event) {
+            if (event) event.preventDefault();
+            const peso = parseFloat(document.getElementById('agua-peso').value) || 70;
+            const talla = parseFloat(document.getElementById('agua-talla').value) || 170;
+            const edad = parseInt(document.getElementById('agua-edad').value, 10) || 28;
+
+            let factorMl = 35;
+            if (edad < 30) factorMl = 38;
+            else if (edad > 55) factorMl = 32;
+
+            const ajusteTallaMl = Math.max(0, (talla - 165) * 3);
+            const litrosBase = ((peso * factorMl) + ajusteTallaMl) / 1000;
+            const litrosEntreno = litrosBase + 0.7;
+
+            const vasosBase = Math.round((litrosBase * 1000) / 250);
+            const vasosEntreno = Math.round((litrosEntreno * 1000) / 250);
+
+            document.getElementById('agua-litros-base').textContent = litrosBase.toFixed(2) + ' L / día';
+            document.getElementById('agua-vasos-base').textContent = '≈ ' + vasosBase + ' vasos de 250 ml (día sin entreno)';
+            document.getElementById('agua-litros-entreno').textContent = litrosEntreno.toFixed(2) + ' L / día';
+            document.getElementById('agua-vasos-entreno').textContent = '≈ ' + vasosEntreno + ' vasos (incluye +0.70 L por entreno)';
+            document.getElementById('agua-nota-medica').textContent = `Para tu perfil (${peso} kg, ${talla} cm, ${edad} años): toma ${litrosBase.toFixed(2)} L en días de descanso y ${litrosEntreno.toFixed(2)} L los días que entrenes en FitUp Club.`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smoothWheel: true,
+                syncTouch: false,
+                wheelMultiplier: 0.95,
+                touchMultiplier: 1.0
+            });
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+
+            const mm = gsap.matchMedia();
+
+            mm.add("(min-width: 768px)", () => {
+                gsap.utils.toArray('.parallax-bg').forEach((bg) => {
+                    gsap.fromTo(bg, { yPercent: -14 }, {
+                        yPercent: 18,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: bg.closest('section') || bg.parentElement,
+                            start: 'top bottom',
+                            end: 'bottom top',
+                            scrub: true
+                        }
+                    });
+                });
+
+                gsap.utils.toArray('.img-reveal').forEach((img) => {
+                    gsap.fromTo(img, { scale: 1.2 }, {
+                        scale: 1,
+                        ease: 'power2.out',
+                        scrollTrigger: {
+                            trigger: img.parentElement,
+                            start: 'top 92%',
+                            end: 'bottom 35%',
+                            scrub: 0.6
+                        }
+                    });
+                });
+            });
+
+            mm.add("(max-width: 767px)", () => {
+                gsap.utils.toArray('.parallax-bg').forEach((bg) => {
+                    gsap.fromTo(bg, { yPercent: -4 }, {
+                        yPercent: 4,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: bg.closest('section') || bg.parentElement,
+                            start: 'top bottom',
+                            end: 'bottom top',
+                            scrub: true
+                        }
+                    });
+                });
+
+                gsap.utils.toArray('.img-reveal').forEach((img) => {
+                    gsap.fromTo(img, { scale: 1.08 }, {
+                        scale: 1,
+                        duration: 0.8,
+                        ease: 'power2.out',
+                        scrollTrigger: {
+                            trigger: img.parentElement,
+                            start: 'top 90%'
+                        }
+                    });
+                });
+            });
+
+            gsap.utils.toArray('.reveal-heading').forEach((heading) => {
+                const lines = heading.querySelectorAll('.line-reveal');
+                gsap.from(lines, {
+                    yPercent: 115,
+                    duration: 1.0,
+                    stagger: 0.1,
+                    ease: 'expo.out'
+                });
+            });
+
+            gsap.utils.toArray('.fade-card').forEach((card) => {
+                gsap.from(card, {
+                    y: 28,
+                    opacity: 0,
+                    duration: 0.75,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 92%'
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
