@@ -26,8 +26,12 @@
                         sans: ['Montserrat', 'sans-serif']
                     },
                     colors: {
-                        surface: '#0f0f0f',
-                        surfaceLight: '#181818'
+                        orange: {
+                            500: '#FF6600',
+                            600: '#E65C00'
+                        },
+                        surface: '#111111',
+                        surfaceLight: '#1A1A1A'
                     }
                 }
             }
@@ -58,27 +62,25 @@
         .img-reveal-wrap {
             overflow: hidden;
             transform: translateZ(0);
-            -webkit-mask-image: -webkit-radial-gradient(white, black);
         }
         .img-reveal, .parallax-bg {
             will-change: transform;
         }
-        /* Sliders orgánicos redondos en Negro y Naranja */
         input[type="range"] {
             -webkit-appearance: none;
             appearance: none;
-            height: 10px;
+            height: 8px;
             background: #262626;
-            border-radius: 9999px;
+            border-radius: 8px;
             outline: none;
         }
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 24px;
-            height: 24px;
-            border-radius: 9999px;
-            background: #f97316;
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            background: #FF6600;
             cursor: pointer;
         }
     </style>
@@ -90,8 +92,8 @@
         <i class="fa-solid fa-location-dot mr-1.5"></i> Ubicados en C.C. Open Plaza Cajamarca (Segundo Nivel) • Estacionamiento 24h
     </div>
 
-    <!-- NAVBAR UNIFICADA -->
-    <header class="sticky top-0 z-50 bg-black/95 backdrop-blur-md">
+    <!-- NAVBAR TECNOLÓGICA (ROUNDED-XL) -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 shrink-0">
                 <img src="imagenes/logo-fitup.png" alt="FitUp Club" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
@@ -100,90 +102,99 @@
                 </span>
             </a>
 
-            <nav class="hidden lg:flex items-center gap-3 text-xs font-black uppercase tracking-wider bg-surface px-4 py-2 rounded-full">
-                <a href="index.html" class="text-white/80 hover:text-orange-500 px-5 py-2.5 rounded-full transition-colors duration-200">Inicio</a>
-                <a href="servicios.html" class="text-white/80 hover:text-orange-500 px-5 py-2.5 rounded-full transition-colors duration-200">Servicios y Horarios</a>
-                <a href="entrenadores.html" class="text-white/80 hover:text-orange-500 px-5 py-2.5 rounded-full transition-colors duration-200">Entrenadores</a>
-                <a href="tu-espacio.html" class="bg-orange-500 text-white px-5 py-2.5 rounded-full transition-colors duration-200">Tu Espacio FitUp</a>
+            <nav class="hidden lg:flex items-center gap-2 text-xs font-black uppercase tracking-wider bg-surface p-1.5 rounded-xl border border-white/10">
+                <a href="index.html" class="text-gray-300 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Inicio</a>
+                <a href="servicios.html" class="text-gray-300 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Servicios y Horarios</a>
+                <a href="entrenadores.html" class="text-gray-300 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Entrenadores</a>
+                <a href="tu-espacio.html" class="bg-orange-500 text-white px-4 py-2.5 rounded-lg transition-colors duration-200">Tu Espacio FitUp</a>
+                <a href="index.html#tips" class="text-gray-300 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Tips FitUp</a>
             </nav>
 
             <div class="flex items-center gap-3">
                 <a href="index.html#prueba-gratis" class="bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider px-6 py-3.5 rounded-full transition-colors duration-200 whitespace-nowrap">
                     Sesión Gratis
                 </a>
-                <button type="button" onclick="toggleMobileMenu()" aria-label="Menú" class="lg:hidden w-11 h-11 rounded-full bg-surface hover:bg-orange-500 text-white flex items-center justify-center transition-colors">
+                <button type="button" onclick="toggleMobileMenu()" aria-label="Menú" class="lg:hidden w-11 h-11 rounded-xl bg-surface hover:bg-orange-500 text-white flex items-center justify-center border border-white/10 transition-colors">
                     <i id="hamburger-icon" class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-surface mx-4 mb-4 p-5 rounded-3xl space-y-2">
-            <a href="index.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase text-white hover:text-orange-500 transition-colors">Inicio</a>
-            <a href="servicios.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase text-white hover:text-orange-500 transition-colors">Servicios y Horarios</a>
-            <a href="entrenadores.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase text-white hover:text-orange-500 transition-colors">Entrenadores</a>
-            <a href="tu-espacio.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase bg-orange-500 text-white">Tu Espacio FitUp</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-surface mx-4 mb-4 p-4 rounded-xl border border-white/10 space-y-2">
+            <a href="index.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase text-gray-200 hover:text-orange-500 transition-colors">Inicio</a>
+            <a href="servicios.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase text-gray-200 hover:text-orange-500 transition-colors">Servicios y Horarios</a>
+            <a href="entrenadores.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase text-gray-200 hover:text-orange-500 transition-colors">Entrenadores</a>
+            <a href="tu-espacio.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase bg-orange-500 text-white">Tu Espacio FitUp</a>
+            <a href="index.html#tips" class="block py-3 px-4 rounded-lg text-sm font-black uppercase text-gray-200 hover:text-orange-500 transition-colors">Tips FitUp Club</a>
         </div>
     </header>
 
     <main>
 
-        <!-- CABECERA PARALLAX OVALADA -->
-        <section class="py-10 bg-black">
-            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-                <div class="relative rounded-[3rem] overflow-hidden py-14 sm:py-20 px-6 sm:px-12 bg-surface flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-                    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=85" 
-                             alt="Tu Espacio FitUp" 
-                             class="parallax-bg w-full h-[135%] -top-[18%] relative object-cover opacity-20">
-                    </div>
+        <!-- CABECERA HERO INMERSIVA CON FONDO DE GIMNASIO + BG-BLACK/80 + PARALLAX -->
+        <section class="relative py-20 sm:py-24 overflow-hidden bg-black border-b border-white/10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=85" 
+                     alt="Tu Espacio FitUp" 
+                     class="parallax-bg w-full h-[135%] -top-[18%] relative object-cover object-center">
+                <div class="absolute inset-0 bg-black/80"></div>
+            </div>
 
-                    <div class="relative z-10 max-w-2xl">
-                        <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-                            Herramienta Interactiva
-                        </span>
-                        <h1 class="text-3xl sm:text-5xl md:text-6xl font-black uppercase text-white leading-tight reveal-heading">
-                            <span class="line-mask"><span class="line-reveal">CALCULA TU</span></span>
-                            <span class="line-mask"><span class="line-reveal text-orange-500">PUNTO DE PARTIDA</span></span>
-                        </h1>
-                        <p class="mt-4 text-white/75 text-sm sm:text-base font-normal leading-relaxed">
-                            Ingresa tu edad, peso y altura para calcular tu Índice de Masa Corporal (IMC) y descubrir qué zonas de FitUp Club Cajamarca son ideales para ti.
-                        </p>
-                    </div>
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+                <div class="max-w-2xl">
+                    <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-lg mb-4">
+                        Herramienta Interactiva
+                    </span>
+                    <h1 class="text-3xl sm:text-5xl md:text-6xl font-black uppercase text-white leading-tight reveal-heading">
+                        <span class="line-mask"><span class="line-reveal">CALCULA TU</span></span>
+                        <span class="line-mask"><span class="line-reveal text-orange-500">PUNTO DE PARTIDA</span></span>
+                    </h1>
+                    <p class="mt-4 text-gray-300 text-sm sm:text-base font-normal leading-relaxed">
+                        Ingresa tu edad, peso y altura para calcular tu Índice de Masa Corporal (IMC) y descubrir qué zonas de FitUp Club Cajamarca son ideales para ti.
+                    </p>
+                </div>
 
-                    <!-- Botones Píldora de Simulación Rápida -->
-                    <div class="relative z-10 bg-black/70 backdrop-blur-md rounded-[2.2rem] p-6 shrink-0">
-                        <span class="text-[11px] font-black uppercase tracking-wider text-orange-500 block mb-3">Probar perfil de ejemplo:</span>
-                        <div class="flex flex-wrap gap-2.5">
-                            <button type="button" onclick="cargarEjemplo(22, 51, 172)" class="bg-surfaceLight hover:bg-orange-500 text-white text-xs font-black uppercase px-5 py-3 rounded-full transition-colors">
-                                IMC Bajo
-                            </button>
-                            <button type="button" onclick="cargarEjemplo(28, 72, 172)" class="bg-surfaceLight hover:bg-orange-500 text-white text-xs font-black uppercase px-5 py-3 rounded-full transition-colors">
-                                IMC Normal
-                            </button>
-                            <button type="button" onclick="cargarEjemplo(35, 92, 170)" class="bg-surfaceLight hover:bg-orange-500 text-white text-xs font-black uppercase px-5 py-3 rounded-full transition-colors">
-                                IMC Alto
-                            </button>
-                        </div>
+                <!-- Botones de Simulación Rápida en contenedor rounded-xl -->
+                <div class="bg-surface/90 backdrop-blur-md rounded-xl border border-white/10 p-5 shrink-0">
+                    <span class="text-[11px] font-black uppercase tracking-wider text-orange-500 block mb-3">Probar perfil de ejemplo:</span>
+                    <div class="flex flex-wrap gap-2.5">
+                        <button type="button" onclick="cargarEjemplo(22, 51, 172)" class="bg-surfaceLight hover:bg-orange-500 text-white text-xs font-black uppercase px-5 py-2.5 rounded-full transition-colors">
+                            IMC Bajo
+                        </button>
+                        <button type="button" onclick="cargarEjemplo(28, 72, 172)" class="bg-surfaceLight hover:bg-orange-500 text-white text-xs font-black uppercase px-5 py-2.5 rounded-full transition-colors">
+                            IMC Normal
+                        </button>
+                        <button type="button" onclick="cargarEjemplo(35, 92, 170)" class="bg-surfaceLight hover:bg-orange-500 text-white text-xs font-black uppercase px-5 py-2.5 rounded-full transition-colors">
+                            IMC Alto
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CALCULADORA INTERACTIVA EN CÁPSULAS OVALADAS (ROUNDED-[3REM]) -->
-        <section class="py-10 bg-black">
-            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <!-- CALCULADORA INTERACTIVA EN PANELES TECNOLÓGICOS (ROUNDED-2XL / ROUNDED-XL) -->
+        <section class="relative py-16 bg-black overflow-hidden">
+            <!-- Fondo inmersivo sutil con bg-black/85 -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1920&q=80" 
+                     alt="Fondo Pesas" 
+                     class="parallax-bg w-full h-[130%] -top-[15%] relative object-cover object-center">
+                <div class="absolute inset-0 bg-black/85"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
-                    <!-- COLUMNA IZQUIERDA: CONTROLES BIOMÉTRICOS OVALADOS -->
-                    <div class="lg:col-span-5 bg-surface rounded-[3rem] p-7 sm:p-10 flex flex-col justify-between fade-card">
+                    <!-- COLUMNA IZQUIERDA: CONTROLES BIOMÉTRICOS (ROUNDED-2XL) -->
+                    <div class="lg:col-span-5 bg-surface rounded-2xl border border-white/10 p-6 sm:p-8 flex flex-col justify-between fade-card">
                         <div>
-                            <div class="flex items-center justify-between mb-8">
+                            <div class="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
                                 <div>
                                     <span class="text-xs font-black uppercase text-orange-500 block">Paso 01</span>
                                     <h2 class="text-2xl sm:text-3xl font-black uppercase text-white mt-1">Tus Parámetros</h2>
                                 </div>
-                                <div class="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center text-lg">
+                                <div class="w-11 h-11 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg">
                                     <i class="fa-solid fa-sliders"></i>
                                 </div>
                             </div>
@@ -191,16 +202,16 @@
                             <form id="bmi-form" onsubmit="calcularEstadoFisico(event)" class="space-y-5">
 
                                 <!-- Edad -->
-                                <div class="bg-surfaceLight p-6 rounded-3xl">
+                                <div class="bg-surfaceLight p-5 rounded-xl border border-white/10">
                                     <div class="flex items-center justify-between mb-3">
-                                        <label for="edad" class="text-xs font-black uppercase text-white/80">
+                                        <label for="edad" class="text-xs font-black uppercase text-gray-200">
                                             Edad (Años)
                                         </label>
-                                        <div class="flex items-center gap-1 bg-black rounded-full px-4 py-1.5">
+                                        <div class="flex items-center gap-1 bg-black rounded-lg px-3 py-1 border border-white/10">
                                             <input type="number" id="edad" min="12" max="95" value="28" required
                                                    oninput="document.getElementById('edad-range').value = this.value"
                                                    class="w-12 bg-transparent text-right font-black text-lg text-orange-500 focus:outline-none">
-                                            <span class="text-xs text-white/60">años</span>
+                                            <span class="text-xs text-gray-400">años</span>
                                         </div>
                                     </div>
                                     <input type="range" id="edad-range" min="12" max="95" value="28" 
@@ -209,16 +220,16 @@
                                 </div>
 
                                 <!-- Peso (kg) -->
-                                <div class="bg-surfaceLight p-6 rounded-3xl">
+                                <div class="bg-surfaceLight p-5 rounded-xl border border-white/10">
                                     <div class="flex items-center justify-between mb-3">
-                                        <label for="peso" class="text-xs font-black uppercase text-white/80">
+                                        <label for="peso" class="text-xs font-black uppercase text-gray-200">
                                             Peso Corporal (kg)
                                         </label>
-                                        <div class="flex items-center gap-1 bg-black rounded-full px-4 py-1.5">
+                                        <div class="flex items-center gap-1 bg-black rounded-lg px-3 py-1 border border-white/10">
                                             <input type="number" id="peso" step="0.5" min="35" max="180" value="72" required
                                                    oninput="document.getElementById('peso-range').value = this.value"
                                                    class="w-14 bg-transparent text-right font-black text-lg text-orange-500 focus:outline-none">
-                                            <span class="text-xs text-white/60">kg</span>
+                                            <span class="text-xs text-gray-400">kg</span>
                                         </div>
                                     </div>
                                     <input type="range" id="peso-range" step="0.5" min="35" max="180" value="72" 
@@ -227,16 +238,16 @@
                                 </div>
 
                                 <!-- Altura (cm) -->
-                                <div class="bg-surfaceLight p-6 rounded-3xl">
+                                <div class="bg-surfaceLight p-5 rounded-xl border border-white/10">
                                     <div class="flex items-center justify-between mb-3">
-                                        <label for="altura" class="text-xs font-black uppercase text-white/80">
+                                        <label for="altura" class="text-xs font-black uppercase text-gray-200">
                                             Estatura (cm)
                                         </label>
-                                        <div class="flex items-center gap-1 bg-black rounded-full px-4 py-1.5">
+                                        <div class="flex items-center gap-1 bg-black rounded-lg px-3 py-1 border border-white/10">
                                             <input type="number" id="altura" min="130" max="220" value="172" required
                                                    oninput="document.getElementById('altura-range').value = this.value"
                                                    class="w-14 bg-transparent text-right font-black text-lg text-orange-500 focus:outline-none">
-                                            <span class="text-xs text-white/60">cm</span>
+                                            <span class="text-xs text-gray-400">cm</span>
                                         </div>
                                     </div>
                                     <input type="range" id="altura-range" min="130" max="220" value="172" 
@@ -244,9 +255,9 @@
                                            class="w-full">
                                 </div>
 
-                                <!-- Botón Píldora Naranja -->
+                                <!-- Botón Naranja -->
                                 <button type="submit" 
-                                        class="w-full bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase tracking-wider text-sm py-5 rounded-full transition-colors duration-200 flex items-center justify-center gap-2">
+                                        class="w-full bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase tracking-wider text-sm py-4 rounded-full transition-colors duration-200 flex items-center justify-center gap-2">
                                     <i class="fa-solid fa-calculator"></i>
                                     <span>Calcular mi Estado Físico</span>
                                 </button>
@@ -254,68 +265,68 @@
                         </div>
                     </div>
 
-                    <!-- COLUMNA DERECHA: DIAGNÓSTICO Y ZONAS RECOMENDADAS (ROUNDED-[3REM]) -->
-                    <div class="lg:col-span-7 bg-surface rounded-[3rem] p-7 sm:p-10 flex flex-col justify-between fade-card">
+                    <!-- COLUMNA DERECHA: DIAGNÓSTICO Y ZONAS RECOMENDADAS (ROUNDED-2XL) -->
+                    <div class="lg:col-span-7 bg-surface rounded-2xl border border-white/10 p-6 sm:p-8 flex flex-col justify-between fade-card">
 
                         <div class="space-y-6">
                             <!-- Cabecera de Resultado -->
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-white/10">
                                 <div>
-                                    <span id="res-rango-badge" class="inline-block bg-orange-500 text-white text-xs font-black uppercase px-4 py-1.5 rounded-full mb-3">
+                                    <span id="res-rango-badge" class="inline-block bg-orange-500 text-white text-xs font-black uppercase px-3.5 py-1 rounded-lg mb-2">
                                         IMC Normal (18.5 - 24.9)
                                     </span>
                                     <h3 id="res-titulo" class="text-2xl sm:text-3xl font-black uppercase text-white">
                                         ESTADO FÍSICO EQUILIBRADO
                                     </h3>
-                                    <p id="res-subtitulo" class="text-xs sm:text-sm text-white/60 font-normal mt-1">
+                                    <p id="res-subtitulo" class="text-xs sm:text-sm text-gray-300 font-normal mt-1">
                                         Perfil evaluado: 28 años • 72 kg • 172 cm
                                     </p>
                                 </div>
 
-                                <!-- Cápsula del Valor IMC -->
-                                <div class="bg-surfaceLight rounded-3xl px-7 py-5 text-center shrink-0">
-                                    <span class="text-[11px] font-black uppercase text-white/60 block">Tu IMC</span>
+                                <!-- Recuadro del Valor IMC -->
+                                <div class="bg-surfaceLight rounded-xl border border-white/10 px-6 py-4 text-center shrink-0">
+                                    <span class="text-[11px] font-black uppercase text-gray-400 block">Tu IMC</span>
                                     <span id="res-imc-valor" class="text-4xl sm:text-5xl font-black text-orange-500">24.3</span>
                                 </div>
                             </div>
 
-                            <!-- Escala Visual Redondeada -->
-                            <div class="bg-surfaceLight p-6 rounded-3xl">
+                            <!-- Escala Visual Tecnológica (rounded-xl) -->
+                            <div class="bg-surfaceLight p-5 rounded-xl border border-white/10">
                                 <div class="flex justify-between text-[11px] font-black uppercase mb-3">
-                                    <span class="text-white/70">Bajo (&lt;18.5)</span>
+                                    <span class="text-gray-300">Bajo (&lt;18.5)</span>
                                     <span class="text-orange-500">Normal (18.5 - 24.9)</span>
-                                    <span class="text-white/70">Alto (25+)</span>
+                                    <span class="text-gray-300">Alto (25+)</span>
                                 </div>
 
-                                <div class="w-full h-3.5 bg-black rounded-full overflow-hidden flex">
+                                <div class="w-full h-3 bg-black rounded-lg overflow-hidden flex">
                                     <div class="w-1/3 bg-white/25 h-full"></div>
                                     <div class="w-1/3 bg-orange-500 h-full"></div>
                                     <div class="w-1/3 bg-white/40 h-full"></div>
                                 </div>
 
                                 <div class="relative w-full h-6 mt-2">
-                                    <div id="imc-marker" class="absolute top-0 -translate-x-1/2 transition-all duration-500 text-[11px] font-black text-white bg-orange-500 px-3 py-0.5 rounded-full" style="left: 50%;">
+                                    <div id="imc-marker" class="absolute top-0 -translate-x-1/2 transition-all duration-500 text-[11px] font-black text-white bg-orange-500 px-2.5 py-0.5 rounded-md" style="left: 50%;">
                                         ▲ Tu IMC
                                     </div>
                                 </div>
 
-                                <div class="mt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
-                                    <span class="text-white/60 font-normal">Peso saludable estimado para tu estatura:</span>
+                                <div class="mt-3 pt-3 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                                    <span class="text-gray-400 font-normal">Peso saludable estimado para tu estatura:</span>
                                     <span id="res-peso-ideal" class="text-white font-black uppercase">54.7 kg - 73.7 kg</span>
                                 </div>
                             </div>
 
                             <!-- Mensaje Personalizado -->
-                            <div class="bg-surfaceLight p-6 rounded-3xl">
+                            <div class="bg-surfaceLight p-5 rounded-xl border-l-4 border-orange-500">
                                 <span class="text-xs font-black uppercase text-orange-500 block mb-2">
                                     <i class="fa-solid fa-dumbbell mr-1.5"></i> Recomendación Personalizada FitUp Club:
                                 </span>
-                                <p id="res-mensaje" class="text-white/85 text-sm sm:text-base font-normal leading-relaxed"></p>
+                                <p id="res-mensaje" class="text-gray-200 text-sm sm:text-base font-normal leading-relaxed"></p>
                             </div>
 
-                            <!-- Tarjetas Redondeadas de Zonas Recomendadas -->
+                            <!-- Tarjetas de Zonas Recomendadas (rounded-xl) -->
                             <div>
-                                <span class="text-xs font-black uppercase text-white/60 block mb-3">
+                                <span class="text-xs font-black uppercase text-gray-400 block mb-3">
                                     Zonas de FitUp Club que debes priorizar:
                                 </span>
                                 <div id="res-zonas-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -324,12 +335,12 @@
                             </div>
                         </div>
 
-                        <!-- Botones Inferiores Píldora -->
-                        <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+                        <!-- Botones Inferiores -->
+                        <div class="mt-8 pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center gap-4">
                             <a href="index.html#prueba-gratis" class="w-full sm:w-auto flex-1 bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider py-4 px-6 rounded-full text-center transition-colors">
                                 Solicitar mi Sesión de Prueba Gratuita
                             </a>
-                            <a href="servicios.html" class="w-full sm:w-auto bg-surfaceLight hover:bg-orange-500 text-white font-black uppercase text-xs tracking-wider py-4 px-6 rounded-full text-center transition-colors">
+                            <a href="servicios.html" class="w-full sm:w-auto bg-surfaceLight hover:bg-orange-500 text-white border border-white/15 font-black uppercase text-xs tracking-wider py-4 px-6 rounded-full text-center transition-colors">
                                 Ver Zonas y Horarios
                             </a>
                         </div>
@@ -344,14 +355,14 @@
     </main>
 
     <!-- FOOTER UNIFICADO NEGRO PURO -->
-    <footer class="bg-black text-white py-14">
+    <footer class="bg-black text-white py-12 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div class="bg-surface rounded-[3rem] p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="bg-surface rounded-2xl border border-white/10 p-8 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="flex items-center gap-3">
                     <img src="imagenes/logo-fitup.png" alt="Logo FitUp Club" class="h-9 w-auto object-contain" onerror="this.style.display='none'">
                     <span class="text-2xl font-black uppercase text-white">FITUP <span class="text-orange-500">CLUB</span></span>
                 </div>
-                <p class="text-xs text-white/60">© 2026 FitUp Club Cajamarca • C.C. Open Plaza (Segundo Nivel)</p>
+                <p class="text-xs text-gray-400">© 2026 FitUp Club Cajamarca • C.C. Open Plaza (Segundo Nivel)</p>
             </div>
         </div>
     </footer>
@@ -446,12 +457,12 @@
 
             const grid = document.getElementById('res-zonas-grid');
             grid.innerHTML = zonas.map(z => `
-                <div class="bg-surfaceLight rounded-3xl p-5">
-                    <div class="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm mb-3">
+                <div class="bg-surfaceLight rounded-xl border border-white/10 p-4">
+                    <div class="w-9 h-9 rounded-lg bg-orange-500 text-white flex items-center justify-center text-sm mb-3">
                         <i class="fa-solid ${z.icono}"></i>
                     </div>
                     <h5 class="text-sm font-black uppercase text-white">${z.nombre}</h5>
-                    <p class="text-xs text-white/70 mt-1 font-normal">${z.detalle}</p>
+                    <p class="text-xs text-gray-300 mt-1 font-normal">${z.detalle}</p>
                 </div>
             `).join('');
         }
@@ -479,7 +490,7 @@
                     yPercent: 18,
                     ease: 'none',
                     scrollTrigger: {
-                        trigger: bg.parentElement,
+                        trigger: bg.closest('section') || bg.parentElement,
                         start: 'top bottom',
                         end: 'bottom top',
                         scrub: true

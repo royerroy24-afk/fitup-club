@@ -26,8 +26,12 @@
                         sans: ['Montserrat', 'sans-serif']
                     },
                     colors: {
-                        surface: '#0f0f0f',
-                        surfaceLight: '#161616'
+                        orange: {
+                            500: '#FF6600',
+                            600: '#E65C00'
+                        },
+                        surface: '#111111',
+                        surfaceLight: '#1A1A1A'
                     }
                 }
             }
@@ -58,7 +62,6 @@
         .img-reveal-wrap {
             overflow: hidden;
             transform: translateZ(0);
-            -webkit-mask-image: -webkit-radial-gradient(white, black);
         }
         .img-reveal, .parallax-bg {
             will-change: transform;
@@ -72,8 +75,8 @@
         <i class="fa-solid fa-location-dot mr-1.5"></i> Ubicados en C.C. Open Plaza Cajamarca (Segundo Nivel) • Estacionamiento 24h
     </div>
 
-    <!-- NAVBAR UNIFICADA -->
-    <header class="sticky top-0 z-50 bg-black/95 backdrop-blur-md">
+    <!-- NAVBAR TECNOLÓGICA (ROUNDED-XL) -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 shrink-0">
                 <img src="imagenes/logo-fitup.png" alt="FitUp Club" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
@@ -82,185 +85,187 @@
                 </span>
             </a>
 
-            <nav class="hidden lg:flex items-center gap-3 text-xs font-black uppercase tracking-wider bg-surface px-4 py-2 rounded-full">
-                <a href="index.html" class="text-white/80 hover:text-orange-500 px-5 py-2.5 rounded-full transition-colors duration-200">Inicio</a>
-                <a href="servicios.html" class="bg-orange-500 text-white px-5 py-2.5 rounded-full transition-colors duration-200">Servicios y Horarios</a>
-                <a href="entrenadores.html" class="text-white/80 hover:text-orange-500 px-5 py-2.5 rounded-full transition-colors duration-200">Entrenadores</a>
-                <a href="tu-espacio.html" class="text-white/80 hover:text-orange-500 px-5 py-2.5 rounded-full transition-colors duration-200">Tu Espacio FitUp</a>
+            <nav class="hidden lg:flex items-center gap-2 text-xs font-black uppercase tracking-wider bg-surface p-1.5 rounded-xl border border-white/10">
+                <a href="index.html" class="text-gray-300 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Inicio</a>
+                <a href="servicios.html" class="bg-orange-500 text-white px-4 py-2.5 rounded-lg transition-colors duration-200">Servicios y Horarios</a>
+                <a href="entrenadores.html" class="text-gray-300 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Entrenadores</a>
+                <a href="tu-espacio.html" class="text-gray-300 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Tu Espacio FitUp</a>
+                <a href="index.html#tips" class="text-gray-300 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Tips FitUp</a>
             </nav>
 
             <div class="flex items-center gap-3">
                 <a href="tu-espacio.html" class="bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider px-6 py-3.5 rounded-full transition-colors duration-200 whitespace-nowrap">
                     Calcular IMC
                 </a>
-                <button type="button" onclick="toggleMobileMenu()" aria-label="Menú" class="lg:hidden w-11 h-11 rounded-full bg-surface hover:bg-orange-500 text-white flex items-center justify-center transition-colors">
+                <button type="button" onclick="toggleMobileMenu()" aria-label="Menú" class="lg:hidden w-11 h-11 rounded-xl bg-surface hover:bg-orange-500 text-white flex items-center justify-center border border-white/10 transition-colors">
                     <i id="hamburger-icon" class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-surface mx-4 mb-4 p-5 rounded-3xl space-y-2">
-            <a href="index.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase text-white hover:text-orange-500 transition-colors">Inicio</a>
-            <a href="servicios.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase bg-orange-500 text-white">Servicios y Horarios</a>
-            <a href="entrenadores.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase text-white hover:text-orange-500 transition-colors">Entrenadores</a>
-            <a href="tu-espacio.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase text-white hover:text-orange-500 transition-colors">Tu Espacio FitUp</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-surface mx-4 mb-4 p-4 rounded-xl border border-white/10 space-y-2">
+            <a href="index.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase text-gray-200 hover:text-orange-500 transition-colors">Inicio</a>
+            <a href="servicios.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase bg-orange-500 text-white">Servicios y Horarios</a>
+            <a href="entrenadores.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase text-gray-200 hover:text-orange-500 transition-colors">Entrenadores</a>
+            <a href="tu-espacio.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase text-gray-200 hover:text-orange-500 transition-colors">Tu Espacio FitUp</a>
+            <a href="index.html#tips" class="block py-3 px-4 rounded-lg text-sm font-black uppercase text-gray-200 hover:text-orange-500 transition-colors">Tips FitUp Club</a>
         </div>
     </header>
 
     <main>
 
-        <!-- CABECERA PARALLAX OVALADA -->
-        <section class="py-10 bg-black">
-            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-                <div class="relative rounded-[3rem] overflow-hidden py-16 sm:py-24 px-6 sm:px-12 bg-surface">
-                    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1920&q=85" 
-                             alt="Instalaciones FitUp" 
-                             class="parallax-bg w-full h-[135%] -top-[18%] relative object-cover opacity-25">
-                    </div>
-                    <div class="relative z-10 max-w-3xl">
-                        <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-                            11 Zonas Especializadas
-                        </span>
-                        <h1 class="text-4xl sm:text-6xl font-black uppercase text-white leading-tight reveal-heading">
-                            <span class="line-mask"><span class="line-reveal">SERVICIOS E</span></span>
-                            <span class="line-mask"><span class="line-reveal text-orange-500">INSTALACIONES</span></span>
-                        </h1>
-                        <p class="mt-4 text-white/75 text-base sm:text-lg font-normal leading-relaxed">
-                            Conoce cada área de entrenamiento, bienestar y salud disponible en nuestra sede del C.C. Open Plaza Cajamarca (Segundo Nivel).
-                        </p>
-                    </div>
+        <!-- CABECERA HERO INMERSIVA CON FONDO DE GIMNASIO + BG-BLACK/80 + PARALLAX -->
+        <section class="relative py-20 sm:py-28 overflow-hidden bg-black border-b border-white/10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1920&q=85" 
+                     alt="Instalaciones FitUp" 
+                     class="parallax-bg w-full h-[135%] -top-[18%] relative object-cover object-center">
+                <div class="absolute inset-0 bg-black/80"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl">
+                    <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-lg mb-4">
+                        11 Zonas Especializadas
+                    </span>
+                    <h1 class="text-4xl sm:text-6xl font-black uppercase text-white leading-tight reveal-heading">
+                        <span class="line-mask"><span class="line-reveal">SERVICIOS E</span></span>
+                        <span class="line-mask"><span class="line-reveal text-orange-500">INSTALACIONES</span></span>
+                    </h1>
+                    <p class="mt-4 text-gray-300 text-base sm:text-lg font-normal leading-relaxed">
+                        Conoce cada área de entrenamiento, bienestar y salud disponible en nuestra sede del C.C. Open Plaza Cajamarca (Segundo Nivel).
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- GRID DE SERVICIOS CON BORDES OVALADOS (ROUNDED-[3REM]) Y ZOOM GSAP -->
-        <section class="py-14 bg-black">
-            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <!-- GRID DE SERVICIOS CON BORDES SUTILES (ROUNDED-XL) Y ZOOM 3D (SCALE 1.2 -> 1) -->
+        <section class="relative py-20 bg-black border-b border-white/10 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                     <!-- 1. Sala de Musculación -->
-                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
-                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                    <div class="bg-surface rounded-xl border border-white/10 p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-xl h-56">
                             <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Sala de Musculación" class="img-reveal w-full h-full object-cover">
                         </div>
-                        <div class="p-5">
+                        <div class="p-4">
                             <span class="text-xs font-black uppercase text-orange-500">Fuerza e Hipertrofia</span>
                             <h3 class="text-2xl font-black uppercase text-white mt-1">Sala de Musculación</h3>
-                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
                                 Máquinas biomecánicas guiadas, bancos olímpicos, jaulas de potencia y mancuernas de alto tonelaje.
                             </p>
                         </div>
                     </div>
 
                     <!-- 2. Clases Grupales -->
-                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
-                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                    <div class="bg-surface rounded-xl border border-white/10 p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-xl h-56">
                             <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Clases Grupales" class="img-reveal w-full h-full object-cover">
                         </div>
-                        <div class="p-5">
+                        <div class="p-4">
                             <span class="text-xs font-black uppercase text-orange-500">Energía Colectiva</span>
                             <h3 class="text-2xl font-black uppercase text-white mt-1">Clases Grupales</h3>
-                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
                                 Sesiones diarias de Zumba, Full Body, Tabata, Baile Fitness y entrenamiento localizado en vivo.
                             </p>
                         </div>
                     </div>
 
                     <!-- 3. Zona Spinning -->
-                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
-                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                    <div class="bg-surface rounded-xl border border-white/10 p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-xl h-56">
                             <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=800&q=80" alt="Zona Spinning" class="img-reveal w-full h-full object-cover">
                         </div>
-                        <div class="p-5">
+                        <div class="p-4">
                             <span class="text-xs font-black uppercase text-orange-500">Ciclismo Indoor</span>
                             <h3 class="text-2xl font-black uppercase text-white mt-1">Zona Spinning</h3>
-                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
                                 Salón exclusivo de ciclismo indoor con música envolvente para máxima resistencia cardiovascular.
                             </p>
                         </div>
                     </div>
 
                     <!-- 4. Zona Cardio -->
-                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
-                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                    <div class="bg-surface rounded-xl border border-white/10 p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-xl h-56">
                             <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Zona Cardio" class="img-reveal w-full h-full object-cover">
                         </div>
-                        <div class="p-5">
+                        <div class="p-4">
                             <span class="text-xs font-black uppercase text-orange-500">Capacidad Aeróbica</span>
                             <h3 class="text-2xl font-black uppercase text-white mt-1">Zona Cardio</h3>
-                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
                                 Trotadoras profesionales, elípticas, escaladoras y remos con monitoreo digital de ritmo cardíaco.
                             </p>
                         </div>
                     </div>
 
                     <!-- 5. Zona Funcional -->
-                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
-                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                    <div class="bg-surface rounded-xl border border-white/10 p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-xl h-56">
                             <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Zona Funcional" class="img-reveal w-full h-full object-cover">
                         </div>
-                        <div class="p-5">
+                        <div class="p-4">
                             <span class="text-xs font-black uppercase text-orange-500">Agilidad & HIIT</span>
                             <h3 class="text-2xl font-black uppercase text-white mt-1">Zona Funcional</h3>
-                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
                                 Circuito funcional con TRX, kettlebells, cuerdas de batalla, balones medicinales y cajones pliométricos.
                             </p>
                         </div>
                     </div>
 
                     <!-- 6. Sauna y Duchas Calientes -->
-                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
-                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                    <div class="bg-surface rounded-xl border border-white/10 p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-xl h-56">
                             <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Sauna y Duchas" class="img-reveal w-full h-full object-cover">
                         </div>
-                        <div class="p-5">
+                        <div class="p-4">
                             <span class="text-xs font-black uppercase text-orange-500">Recuperación</span>
                             <h3 class="text-2xl font-black uppercase text-white mt-1">Sauna & Duchas Calientes</h3>
-                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
                                 Relajación muscular en sauna seco, vestidores impecables, casilleros y duchas con agua caliente.
                             </p>
                         </div>
                     </div>
 
                     <!-- 7. Cafetería Fitness -->
-                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
-                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                    <div class="bg-surface rounded-xl border border-white/10 p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-xl h-56">
                             <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Cafetería Fitness" class="img-reveal w-full h-full object-cover">
                         </div>
-                        <div class="p-5">
+                        <div class="p-4">
                             <span class="text-xs font-black uppercase text-orange-500">Nutrición Deportiva</span>
                             <h3 class="text-2xl font-black uppercase text-white mt-1">Cafetería Fitness</h3>
-                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
                                 Batidos proteicos, aminoácidos, café de especialidad y comidas saludables para tu post-entreno.
                             </p>
                         </div>
                     </div>
 
                     <!-- 8. Médico Deportivo -->
-                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
-                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                    <div class="bg-surface rounded-xl border border-white/10 p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-xl h-56">
                             <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Médico Deportivo" class="img-reveal w-full h-full object-cover">
                         </div>
-                        <div class="p-5">
+                        <div class="p-4">
                             <span class="text-xs font-black uppercase text-orange-500">Salud Integral</span>
                             <h3 class="text-2xl font-black uppercase text-white mt-1">Médico Deportivo</h3>
-                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
                                 Diagnóstico físico inicial, evaluación antropométrica y prevención de lesiones articulares.
                             </p>
                         </div>
                     </div>
 
                     <!-- 9. Convenios y Estacionamiento 24h -->
-                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
-                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                    <div class="bg-surface rounded-xl border border-white/10 p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-xl h-56">
                             <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80" alt="Convenios y Parqueo 24h" class="img-reveal w-full h-full object-cover">
                         </div>
-                        <div class="p-5">
+                        <div class="p-4">
                             <span class="text-xs font-black uppercase text-orange-500">Comodidad Total</span>
                             <h3 class="text-2xl font-black uppercase text-white mt-1">Convenios & Parqueo 24h</h3>
-                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                            <p class="text-gray-300 text-sm mt-2 font-normal leading-relaxed">
                                 Membresías corporativas para empresas y estacionamiento seguro las 24 horas en Open Plaza.
                             </p>
                         </div>
@@ -271,12 +276,19 @@
             </div>
         </section>
 
-        <!-- HORARIOS OFICIALES EN CÁPSULAS OVALADAS -->
-        <section class="py-20 bg-black">
-            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <!-- HORARIOS OFICIALES CON FONDO DE GIMNASIO + OVERLAY BG-BLACK/80 -->
+        <section class="relative py-24 bg-black overflow-hidden">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80" 
+                     alt="Horarios FitUp" 
+                     class="parallax-bg w-full h-[135%] -top-[18%] relative object-cover object-center">
+                <div class="absolute inset-0 bg-black/85"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
 
                 <div class="text-center max-w-2xl mx-auto mb-14">
-                    <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+                    <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-lg mb-4">
                         C.C. Open Plaza Cajamarca • Segundo Nivel
                     </span>
                     <h2 class="text-3xl sm:text-5xl font-black uppercase text-white leading-tight reveal-heading">
@@ -286,31 +298,31 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-surface rounded-[3rem] p-10 text-center fade-card">
-                        <div class="w-14 h-14 rounded-full bg-orange-500 text-white flex items-center justify-center text-xl mx-auto mb-5">
+                    <div class="bg-surface rounded-xl border border-white/10 p-8 text-center fade-card">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-xl mx-auto mb-5">
                             <i class="fa-regular fa-calendar-check"></i>
                         </div>
                         <span class="text-xs font-black uppercase tracking-widest text-orange-500">Lunes a Viernes</span>
                         <h3 class="text-3xl font-black text-white mt-2">6:00 AM - 10:00 PM</h3>
-                        <p class="text-white/70 text-sm mt-2 font-normal">Todas las áreas y clases grupales activas</p>
+                        <p class="text-gray-300 text-sm mt-2 font-normal">Todas las áreas y clases grupales activas</p>
                     </div>
 
-                    <div class="bg-surface rounded-[3rem] p-10 text-center fade-card">
-                        <div class="w-14 h-14 rounded-full bg-orange-500 text-white flex items-center justify-center text-xl mx-auto mb-5">
+                    <div class="bg-surface rounded-xl border border-white/10 p-8 text-center fade-card">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-xl mx-auto mb-5">
                             <i class="fa-regular fa-clock"></i>
                         </div>
                         <span class="text-xs font-black uppercase tracking-widest text-orange-500">Sábados</span>
                         <h3 class="text-3xl font-black text-white mt-2">6:00 AM - 6:00 PM</h3>
-                        <p class="text-white/70 text-sm mt-2 font-normal">Musculación, cardio, funcional y sauna</p>
+                        <p class="text-gray-300 text-sm mt-2 font-normal">Musculación, cardio, funcional y sauna</p>
                     </div>
 
-                    <div class="bg-surface rounded-[3rem] p-10 text-center fade-card">
-                        <div class="w-14 h-14 rounded-full bg-orange-500 text-white flex items-center justify-center text-xl mx-auto mb-5">
+                    <div class="bg-surface rounded-xl border border-white/10 p-8 text-center fade-card">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-xl mx-auto mb-5">
                             <i class="fa-solid fa-sun"></i>
                         </div>
                         <span class="text-xs font-black uppercase tracking-widest text-orange-500">Domingos</span>
                         <h3 class="text-3xl font-black text-white mt-2">8:00 AM - 12:00 PM</h3>
-                        <p class="text-white/70 text-sm mt-2 font-normal">Entrenamiento dominical de mañana</p>
+                        <p class="text-gray-300 text-sm mt-2 font-normal">Entrenamiento dominical de mañana</p>
                     </div>
                 </div>
 
@@ -320,9 +332,9 @@
     </main>
 
     <!-- FOOTER UNIFICADO NEGRO PURO -->
-    <footer class="bg-black text-white py-14">
+    <footer class="bg-black text-white py-12 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div class="bg-surface rounded-[3rem] p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="bg-surface rounded-2xl border border-white/10 p-8 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="flex items-center gap-3">
                     <img src="imagenes/logo-fitup.png" alt="Logo FitUp Club" class="h-9 w-auto object-contain" onerror="this.style.display='none'">
                     <span class="text-2xl font-black uppercase text-white">FITUP <span class="text-orange-500">CLUB</span></span>
@@ -368,7 +380,7 @@
                     yPercent: 18,
                     ease: 'none',
                     scrollTrigger: {
-                        trigger: bg.parentElement,
+                        trigger: bg.closest('section') || bg.parentElement,
                         start: 'top bottom',
                         end: 'bottom top',
                         scrub: true
@@ -377,7 +389,7 @@
             });
 
             gsap.utils.toArray('.img-reveal').forEach((img) => {
-                gsap.fromTo(img, { scale: 1.28 }, {
+                gsap.fromTo(img, { scale: 1.2 }, {
                     scale: 1,
                     ease: 'power2.out',
                     scrollTrigger: {
@@ -405,7 +417,7 @@
 
             gsap.utils.toArray('.fade-card').forEach((card, i) => {
                 gsap.from(card, {
-                    y: 40,
+                    y: 35,
                     opacity: 0,
                     duration: 0.9,
                     delay: (i % 3) * 0.08,
