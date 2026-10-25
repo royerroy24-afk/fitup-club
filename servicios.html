@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitUp Club Cajamarca | Servicios y Horarios</title>
 
-    <!-- Google Fonts: Montserrat -->
+    <!-- Google Fonts: Montserrat (400 Normal & 900 Black) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,17 +19,12 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        fitup: {
-                            slate: '#0f172a',
-                            slateDark: '#0b1120',
-                            slateCard: '#1e293b',
-                            orange: '#F85C14',
-                            orangeHover: '#d94b0b'
-                        }
-                    },
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif']
+                    },
+                    colors: {
+                        surface: '#0f0f0f',
+                        surfaceLight: '#161616'
                     }
                 }
             }
@@ -40,206 +32,233 @@
     </script>
 
     <style>
-        body { font-family: 'Montserrat', sans-serif; }
-        h1, h2, h3, h4 { font-weight: 900 !important; letter-spacing: -0.02em; }
-        @keyframes pageFadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
         }
-        .page-fade-in {
-            animation: pageFadeIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        h1, h2, h3, h4 {
+            font-weight: 900 !important;
+            letter-spacing: -0.025em;
+        }
+        p {
+            font-weight: 400;
+        }
+        .line-mask {
+            overflow: hidden;
+            display: block;
+        }
+        .line-reveal {
+            display: block;
+            will-change: transform;
+        }
+        .img-reveal-wrap {
+            overflow: hidden;
+            transform: translateZ(0);
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
+        }
+        .img-reveal, .parallax-bg {
+            will-change: transform;
         }
     </style>
 </head>
-<body class="bg-white text-slate-900 antialiased selection:bg-fitup-orange selection:text-white flex flex-col min-h-screen overflow-x-hidden">
+<body class="bg-black text-white antialiased selection:bg-orange-500 selection:text-white overflow-x-hidden">
 
-    <!-- BARRA INFORMATIVA PLANA -->
-    <div class="bg-fitup-slateDark text-slate-300 text-xs font-bold py-2.5 px-4 text-center border-b border-slate-800 uppercase tracking-wider">
-        <i class="fa-solid fa-location-dot text-fitup-orange mr-1.5"></i> C.C. Open Plaza Cajamarca (Segundo Nivel) • Estacionamiento 24h
+    <!-- BARRA SUPERIOR -->
+    <div class="bg-orange-500 text-white text-[11px] sm:text-xs font-black py-2.5 px-4 text-center uppercase tracking-widest">
+        <i class="fa-solid fa-location-dot mr-1.5"></i> Ubicados en C.C. Open Plaza Cajamarca (Segundo Nivel) • Estacionamiento 24h
     </div>
 
-    <!-- NAVBAR MULTIPÁGINA -->
-    <header class="sticky top-0 z-50 bg-slate-900 border-b border-slate-800">
+    <!-- NAVBAR UNIFICADA -->
+    <header class="sticky top-0 z-50 bg-black/95 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 shrink-0">
                 <img src="imagenes/logo-fitup.png" alt="FitUp Club" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
-                <span class="text-xl sm:text-2xl font-black tracking-tight text-white uppercase">
-                    FITUP <span class="text-fitup-orange">CLUB</span>
+                <span class="text-xl sm:text-2xl font-black tracking-tighter text-white uppercase">
+                    FITUP <span class="text-orange-500">CLUB</span>
                 </span>
             </a>
 
-            <!-- Enlaces Desktop -->
-            <nav class="hidden lg:flex items-center gap-8 text-xs font-extrabold uppercase tracking-wider">
-                <a href="index.html" class="text-slate-300 hover:text-fitup-orange py-2 transition-colors duration-200">Inicio</a>
-                <a href="servicios.html" class="text-fitup-orange border-b-2 border-fitup-orange py-2 transition-colors duration-200">Servicios y Horarios</a>
-                <a href="entrenadores.html" class="text-slate-300 hover:text-fitup-orange py-2 transition-colors duration-200">Entrenadores</a>
-                <a href="tu-espacio.html" class="text-slate-300 hover:text-fitup-orange py-2 transition-colors duration-200">Tu Espacio FitUp</a>
+            <nav class="hidden lg:flex items-center gap-3 text-xs font-black uppercase tracking-wider bg-surface px-4 py-2 rounded-full">
+                <a href="index.html" class="text-white/80 hover:text-orange-500 px-5 py-2.5 rounded-full transition-colors duration-200">Inicio</a>
+                <a href="servicios.html" class="bg-orange-500 text-white px-5 py-2.5 rounded-full transition-colors duration-200">Servicios y Horarios</a>
+                <a href="entrenadores.html" class="text-white/80 hover:text-orange-500 px-5 py-2.5 rounded-full transition-colors duration-200">Entrenadores</a>
+                <a href="tu-espacio.html" class="text-white/80 hover:text-orange-500 px-5 py-2.5 rounded-full transition-colors duration-200">Tu Espacio FitUp</a>
             </nav>
 
             <div class="flex items-center gap-3">
-                <a href="tu-espacio.html" class="bg-fitup-orange hover:bg-fitup-orangeHover text-white font-black uppercase text-xs tracking-wider px-5 py-3.5 rounded-lg transition-colors duration-200 whitespace-nowrap">
+                <a href="tu-espacio.html" class="bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider px-6 py-3.5 rounded-full transition-colors duration-200 whitespace-nowrap">
                     Calcular IMC
                 </a>
-                <button type="button" onclick="toggleMobileMenu()" aria-label="Menú" class="lg:hidden w-11 h-11 rounded-lg bg-slate-800 hover:bg-fitup-orange text-white flex items-center justify-center border border-slate-700 transition-colors">
+                <button type="button" onclick="toggleMobileMenu()" aria-label="Menú" class="lg:hidden w-11 h-11 rounded-full bg-surface hover:bg-orange-500 text-white flex items-center justify-center transition-colors">
                     <i id="hamburger-icon" class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Menú Móvil -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-t border-slate-800 px-5 py-5 space-y-2">
-            <a href="index.html" class="block py-3 px-4 rounded-lg text-sm font-bold uppercase text-slate-200 hover:bg-slate-800 hover:text-fitup-orange transition-colors">Inicio</a>
-            <a href="servicios.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase bg-slate-800 text-fitup-orange">Servicios y Horarios</a>
-            <a href="entrenadores.html" class="block py-3 px-4 rounded-lg text-sm font-bold uppercase text-slate-200 hover:bg-slate-800 hover:text-fitup-orange transition-colors">Entrenadores</a>
-            <a href="tu-espacio.html" class="block py-3 px-4 rounded-lg text-sm font-bold uppercase text-slate-200 hover:bg-slate-800 hover:text-fitup-orange transition-colors">Tu Espacio FitUp</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-surface mx-4 mb-4 p-5 rounded-3xl space-y-2">
+            <a href="index.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase text-white hover:text-orange-500 transition-colors">Inicio</a>
+            <a href="servicios.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase bg-orange-500 text-white">Servicios y Horarios</a>
+            <a href="entrenadores.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase text-white hover:text-orange-500 transition-colors">Entrenadores</a>
+            <a href="tu-espacio.html" class="block py-3 px-5 rounded-full text-sm font-black uppercase text-white hover:text-orange-500 transition-colors">Tu Espacio FitUp</a>
         </div>
     </header>
 
-    <main class="flex-grow page-fade-in">
+    <main>
 
-        <!-- CABECERA DE PÁGINA PLANA -->
-        <section class="bg-slate-900 text-white py-16 border-b border-slate-800">
-            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center md:text-left">
-                <span class="inline-block bg-slate-800 text-fitup-orange text-xs font-extrabold uppercase tracking-widest px-3.5 py-1.5 rounded border border-slate-700 mb-3">
-                    Instalaciones y Atención
-                </span>
-                <h1 class="text-4xl sm:text-5xl font-black uppercase text-white">
-                    NUESTROS SERVICIOS Y <span class="text-fitup-orange">HORARIOS</span>
-                </h1>
-                <p class="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl font-medium">
-                    Conoce todas las zonas especializadas incluidas en nuestra sede del C.C. Open Plaza Cajamarca (Segundo Nivel).
-                </p>
+        <!-- CABECERA PARALLAX OVALADA -->
+        <section class="py-10 bg-black">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+                <div class="relative rounded-[3rem] overflow-hidden py-16 sm:py-24 px-6 sm:px-12 bg-surface">
+                    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1920&q=85" 
+                             alt="Instalaciones FitUp" 
+                             class="parallax-bg w-full h-[135%] -top-[18%] relative object-cover opacity-25">
+                    </div>
+                    <div class="relative z-10 max-w-3xl">
+                        <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+                            11 Zonas Especializadas
+                        </span>
+                        <h1 class="text-4xl sm:text-6xl font-black uppercase text-white leading-tight reveal-heading">
+                            <span class="line-mask"><span class="line-reveal">SERVICIOS E</span></span>
+                            <span class="line-mask"><span class="line-reveal text-orange-500">INSTALACIONES</span></span>
+                        </h1>
+                        <p class="mt-4 text-white/75 text-base sm:text-lg font-normal leading-relaxed">
+                            Conoce cada área de entrenamiento, bienestar y salud disponible en nuestra sede del C.C. Open Plaza Cajamarca (Segundo Nivel).
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- GRID DE SERVICIOS E INSTALACIONES (FLAT DESIGN) -->
-        <section class="py-20 bg-white">
+        <!-- GRID DE SERVICIOS CON BORDES OVALADOS (ROUNDED-[3REM]) Y ZOOM GSAP -->
+        <section class="py-14 bg-black">
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                     <!-- 1. Sala de Musculación -->
-                    <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden" data-aos="fade-up">
-                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=700&q=80" alt="Sala de Musculación" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 text-fitup-orange text-xs font-extrabold uppercase mb-1">
-                                <i class="fa-solid fa-dumbbell"></i> Fuerza e Hipertrofia
-                            </div>
-                            <h3 class="text-xl font-black uppercase text-slate-900">Sala de Musculación</h3>
-                            <p class="text-slate-600 text-sm mt-2 font-medium">
+                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Sala de Musculación" class="img-reveal w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-xs font-black uppercase text-orange-500">Fuerza e Hipertrofia</span>
+                            <h3 class="text-2xl font-black uppercase text-white mt-1">Sala de Musculación</h3>
+                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
                                 Máquinas biomecánicas guiadas, bancos olímpicos, jaulas de potencia y mancuernas de alto tonelaje.
                             </p>
                         </div>
                     </div>
 
                     <!-- 2. Clases Grupales -->
-                    <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden" data-aos="fade-up" data-aos-delay="50">
-                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=80" alt="Clases Grupales" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 text-fitup-orange text-xs font-extrabold uppercase mb-1">
-                                <i class="fa-solid fa-users"></i> Energía en Grupo
-                            </div>
-                            <h3 class="text-xl font-black uppercase text-slate-900">Clases Grupales</h3>
-                            <p class="text-slate-600 text-sm mt-2 font-medium">
-                                Sesiones diarias de Zumba, Full Body, Tabata, Baile Fitness y Localizado en amplio salón acústico.
+                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Clases Grupales" class="img-reveal w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-xs font-black uppercase text-orange-500">Energía Colectiva</span>
+                            <h3 class="text-2xl font-black uppercase text-white mt-1">Clases Grupales</h3>
+                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                                Sesiones diarias de Zumba, Full Body, Tabata, Baile Fitness y entrenamiento localizado en vivo.
                             </p>
                         </div>
                     </div>
 
                     <!-- 3. Zona Spinning -->
-                    <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=700&q=80" alt="Zona Spinning" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 text-fitup-orange text-xs font-extrabold uppercase mb-1">
-                                <i class="fa-solid fa-bicycle"></i> Ciclismo Indoor
-                            </div>
-                            <h3 class="text-xl font-black uppercase text-slate-900">Zona Spinning</h3>
-                            <p class="text-slate-600 text-sm mt-2 font-medium">
-                                Bicicletas estáticas de alto rendimiento para mejorar tu resistencia cardiovascular y tonificar piernas.
+                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                            <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=800&q=80" alt="Zona Spinning" class="img-reveal w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-xs font-black uppercase text-orange-500">Ciclismo Indoor</span>
+                            <h3 class="text-2xl font-black uppercase text-white mt-1">Zona Spinning</h3>
+                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                                Salón exclusivo de ciclismo indoor con música envolvente para máxima resistencia cardiovascular.
                             </p>
                         </div>
                     </div>
 
                     <!-- 4. Zona Cardio -->
-                    <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden" data-aos="fade-up">
-                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=700&q=80" alt="Zona Cardio" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 text-fitup-orange text-xs font-extrabold uppercase mb-1">
-                                <i class="fa-solid fa-heart-pulse"></i> Resistencia
-                            </div>
-                            <h3 class="text-xl font-black uppercase text-slate-900">Zona Cardio</h3>
-                            <p class="text-slate-600 text-sm mt-2 font-medium">
-                                Trotadoras profesionales, elípticas y escaladoras con control digital de pulsaciones y calorías.
+                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Zona Cardio" class="img-reveal w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-xs font-black uppercase text-orange-500">Capacidad Aeróbica</span>
+                            <h3 class="text-2xl font-black uppercase text-white mt-1">Zona Cardio</h3>
+                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                                Trotadoras profesionales, elípticas, escaladoras y remos con monitoreo digital de ritmo cardíaco.
                             </p>
                         </div>
                     </div>
 
                     <!-- 5. Zona Funcional -->
-                    <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden" data-aos="fade-up" data-aos-delay="50">
-                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=700&q=80" alt="Zona Funcional" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 text-fitup-orange text-xs font-extrabold uppercase mb-1">
-                                <i class="fa-solid fa-bolt"></i> Agilidad & HIIT
-                            </div>
-                            <h3 class="text-xl font-black uppercase text-slate-900">Zona Funcional</h3>
-                            <p class="text-slate-600 text-sm mt-2 font-medium">
-                                Circuito funcional con TRX, pesas rusas (kettlebells), cuerdas de batalla, balones y cajones pliométricos.
+                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Zona Funcional" class="img-reveal w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-xs font-black uppercase text-orange-500">Agilidad & HIIT</span>
+                            <h3 class="text-2xl font-black uppercase text-white mt-1">Zona Funcional</h3>
+                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                                Circuito funcional con TRX, kettlebells, cuerdas de batalla, balones medicinales y cajones pliométricos.
                             </p>
                         </div>
                     </div>
 
-                    <!-- 6. Sauna y Duchas con Agua Caliente -->
-                    <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=80" alt="Sauna y Duchas" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 text-fitup-orange text-xs font-extrabold uppercase mb-1">
-                                <i class="fa-solid fa-hot-tub-person"></i> Recuperación & Confort
-                            </div>
-                            <h3 class="text-xl font-black uppercase text-slate-900">Sauna y Duchas Calientes</h3>
-                            <p class="text-slate-600 text-sm mt-2 font-medium">
-                                Relajación post-entreno en sauna seco, vestidores amplios, casilleros y duchas con agua caliente todo el día.
+                    <!-- 6. Sauna y Duchas Calientes -->
+                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Sauna y Duchas" class="img-reveal w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-xs font-black uppercase text-orange-500">Recuperación</span>
+                            <h3 class="text-2xl font-black uppercase text-white mt-1">Sauna & Duchas Calientes</h3>
+                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                                Relajación muscular en sauna seco, vestidores impecables, casilleros y duchas con agua caliente.
                             </p>
                         </div>
                     </div>
 
                     <!-- 7. Cafetería Fitness -->
-                    <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden" data-aos="fade-up">
-                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Cafetería" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 text-fitup-orange text-xs font-extrabold uppercase mb-1">
-                                <i class="fa-solid fa-mug-hot"></i> Nutrición
-                            </div>
-                            <h3 class="text-xl font-black uppercase text-slate-900">Cafetería Fitness</h3>
-                            <p class="text-slate-600 text-sm mt-2 font-medium">
-                                Batidos de proteína, suplementos pre-entreno, café e infusiones y comidas saludables listas para llevar.
+                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Cafetería Fitness" class="img-reveal w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-xs font-black uppercase text-orange-500">Nutrición Deportiva</span>
+                            <h3 class="text-2xl font-black uppercase text-white mt-1">Cafetería Fitness</h3>
+                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                                Batidos proteicos, aminoácidos, café de especialidad y comidas saludables para tu post-entreno.
                             </p>
                         </div>
                     </div>
 
                     <!-- 8. Médico Deportivo -->
-                    <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden" data-aos="fade-up" data-aos-delay="50">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=700&q=80" alt="Médico Deportivo" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 text-fitup-orange text-xs font-extrabold uppercase mb-1">
-                                <i class="fa-solid fa-user-doctor"></i> Salud Deportiva
-                            </div>
-                            <h3 class="text-xl font-black uppercase text-slate-900">Médico Deportivo</h3>
-                            <p class="text-slate-600 text-sm mt-2 font-medium">
-                                Evaluación médica inicial, control de porcentaje de grasa y masa muscular, y prevención de lesiones.
+                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Médico Deportivo" class="img-reveal w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-xs font-black uppercase text-orange-500">Salud Integral</span>
+                            <h3 class="text-2xl font-black uppercase text-white mt-1">Médico Deportivo</h3>
+                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                                Diagnóstico físico inicial, evaluación antropométrica y prevención de lesiones articulares.
                             </p>
                         </div>
                     </div>
 
-                    <!-- 9. Convenios Corporativos & Estacionamiento 24h -->
-                    <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=700&q=80" alt="Convenios y Estacionamiento" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 text-fitup-orange text-xs font-extrabold uppercase mb-1">
-                                <i class="fa-solid fa-square-parking"></i> Beneficios Exclusivos
-                            </div>
-                            <h3 class="text-xl font-black uppercase text-slate-900">Convenios y Parqueo 24h</h3>
-                            <p class="text-slate-600 text-sm mt-2 font-medium">
-                                Planes corporativos para empresas de Cajamarca y estacionamiento vigilado 24 horas en Open Plaza.
+                    <!-- 9. Convenios y Estacionamiento 24h -->
+                    <div class="bg-surface rounded-[3rem] p-4 fade-card">
+                        <div class="img-reveal-wrap rounded-[2.4rem] h-56">
+                            <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80" alt="Convenios y Parqueo 24h" class="img-reveal w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-xs font-black uppercase text-orange-500">Comodidad Total</span>
+                            <h3 class="text-2xl font-black uppercase text-white mt-1">Convenios & Parqueo 24h</h3>
+                            <p class="text-white/70 text-sm mt-2 font-normal leading-relaxed">
+                                Membresías corporativas para empresas y estacionamiento seguro las 24 horas en Open Plaza.
                             </p>
                         </div>
                     </div>
@@ -249,61 +268,47 @@
             </div>
         </section>
 
-        <!-- SECCIÓN DE HORARIOS OFICIALES Y UBICACIÓN (PLANO) -->
-        <section class="bg-slate-900 text-white py-20 border-t border-slate-800">
+        <!-- HORARIOS OFICIALES EN CÁPSULAS OVALADAS -->
+        <section class="py-20 bg-black">
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
-                <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
-                    <span class="text-fitup-orange font-extrabold text-xs uppercase tracking-widest block mb-2">
-                        Atención Continua
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="inline-block bg-orange-500 text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+                        C.C. Open Plaza Cajamarca • Segundo Nivel
                     </span>
-                    <h2 class="text-3xl sm:text-4xl font-black uppercase text-white">
-                        HORARIOS DE <span class="text-fitup-orange">ENTRENAMIENTO</span>
+                    <h2 class="text-3xl sm:text-5xl font-black uppercase text-white leading-tight reveal-heading">
+                        <span class="line-mask"><span class="line-reveal">HORARIOS DE</span></span>
+                        <span class="line-mask"><span class="line-reveal text-orange-500">ENTRENAMIENTO</span></span>
                     </h2>
-                    <p class="text-slate-300 text-sm sm:text-base mt-2 font-medium">
-                        Ubicados estratégicamente en el C.C. Open Plaza Cajamarca (Segundo Nivel).
-                    </p>
                 </div>
 
-                <!-- 3 Tarjetas Planas de Horarios -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-8 text-center" data-aos="fade-up">
-                        <div class="w-12 h-12 rounded-lg bg-fitup-orange text-white flex items-center justify-center text-xl mx-auto mb-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-surface rounded-[3rem] p-10 text-center fade-card">
+                        <div class="w-14 h-14 rounded-full bg-orange-500 text-white flex items-center justify-center text-xl mx-auto mb-5">
                             <i class="fa-regular fa-calendar-check"></i>
                         </div>
-                        <p class="text-xs font-extrabold uppercase tracking-wider text-slate-400">Lunes a Viernes</p>
-                        <h3 class="text-2xl sm:text-3xl font-black text-white mt-2">6:00 AM - 10:00 PM</h3>
-                        <p class="text-xs text-slate-400 mt-2">Todas las áreas y clases grupales activas</p>
+                        <span class="text-xs font-black uppercase tracking-widest text-orange-500">Lunes a Viernes</span>
+                        <h3 class="text-3xl font-black text-white mt-2">6:00 AM - 10:00 PM</h3>
+                        <p class="text-white/70 text-sm mt-2 font-normal">Todas las áreas y clases grupales activas</p>
                     </div>
 
-                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-12 h-12 rounded-lg bg-fitup-orange text-white flex items-center justify-center text-xl mx-auto mb-4">
+                    <div class="bg-surface rounded-[3rem] p-10 text-center fade-card">
+                        <div class="w-14 h-14 rounded-full bg-orange-500 text-white flex items-center justify-center text-xl mx-auto mb-5">
                             <i class="fa-regular fa-clock"></i>
                         </div>
-                        <p class="text-xs font-extrabold uppercase tracking-wider text-slate-400">Sábados</p>
-                        <h3 class="text-2xl sm:text-3xl font-black text-white mt-2">6:00 AM - 6:00 PM</h3>
-                        <p class="text-xs text-slate-400 mt-2">Musculación, cardio, funcional y sauna</p>
+                        <span class="text-xs font-black uppercase tracking-widest text-orange-500">Sábados</span>
+                        <h3 class="text-3xl font-black text-white mt-2">6:00 AM - 6:00 PM</h3>
+                        <p class="text-white/70 text-sm mt-2 font-normal">Musculación, cardio, funcional y sauna</p>
                     </div>
 
-                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-12 h-12 rounded-lg bg-fitup-orange text-white flex items-center justify-center text-xl mx-auto mb-4">
+                    <div class="bg-surface rounded-[3rem] p-10 text-center fade-card">
+                        <div class="w-14 h-14 rounded-full bg-orange-500 text-white flex items-center justify-center text-xl mx-auto mb-5">
                             <i class="fa-solid fa-sun"></i>
                         </div>
-                        <p class="text-xs font-extrabold uppercase tracking-wider text-slate-400">Domingos</p>
-                        <h3 class="text-2xl sm:text-3xl font-black text-white mt-2">8:00 AM - 12:00 PM</h3>
-                        <p class="text-xs text-slate-400 mt-2">Entrenamiento dominical de mañana</p>
+                        <span class="text-xs font-black uppercase tracking-widest text-orange-500">Domingos</span>
+                        <h3 class="text-3xl font-black text-white mt-2">8:00 AM - 12:00 PM</h3>
+                        <p class="text-white/70 text-sm mt-2 font-normal">Entrenamiento dominical de mañana</p>
                     </div>
-                </div>
-
-                <!-- CTA hacia Calculadora IMC -->
-                <div class="mt-12 bg-slate-800 border border-slate-700 rounded-xl p-7 flex flex-col md:flex-row items-center justify-between gap-6">
-                    <div>
-                        <h3 class="text-xl sm:text-2xl font-black uppercase text-white">¿No sabes por qué zona empezar?</h3>
-                        <p class="text-slate-300 text-sm mt-1">Usa nuestra calculadora interactiva en "Tu Espacio FitUp" y descubre la ruta ideal según tu IMC.</p>
-                    </div>
-                    <a href="tu-espacio.html" class="w-full md:w-auto bg-fitup-orange hover:bg-fitup-orangeHover text-white font-black uppercase text-xs tracking-wider px-7 py-4 rounded-lg text-center transition-colors shrink-0">
-                        Ir a Calcular mi Estado Físico →
-                    </a>
                 </div>
 
             </div>
@@ -311,20 +316,25 @@
 
     </main>
 
-    <!-- FOOTER PLANO GLOBAL -->
-    <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 text-center sm:text-left">
-            <div class="flex items-center gap-3">
-                <span class="text-xl font-black uppercase text-white">FITUP <span class="text-fitup-orange">CLUB</span></span>
-                <span>• C.C. Open Plaza Cajamarca (Segundo Nivel)</span>
+    <!-- FOOTER UNIFICADO NEGRO PURO -->
+    <footer class="bg-black text-white py-14">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="bg-surface rounded-[3rem] p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <img src="imagenes/logo-fitup.png" alt="Logo FitUp Club" class="h-9 w-auto object-contain" onerror="this.style.display='none'">
+                    <span class="text-2xl font-black uppercase text-white">FITUP <span class="text-orange-500">CLUB</span></span>
+                </div>
+                <a href="tu-espacio.html" class="bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider px-8 py-4 rounded-full transition-colors">
+                    Ir a Calcular mi Estado Físico →
+                </a>
             </div>
-            <p>© 2026 FitUp Club Cajamarca. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- GSAP + SCROLLTRIGGER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script>
-        AOS.init({ duration: 600, once: true, offset: 50 });
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('hamburger-icon');
@@ -332,6 +342,64 @@
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-xmark');
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.utils.toArray('.parallax-bg').forEach((bg) => {
+                gsap.fromTo(bg, { yPercent: -12 }, {
+                    yPercent: 16,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: bg.parentElement,
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: true
+                    }
+                });
+            });
+
+            gsap.utils.toArray('.img-reveal').forEach((img) => {
+                gsap.fromTo(img, { scale: 1.28 }, {
+                    scale: 1,
+                    duration: 1.4,
+                    ease: 'expo.out',
+                    scrollTrigger: {
+                        trigger: img.parentElement,
+                        start: 'top 88%',
+                        toggleActions: 'play none none reverse'
+                    }
+                });
+            });
+
+            gsap.utils.toArray('.reveal-heading').forEach((heading) => {
+                const lines = heading.querySelectorAll('.line-reveal');
+                gsap.from(lines, {
+                    yPercent: 115,
+                    duration: 1.1,
+                    stagger: 0.12,
+                    ease: 'expo.out',
+                    scrollTrigger: {
+                        trigger: heading,
+                        start: 'top 88%'
+                    }
+                });
+            });
+
+            gsap.utils.toArray('.fade-card').forEach((card, i) => {
+                gsap.from(card, {
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.9,
+                    delay: (i % 3) * 0.08,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 90%'
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
