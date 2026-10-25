@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitUp Club | Deja las excusas. Empieza hoy.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            dark: '#121212',
+                            card: '#1a1a1a',
+                            orange: '#ff5500',      /* Naranja Fuego / Blaze */
+                            orangeHover: '#e04b00'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'system-ui', 'sans-serif'],
+                        display: ['Teko', 'Impact', 'sans-serif']
+                    },
+                    boxShadow: {
+                        neon: '0 0 25px rgba(255, 85, 0, 0.5)',
+                        'neon-lg': '0 0 45px rgba(255, 85, 0, 0.75)'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Montserrat & Teko -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;0,900;1,900&family=Teko:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .font-display { font-family: 'Teko', sans-serif; }
+    </style>
+</head>
+<body class="bg-brand-black text-white font-sans antialiased selection:bg-brand-orange selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- 1. Barra de Navegación Limpia -->
+    <header class="w-full border-b border-white/10 bg-brand-black/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="inline-block w-3 h-7 bg-brand-orange skew-x-[-12deg] transition-transform duration-300 group-hover:scale-110"></span>
+                <span class="font-display text-3xl md:text-4xl uppercase tracking-wider text-white font-black">
+                    FITUP<span class="text-brand-orange"> CLUB</span>
+                </span>
+            </a>
+            <div class="flex items-center gap-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand-orange/10 text-brand-orange border border-brand-orange/30">
+                    <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+                    Cupos Abiertos
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- 2. Hero Section (Cabecera) -->
+        <section class="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28">
+            <!-- Glow decorativo de fondo -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[600px] h-[350px] md:h-[600px] bg-brand-orange/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="max-w-5xl mx-auto px-5 text-center relative z-10">
+                <!-- Badge motivacional -->
+                <div class="inline-block mb-4 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs md:text-sm font-bold tracking-widest uppercase text-gray-300">
+                    ⚡ Transformación Total Garantizada
+                </div>
+
+                <!-- Título Gigante -->
+                <h1 class="font-display uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] text-white">
+                    Deja las excusas.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-orange-400 to-amber-200">
+                        Empieza tu transformación hoy.
+                    </span>
+                </h1>
+
+                <!-- Subtítulo Motivador -->
+                <p class="mt-6 text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-normal leading-relaxed">
+                    Un espacio de alto rendimiento diseñado para desafiar tus límites, forjar tu mejor versión y construir una disciplina inquebrantable.
+                </p>
+
+                <!-- 3. Botón Principal (CTA) con efecto WOW de brillo -->
+                <div class="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#" 
+                       class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 sm:py-5 text-lg md:text-xl font-black uppercase tracking-wider text-white bg-brand-orange rounded-xl shadow-neon hover:shadow-neon-lg hover:bg-brand-orangeHover hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 group">
+                        <span>Reclamar mi Clase de Prueba Gratis</span>
+                        <svg class="w-6 h-6 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+                <p class="mt-3 text-xs text-gray-500 uppercase tracking-widest font-semibold">
+                    ✓ Sin compromiso • Acceso total a todas las áreas
+                </p>
+            </div>
+        </section>
+
+        <!-- 4. Sección de Beneficios (3 Columnas) -->
+        <section class="py-16 md:py-20 border-t border-white/5 bg-brand-dark/50">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-4xl md:text-5xl uppercase tracking-wider font-black text-white">
+                        ¿Por qué entrenar en <span class="text-brand-orange">FitUp Club</span>?
+                    </h2>
+                    <p class="text-gray-400 text-sm md:text-base mt-2">Todo lo que necesitas para superar tus marcas cada día.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Tarjeta 1: Equipamiento de Primera -->
+                    <div class="bg-brand-card p-8 rounded-2xl border border-white/10 hover:border-brand-orange/50 transition-all duration-300 hover:-translate-y-1.5 group flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl font-black mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                                <!-- Icono Mancuerna -->
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h1a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2zm11 0v10a2 2 0 002 2h1a2 2 0 002-2V7a2 2 0 00-2-2h-1a2 2 0 00-2 2zM8 12h8"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-black uppercase tracking-wide text-white mb-3">
+                                Equipamiento de Primera
+                            </h3>
+                            <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                                Máquinas biomecánicas de última generación, zona de peso libre olímpico y tecnología diseñada para tu máxima seguridad y rendimiento.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/5 flex items-center text-xs font-bold uppercase tracking-wider text-brand-orange">
+                            Zona Pro & Pesas
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Entrenadores Expertos -->
+                    <div class="bg-brand-card p-8 rounded-2xl border border-white/10 hover:border-brand-orange/50 transition-all duration-300 hover:-translate-y-1.5 group flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl font-black mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                                <!-- Icono Usuario / Coach -->
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-black uppercase tracking-wide text-white mb-3">
+                                Entrenadores Expertos
+                            </h3>
+                            <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                                Instructores certificados y enfocados en corregir tu técnica, optimizar tu progreso y mantener tu motivación en el punto más alto.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/5 flex items-center text-xs font-bold uppercase tracking-wider text-brand-orange">
+                            Planes Personalizados
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Horarios Flexibles -->
+                    <div class="bg-brand-card p-8 rounded-2xl border border-white/10 hover:border-brand-orange/50 transition-all duration-300 hover:-translate-y-1.5 group flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl font-black mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                                <!-- Icono Reloj -->
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-black uppercase tracking-wide text-white mb-3">
+                                Horarios Flexibles
+                            </h3>
+                            <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                                Abierto desde temprano hasta tarde para que entrenes a tu propio ritmo. Tu rutina se adapta a tu vida, no al revés.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/5 flex items-center text-xs font-bold uppercase tracking-wider text-brand-orange">
+                            Lunes a Domingo
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 5. Pie de Página Minimalista -->
+    <footer class="border-t border-white/10 bg-brand-black py-8">
+        <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div class="font-display text-2xl uppercase tracking-wider text-white font-black">
+                FITUP<span class="text-brand-orange"> CLUB</span>
+            </div>
+            <p class="text-xs text-gray-500">
+                © 2026 FitUp Club. Todos los derechos reservados. Diseñado para alto rendimiento.
+            </p>
+            <div class="flex gap-4 text-xs text-gray-400">
+                <a href="#" class="hover:text-brand-orange transition-colors">Términos</a>
+                <span>•</span>
+                <a href="#" class="hover:text-brand-orange transition-colors">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
