@@ -69,32 +69,32 @@
 </head>
 <body class="bg-black text-white antialiased selection:bg-orange-500 selection:text-white overflow-x-hidden">
 
-    <!-- NAVBAR 100% TRANSPARENTE Y LOGO PROTAGONISTA (w-48 / w-56) -->
-    <header class="absolute top-0 w-full z-50 bg-transparent">
-        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
+    <!-- NAVBAR CON FONDO NEGRO ATRÁS Y TAMAÑO UNIFORME Y ORDENADO -->
+    <header class="sticky top-0 w-full z-50 bg-black/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-24 flex items-center justify-between gap-4">
             <a href="index.html" class="flex items-center shrink-0">
-                <img src="imagenes/logo-fitup.png" alt="FitUp Club" class="w-48 sm:w-56 h-auto object-contain" onerror="this.style.display='none'">
+                <img src="imagenes/logo-fitup.png" alt="FitUp Club" class="h-14 w-auto object-contain" onerror="this.style.display='none'">
             </a>
 
-            <nav class="hidden lg:flex items-center gap-2 text-xs font-black uppercase tracking-wider bg-white/5 backdrop-blur-md p-2 rounded-xl">
-                <a href="index.html" class="text-gray-200 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Inicio</a>
-                <a href="servicios.html" class="bg-orange-500 text-white px-5 py-2.5 rounded-lg transition-colors duration-200">Servicios y Horarios</a>
-                <a href="entrenadores.html" class="text-gray-200 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Entrenadores</a>
-                <a href="tu-espacio.html" class="text-gray-200 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Tu Espacio FitUp</a>
-                <a href="index.html#tips" class="text-gray-200 hover:text-orange-500 px-4 py-2.5 rounded-lg transition-colors duration-200">Tips FitUp</a>
+            <nav class="hidden lg:flex items-center gap-1.5 text-xs font-black uppercase tracking-wider bg-white/5 p-1.5 rounded-xl">
+                <a href="index.html" class="text-gray-200 hover:text-orange-500 h-10 px-5 rounded-lg inline-flex items-center justify-center transition-colors duration-200">Inicio</a>
+                <a href="servicios.html" class="bg-orange-500 text-white h-10 px-5 rounded-lg inline-flex items-center justify-center transition-colors duration-200">Servicios y Horarios</a>
+                <a href="entrenadores.html" class="text-gray-200 hover:text-orange-500 h-10 px-4 rounded-lg inline-flex items-center justify-center transition-colors duration-200">Entrenadores</a>
+                <a href="tu-espacio.html" class="text-gray-200 hover:text-orange-500 h-10 px-4 rounded-lg inline-flex items-center justify-center transition-colors duration-200">Tu Espacio FitUp</a>
+                <a href="index.html#tips" class="text-gray-200 hover:text-orange-500 h-10 px-4 rounded-lg inline-flex items-center justify-center transition-colors duration-200">Tips FitUp</a>
             </nav>
 
-            <div class="flex items-center gap-3">
-                <a href="tu-espacio.html" class="bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider px-6 py-3.5 rounded-full transition-colors duration-200 whitespace-nowrap">
+            <div class="flex items-center gap-3 shrink-0">
+                <a href="tu-espacio.html" class="bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider h-11 px-6 rounded-xl inline-flex items-center justify-center transition-colors duration-200 whitespace-nowrap">
                     Calcular IMC
                 </a>
-                <button type="button" onclick="toggleMobileMenu()" aria-label="Menú" class="lg:hidden w-11 h-11 rounded-xl bg-white/10 backdrop-blur-md hover:bg-orange-500 text-white flex items-center justify-center transition-colors">
+                <button type="button" onclick="toggleMobileMenu()" aria-label="Menú" class="lg:hidden w-11 h-11 rounded-xl bg-white/10 hover:bg-orange-500 text-white flex items-center justify-center transition-colors">
                     <i id="hamburger-icon" class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-black/80 backdrop-blur-md mx-4 mb-4 p-4 rounded-xl space-y-2">
+        <div id="mobile-menu" class="hidden lg:hidden bg-black/95 backdrop-blur-md mx-4 mb-4 p-4 rounded-xl space-y-2">
             <a href="index.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase text-gray-200 hover:text-orange-500 transition-colors">Inicio</a>
             <a href="servicios.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase bg-orange-500 text-white">Servicios y Horarios</a>
             <a href="entrenadores.html" class="block py-3 px-4 rounded-lg text-sm font-black uppercase text-gray-200 hover:text-orange-500 transition-colors">Entrenadores</a>
@@ -106,7 +106,7 @@
     <main>
 
         <!-- CABECERA HERO INMERSIVA CON FONDO DE GIMNASIO + BG-BLACK/80 + PARALLAX -->
-        <section class="relative pt-40 pb-20 sm:pt-48 sm:pb-28 overflow-hidden bg-black">
+        <section class="relative py-20 sm:py-28 overflow-hidden bg-black">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
                 <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1920&q=85" 
                      alt="Instalaciones FitUp" 
