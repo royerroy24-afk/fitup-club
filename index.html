@@ -130,13 +130,8 @@
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10 w-full">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-                    <!-- Columna Texto Hero -->
+                    <!-- Columna Texto Hero (Sin etiqueta de ubicación, alineado y ordenado) -->
                     <div class="lg:col-span-7 text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md text-orange-500 px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest mb-6 hero-badge">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Ubicados en C.C. Open Plaza Cajamarca (Segundo Nivel)</span>
-                        </div>
-
                         <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase leading-[1.02] text-white">
                             <span class="line-mask"><span class="line-reveal hero-line">COMIENZA YA.</span></span>
                             <span class="line-mask"><span class="line-reveal hero-line text-orange-500">DEJA LAS</span></span>
@@ -147,13 +142,13 @@
                             Transforma tu físico en el centro de entrenamiento más tecnológico de Cajamarca. Más de 1,500 m² con 11 zonas especializadas, sauna, médico deportivo y evaluación digital en tiempo real.
                         </p>
 
-                        <!-- Botones CTA -->
+                        <!-- Botones CTA Ordenados en una sola línea uniforme -->
                         <div class="mt-9 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 hero-cta">
-                            <a href="#prueba-gratis" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs sm:text-sm tracking-wider px-8 py-5 rounded-full transition-colors duration-200">
+                            <a href="#prueba-gratis" class="w-full sm:w-auto h-14 px-8 rounded-xl bg-orange-500 hover:bg-white hover:text-black text-white font-black uppercase text-xs sm:text-sm tracking-wider inline-flex items-center justify-center gap-3 whitespace-nowrap transition-colors duration-200">
                                 <span>Solicita tu sesión de prueba gratuita</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
-                            <a href="servicios.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/5 backdrop-blur-md hover:bg-orange-500 text-white font-black uppercase text-xs sm:text-sm tracking-wider px-8 py-5 rounded-full transition-colors duration-200">
+                            <a href="servicios.html" class="w-full sm:w-auto h-14 px-8 rounded-xl bg-white/10 backdrop-blur-md hover:bg-orange-500 text-white font-black uppercase text-xs sm:text-sm tracking-wider inline-flex items-center justify-center whitespace-nowrap transition-colors duration-200">
                                 <span>Explorar las 11 Zonas</span>
                             </a>
                         </div>
@@ -162,17 +157,17 @@
                     <!-- Columna Derecha: Tarjeta Glassmorphism (bg-white/5 backdrop-blur-md rounded-2xl) -->
                     <div class="lg:col-span-5">
                         <div class="bg-white/5 backdrop-blur-md rounded-2xl p-4">
-                            <div class="img-reveal-wrap rounded-xl h-[380px] sm:h-[440px]">
+                            <div class="img-reveal-wrap rounded-xl h-[380px] sm:h-[420px]">
                                 <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85" 
                                      alt="Atleta FitUp Club" 
                                      class="img-reveal w-full h-full object-cover">
                             </div>
-                            <div class="px-3 pt-4 pb-2 flex items-center justify-between">
+                            <div class="px-3 pt-4 pb-2 flex items-center justify-between gap-4">
                                 <div>
                                     <span class="text-[11px] font-black uppercase tracking-widest text-orange-500 block">Diagnóstico Interactivo</span>
                                     <p class="text-sm font-black uppercase text-white mt-0.5">Calcula tu Punto de Partida</p>
                                 </div>
-                                <a href="tu-espacio.html" class="bg-orange-500 hover:bg-white hover:text-black text-white text-xs font-black uppercase px-5 py-3 rounded-full transition-colors">
+                                <a href="tu-espacio.html" class="bg-orange-500 hover:bg-white hover:text-black text-white text-xs font-black uppercase h-10 px-5 rounded-xl inline-flex items-center justify-center whitespace-nowrap transition-colors shrink-0">
                                     Calcular IMC
                                 </a>
                             </div>
@@ -184,26 +179,26 @@
         </section>
 
         <!-- =====================================================
-             3. BARRA DE ESTADÍSTICAS GLASSMORPHISM (ROUNDED-2XL)
+             3. BARRA DE ESTADÍSTICAS UNIFORME (1 SOLA FILA POR TÍTULO Y SUBTÍTULO)
         ====================================================== -->
         <section class="py-10 bg-black">
             <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-                <div class="bg-white/5 backdrop-blur-md rounded-2xl py-10 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div class="stat-item">
-                        <p class="text-4xl sm:text-5xl font-black tracking-tighter uppercase text-orange-500">+1,500 m²</p>
-                        <p class="text-xs font-normal uppercase tracking-widest text-gray-300 mt-2">Infraestructura Deportiva</p>
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl py-10 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center items-center">
+                    <div class="stat-item flex flex-col items-center justify-center py-2">
+                        <p class="text-3xl xl:text-4xl font-black tracking-tighter uppercase text-orange-500 whitespace-nowrap leading-none">+1,500 M²</p>
+                        <p class="text-[11px] font-bold uppercase tracking-widest text-gray-300 mt-3 whitespace-nowrap">Infraestructura Deportiva</p>
                     </div>
-                    <div class="stat-item">
-                        <p class="text-4xl sm:text-5xl font-black tracking-tighter uppercase text-white">11 Zonas</p>
-                        <p class="text-xs font-normal uppercase tracking-widest text-gray-300 mt-2">Especializadas de Entreno</p>
+                    <div class="stat-item flex flex-col items-center justify-center py-2">
+                        <p class="text-3xl xl:text-4xl font-black tracking-tighter uppercase text-white whitespace-nowrap leading-none">11 ZONAS</p>
+                        <p class="text-[11px] font-bold uppercase tracking-widest text-gray-300 mt-3 whitespace-nowrap">Especializadas de Entreno</p>
                     </div>
-                    <div class="stat-item">
-                        <p class="text-4xl sm:text-5xl font-black tracking-tighter uppercase text-orange-500">6AM - 10PM</p>
-                        <p class="text-xs font-normal uppercase tracking-widest text-gray-300 mt-2">Horario Lunes a Viernes</p>
+                    <div class="stat-item flex flex-col items-center justify-center py-2">
+                        <p class="text-3xl xl:text-4xl font-black tracking-tighter uppercase text-orange-500 whitespace-nowrap leading-none">6AM - 10PM</p>
+                        <p class="text-[11px] font-bold uppercase tracking-widest text-gray-300 mt-3 whitespace-nowrap">Horario Lunes a Viernes</p>
                     </div>
-                    <div class="stat-item">
-                        <p class="text-4xl sm:text-5xl font-black tracking-tighter uppercase text-white">24 Horas</p>
-                        <p class="text-xs font-normal uppercase tracking-widest text-gray-300 mt-2">Estacionamiento Seguro</p>
+                    <div class="stat-item flex flex-col items-center justify-center py-2">
+                        <p class="text-3xl xl:text-4xl font-black tracking-tighter uppercase text-white whitespace-nowrap leading-none">24 HORAS</p>
+                        <p class="text-[11px] font-bold uppercase tracking-widest text-gray-300 mt-3 whitespace-nowrap">Estacionamiento Seguro</p>
                     </div>
                 </div>
             </div>
@@ -628,8 +623,7 @@
             // 1. Entrada del Hero
             const heroTl = gsap.timeline({ defaults: { ease: 'expo.out' } });
             heroTl
-                .from('.hero-badge', { y: 20, opacity: 0, duration: 0.8 })
-                .from('.hero-line', { yPercent: 115, duration: 1.15, stagger: 0.12 }, '-=0.4')
+                .from('.hero-line', { yPercent: 115, duration: 1.15, stagger: 0.12 })
                 .from('.hero-sub', { y: 25, opacity: 0, duration: 0.9, ease: 'power3.out' }, '-=0.7')
                 .from('.hero-cta', { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6');
 
