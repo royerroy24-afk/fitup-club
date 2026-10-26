@@ -36,10 +36,10 @@ API_VERSION = os.getenv("META_API_VERSION", "v21.0").strip()
 BASE_URL = f"https://graph.facebook.com/{API_VERSION}"
 
 # Umbrales de alerta (ajústalos a tu negocio)
-MAX_FRECUENCIA = 3.5       # frecuencia alta = audiencia saturada
-MIN_CTR = 1.0              # % de clics sobre impresiones
-GASTO_MIN_SIN_RESULTADOS = 5.0  # gasto (moneda de la cuenta) sin resultados
-FACTOR_CPC_ALTO = 1.5      # CPC mayor a 1.5x el promedio de la cuenta
+MAX_FRECUENCIA = 3.2       # frecuencia alta = audiencia saturada
+MIN_CTR = 1.2              # % de clics sobre impresiones
+GASTO_MIN_SIN_RESULTADOS = 15.0  # gasto (moneda de la cuenta) sin resultados
+FACTOR_CPC_ALTO = 1.4      # CPC mayor a 1.5x el promedio de la cuenta
 
 # Acciones que cuentan como "resultado"
 ACCIONES_RESULTADO = {
@@ -49,6 +49,8 @@ ACCIONES_RESULTADO = {
     "offsite_conversion.fb_pixel_purchase",
     "purchase",
     "onsite_conversion.messaging_conversation_started_7d",
+    "onsite_conversion.total_messaging_connection",
+    "messaging_conversation_started_7d",
     "contact",
     "complete_registration",
 }
