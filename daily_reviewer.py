@@ -1,7 +1,7 @@
-"""
+﻿"""
 Meta Ads Daily Reviewer
 -----------------------
-Audita las campañas de una cuenta publicitaria de Meta usando la Marketing API
+Audita las campaÃ±as de una cuenta publicitaria de Meta usando la Marketing API
 y genera un reporte diario en la carpeta reports/.
 
 IMPORTANTE: este script SOLO LEE datos y recomienda. No pausa, no edita
@@ -28,14 +28,14 @@ except ImportError:
     pass
 
 # ---------------------------------------------------------------------------
-# Configuración
+# ConfiguraciÃ³n
 # ---------------------------------------------------------------------------
 TOKEN = os.getenv("META_ACCESS_TOKEN", "").strip()
 ACCOUNT_ID = os.getenv("META_AD_ACCOUNT_ID", "").strip()
 API_VERSION = os.getenv("META_API_VERSION", "v21.0").strip()
 BASE_URL = f"https://graph.facebook.com/{API_VERSION}"
 
-# Umbrales de alerta (ajústalos a tu negocio)
+# Umbrales de alerta (ajÃºstalos a tu negocio)
 MAX_FRECUENCIA = 3.2       # frecuencia alta = audiencia saturada
 MIN_CTR = 1.2              # % de clics sobre impresiones
 GASTO_MIN_SIN_RESULTADOS = 15.0  # gasto (moneda de la cuenta) sin resultados
@@ -69,7 +69,7 @@ def fallar(mensaje: str) -> None:
 def validar_config() -> None:
     if not TOKEN:
         fallar(
-            "Falta META_ACCESS_TOKEN. Créalo en GitHub: Ajustes > Secrets and "
+            "Falta META_ACCESS_TOKEN. CrÃ©alo en GitHub: Ajustes > Secrets and "
             "variables > Actions > New repository secret."
         )
     if not ACCOUNT_ID:
@@ -79,7 +79,7 @@ def validar_config() -> None:
 
 
 def llamar_api(ruta: str, params: dict) -> list:
-    """Hace GET a la Graph API siguiendo la paginación. Nunca imprime el token."""
+    """Hace GET a la Graph API siguiendo la paginaciÃ³n. Nunca imprime el token."""
     params = {**params, "access_token": TOKEN}
     url = f"{BASE_URL}/{ruta}"
     resultados = []
@@ -93,18 +93,18 @@ def llamar_api(ruta: str, params: dict) -> list:
         try:
             data = resp.json()
         except ValueError:
-            fallar(f"Respuesta no válida de Meta (HTTP {resp.status_code}).")
+            fallar(f"Respuesta no vÃ¡lida de Meta (HTTP {resp.status_code}).")
 
         if "error" in data:
             err = data["error"]
             fallar(
-                f"Meta API respondió con error {err.get('code')}: "
+                f"Meta API respondiÃ³ con error {err.get('code')}: "
                 f"{err.get('message')}"
             )
 
         resultados.extend(data.get("data", []))
         url = data.get("paging", {}).get("next")
-        params = {}  # la URL "next" ya trae todos los parámetros
+        params = {}  # la URL "next" ya trae todos los parÃ¡metros
 
     return resultados
 
@@ -127,7 +127,7 @@ def contar_resultados(acciones) -> float:
 
 
 # ---------------------------------------------------------------------------
-# Obtención de datos
+# ObtenciÃ³n de datos
 # ---------------------------------------------------------------------------
 def obtener_info_cuenta() -> dict:
     params = {
@@ -147,7 +147,7 @@ def obtener_insights() -> list:
         f"{ACCOUNT_ID}/insights",
         {
             "level": "campaign",
-            "date_preset": "yesterday",
+            "date_preset": "today",
             "fields": (
                 "campaign_id,campaign_name,spend,impressions,reach,clicks,"
                 "ctr,cpc,cpm,frequency,actions"
@@ -169,7 +169,7 @@ def obtener_estado_campanas() -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Análisis
+# AnÃ¡lisis
 # ---------------------------------------------------------------------------
 def analizar(insights: list, estados: dict):
     filas = []
@@ -198,18 +198,18 @@ def analizar(insights: list, estados: dict):
         alertas = []
         if frecuencia > MAX_FRECUENCIA:
             alertas.append(
-                f"Frecuencia alta ({frecuencia:.2f}): la audiencia está "
-                "saturada. Renueva creativos o amplía la audiencia."
+                f"Frecuencia alta ({frecuencia:.2f}): la audiencia estÃ¡ "
+                "saturada. Renueva creativos o amplÃ­a la audiencia."
             )
         if ctr < MIN_CTR and a_float(ins.get("impressions")) > 500:
             alertas.append(
-                f"CTR bajo ({ctr:.2f}%): el anuncio no llama la atención. "
-                "Prueba nuevos textos o imágenes."
+                f"CTR bajo ({ctr:.2f}%): el anuncio no llama la atenciÃ³n. "
+                "Prueba nuevos textos o imÃ¡genes."
             )
         if gasto >= GASTO_MIN_SIN_RESULTADOS and resultados == 0:
             alertas.append(
-                f"Gastó {gasto:.2f} sin resultados: considera pausar o "
-                "revisar la segmentación y la oferta."
+                f"GastÃ³ {gasto:.2f} sin resultados: considera pausar o "
+                "revisar la segmentaciÃ³n y la oferta."
             )
         if cpc_promedio and cpc > cpc_promedio * FACTOR_CPC_ALTO:
             alertas.append(
@@ -217,7 +217,7 @@ def analizar(insights: list, estados: dict):
                 f"({cpc_promedio:.2f})."
             )
         if not alertas and resultados > 0:
-            alertas.append("Buen desempeño: considera subir presupuesto poco a poco.")
+            alertas.append("Buen desempeÃ±o: considera subir presupuesto poco a poco.")
 
         filas.append(
             {
@@ -251,22 +251,22 @@ def construir_reporte(cuenta: dict, filas: list, gasto_total: float, fecha: str)
         f"**Cuenta:** {nombre} ({ACCOUNT_ID})",
         f"**Periodo analizado:** ayer",
         f"**Gasto total:** {gasto_total:.2f} {moneda}",
-        f"**Campañas con actividad:** {len(filas)}",
+        f"**CampaÃ±as con actividad:** {len(filas)}",
         "",
     ]
 
     if not filas:
         lineas += [
-            "No hubo campañas con gasto o impresiones ayer.",
+            "No hubo campaÃ±as con gasto o impresiones ayer.",
             "",
-            "Revisa que haya campañas activas y que el método de pago funcione.",
+            "Revisa que haya campaÃ±as activas y que el mÃ©todo de pago funcione.",
         ]
         return "\n".join(lineas)
 
     lineas += [
-        "## Resumen por campaña",
+        "## Resumen por campaÃ±a",
         "",
-        "| Campaña | Estado | Gasto | CTR % | CPC | Frecuencia | Resultados | Costo/res. |",
+        "| CampaÃ±a | Estado | Gasto | CTR % | CPC | Frecuencia | Resultados | Costo/res. |",
         "|---|---|---|---|---|---|---|---|",
     ]
     for f in filas:
@@ -286,7 +286,7 @@ def construir_reporte(cuenta: dict, filas: list, gasto_total: float, fecha: str)
 
     lineas += [
         "---",
-        "Este reporte es solo informativo. Ningún cambio se aplicó en la cuenta.",
+        "Este reporte es solo informativo. NingÃºn cambio se aplicÃ³ en la cuenta.",
     ]
     return "\n".join(lineas)
 
@@ -310,7 +310,7 @@ def guardar(reporte_md: str, filas: list, fecha: str) -> None:
 def main() -> None:
     validar_config()
 
-    # Fecha en hora de Perú (UTC-5) para nombrar el reporte
+    # Fecha en hora de PerÃº (UTC-5) para nombrar el reporte
     hoy_peru = datetime.now(timezone.utc) - timedelta(hours=5)
     fecha = hoy_peru.strftime("%Y-%m-%d")
 
